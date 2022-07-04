@@ -87,10 +87,10 @@
       /*   슬라이드       */
 
       #slide {width: 100%; height: 50vh; margin: 0 auto;
-   background-image: url("img/slide.png"); background-size: auto; 
+   background-image: url("img/slide1.png"); background-size: auto; 
  background-position: center; }
         
- .slbox {width: 100%; height: 50%; margin: 0 auto; display: flex; flex-direction: column;
+ .slbox {width: 100%; height: 60%; margin: 0 auto; display: flex; flex-direction: column;
 align-items: center;justify-content: center; }
 .slbox p:nth-of-type(1) {font-size: 20px; color: #f1f1f1; 
  transform: translateY(100px); transition: all 2.5s; opacity: 0;}
@@ -100,13 +100,14 @@ align-items: center;justify-content: center; }
  .slbox p:nth-of-type(3) {font-size: 16px; color: #f1f1f1; 
  transform: translateY(100px); transition: all 2.5s; opacity: 0;}
 
+
  .ibox {width: 100%; height: 10%; margin: 0 auto;}
 .ibox img {width: 100%; height: 100%; margin: 0 auto; transform: translateY(100px);
 transition: all 2s; opacity: 0;}
 
 
 
- .debox {width: 100%; height: 40%; margin: 0 auto; display: flex; flex-direction: row;
+ .debox {width: 100%; height: 30%; margin: 0 auto; display: flex; flex-direction: row;
  align-items: center; justify-content: center; transform: translateY(100px);
   transition: all 1s; opacity: 0;}
 
@@ -136,8 +137,8 @@ transition: all 2s; opacity: 0;}
  #eve {width: 100%; height: 100%; margin: 0 auto; background-color: #000; display: flex; 
   align-items: center; flex-direction: column; justify-content: space-evenly;}
 
- .te {width: 90%; height: 40%; margin: 0 auto; display: flex;
-  flex-direction: column; justify-content: flex-start; align-items: center;}
+ .te {width: 90%; height: 55%; margin: 0 auto; display: flex;
+  flex-direction: column; justify-content: space-evenly; align-items: center;}
  .te p:nth-of-type(1) {font-size: 16px; color: red; transform: translateY(100px); transition: all 1s; opacity: 0;}
  .te p:nth-of-type(2) {font-size: 18px; font-weight: bold; color: #f1f1f1; transform: translateY(100px); transition: all 1s; opacity: 0;}
  .te p:nth-of-type(3) {font-size: 12px; color: #f1f1f1; transform: translateY(100px); transition: all 1s; opacity: 0;}
@@ -147,11 +148,11 @@ transition: all 2s; opacity: 0;}
 -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
 
 .bor {width: 70%; height: 90%; margin: auto auto; border: 1px solid red; position: absolute;
-     z-index: 1; top: 12%; left: 15%;}
-.mu {width: 70%; height: 90%; margin: auto auto; position: absolute; z-index: 2; top: 15%; left: 10%; }
+     z-index: 1; top: -5%; left: 15%;}
+.mu {width: 70%; height: 90%; margin: auto auto; position: absolute; z-index: 2; top: 0%; left: 10%; }
  .mu video {width: 100%; height: 100%;}
         
- #characters {width: 100%; height: 1500px; margin: 0 auto; }
+ #characters {width: 100%; height: auto; margin: 0 auto; }
  .cha {width: 100%; height: 10%; margin: 0 auto;  display: flex;
             flex-direction: column; justify-content: center; align-items: center;}
 .cha p:nth-of-type(1) {color: red; font-size: 16px; transform: translateY(100px); 
@@ -188,42 +189,42 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
 
 .director {width: 100%; height: 100%; margin: 0 auto; background-color: #000; display: flex; flex-direction: column;}
 
-.ditext {width: 90%; height: 40%; margin: 0 auto; float: left; display: flex; flex-direction: column;
+.ditext {width: 90%; height: 30%; margin: 0 auto; float: left; display: flex; flex-direction: column;
     justify-content: center; align-items: flex-start;}
 .ditext p:nth-of-type(1) {color: red; font-size: 16px; transform: translateY(100px); transition: all 2.5s; 
     opacity: 0;}
     .ditext p:nth-of-type(2) {color: #f1f1f1; font-size: 20px; transform: translateY(100px); transition: all 2.5s; 
     opacity: 0;}
-    .ditext p:nth-of-type(3) {color: #f1f1f1; font-size: 16px; transform: translateY(100px); transition: all 2.5s; 
+    .ditext p:nth-of-type(3) {color: #f1f1f1; font-size: 14px; transform: translateY(100px); transition: all 2.5s; 
     opacity: 0;}
 
 .diimg {width: 90%; height: 60%; margin: 0 auto; float: right; display: flex; 
     transform: translateY(0px); transition: all 2s; opacity: 0;
         -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
 
-.dile {width: 40%; height: 100%; margin: 0 auto; float: left; display: flex; position: relative;
+.dile {width: 50%; height: 100%; margin: 0 auto; float: left; display: flex; position: relative;
     flex-direction: column; justify-content: flex-end; align-items: center;}
-.dile p {color: #f1f1f1; font-size: 20px; margin-top: 20px;}
+.dile p {color: #f1f1f1; font-size: 16px; margin-top: 20px;}
 
 
 
 
 .le1 {width: 90%; height: 60%; margin: 0 auto; border: 1px solid red; position: absolute;
-         z-index: 1; top: 10%; left: 5%;}
+         z-index: 1; top: 10%; left: 0%;}
 .le2 {width: 90%; height: 60%; margin: 0 auto; position: absolute;
-         z-index: 2; top: 15%; left: 15%;}
+         z-index: 2; top: 15%; left: 5%;}
          .le2 img {width: 100%; height: 100%;}
 
 
- .diri {width: 40%; height: 100%; margin: 0 auto; float: right; display: flex; position: relative;
+ .diri {width: 50%; height: 100%; margin: 0 auto; float: right; display: flex; position: relative;
     flex-direction: column; justify-content: flex-end; align-items: center;}
  .diri p {color: #f1f1f1; font-size: 24px;}
 .ri1 {width: 90%; height: 60%; margin: 0 auto; border: 1px solid red; position: absolute;
-         z-index: 1; top: 10%; left: 5%;}
+         z-index: 1; top: 10%; left: 0%;}
 .ri2 {width: 90%; height: 60%; margin: 0 auto; position: absolute;
-         z-index: 2; top: 15%; left: 15%;}
+         z-index: 2; top: 15%; left: 5%;}
          .ri2 img {width: 100%; height: 100%;}
-.diri p {color: #f1f1f1; font-size: 20px; margin-top: 30px;}
+.diri p {color: #f1f1f1; font-size: 16px; margin-top: 20px;}
 
 
 
@@ -333,7 +334,7 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
     flex-wrap: wrap; justify-content: space-evenly;  align-items: stretch;}
 .mlbox {width: 30%; height: 20%; margin: 0 auto;}
 
-#gallerybg {width: 100%; height: 50vh; margin: 0 auto; background-color: #000;}
+#gallerybg {width: 100%; height: 40vh; margin: 0 auto; background-color: #000;}
 .gallery {width: 100%; height: 100%; margin: 0 auto; background-color: #000;
     display: flex; flex-direction: column;
      transform: translateY(100px); transition: all 1.5s; opacity: 0;}
@@ -343,7 +344,7 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
 .ga p:nth-of-type(2) {font-size: 30px; color: #f1f1f1;}
 .ga p:nth-of-type(3) {font-size: 16px; color: #777;}
 
-.lery {width: 100%; height: 50%; margin: 0 auto; background-color: #000; display: flex;
+.lery {width: 100%; height: 60%; margin: 0 auto; background-color: #000; display: flex;
  flex-direction: row; align-items: center; }
 .ry1 {width: 45%; height: 75%; margin: 0 auto; display: flex;
 background-image: url("img/35.jpg"); background-position: center; background-size: cover; }
@@ -372,7 +373,7 @@ background-position: center; background-size: cover;}
  transform: translateY(100px); transition: all 1.5s; opacity: 0;}
 .tion1 p:nth-of-type(1) {color: red; font-size: 16px;}
 .tion1 p:nth-of-type(2) {color: #f1f1f1; font-size: 30px; font-weight: bold;}
-.tion1 p:nth-of-type(3) {color: #f1f1f1; font-size: 20px;}
+.tion1 p:nth-of-type(3) {color: #f1f1f1; font-size: 16px;}
 
 .tion2 {width: 50%; height: 20%; margin: 0 auto; background-image: url("img/40.jpg"); 
 background-position: center; background-size: cover;
@@ -389,12 +390,12 @@ background-position: center; background-size: cover;
  transform: translateY(100px); transition: all 1.5s; opacity: 0;}
  .tion4 p:nth-of-type(1) {color: red; font-size: 16px;}
 .tion4 p:nth-of-type(2) {color: #f1f1f1; font-size: 30px; font-weight: bold;}
-.tion4 p:nth-of-type(3) {color: #f1f1f1; font-size: 20px;}
+.tion4 p:nth-of-type(3) {color: #f1f1f1; font-size: 16px;}
 
 
 
 
-#cardbg {width: 100%; height: 100vh; margin: 0 auto; background-color: #000;}
+#cardbg {width: 100%; height: 1000px; margin: 0 auto; background-color: #000;}
 .rdbg {width: 100%; height: 100%; margin: 0 auto; background-color: #000; 
     display: flex; flex-direction: column;  
     transform: translateY(100px); transition: all 1.5s; opacity: 0;}
@@ -562,7 +563,7 @@ input:nth-of-type(2){
 .calltext p:nth-of-type(3) {font-size: 16px; color: #f1f1f1;}
 
 
-footer {width: 100%; height: 20vh; margin: 0 auto; background-color: #04AA6D;}
+footer {width: 100%; height: 6vh; margin: 0 auto; background-color: #04AA6D;}
 #footerbg {width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: column; }
 .foot {width: 100%; height: 50%; float: left; display: flex; justify-content: space-evenly;
     align-items: center;}
@@ -610,7 +611,7 @@ font-size: 18px;}
         /*   슬라이드       */
 
  #slide {width: 100%; height: calc(100% - 70px); margin: 0 auto;
-   background-image: url("img/slide.png"); background-size: auto; 
+   background-image: url("img/slide1.png"); background-size: auto; 
  background-position: center; }
         
  .slbox {width: 100%; height: 50%; margin: 0 auto; display: flex; flex-direction: column;
@@ -674,7 +675,7 @@ transition: all 2s; opacity: 0;}
 .mu {width: 60%; height: 75%; margin: auto auto; position: absolute; z-index: 2; top: 15%; left: 10%; }
  .mu video {width: 100%; height: 100%;}
         
- #characters {width: 100%; height: 1700px; margin: 0 auto; }
+ #characters {width: 100%; height: auto; margin: 0 auto; }
  .cha {width: 100%; height: 10%; margin: 0 auto;  display: flex;
             flex-direction: column; justify-content: center; align-items: center;}
 .cha p:nth-of-type(1) {color: red; font-size: 16px; transform: translateY(100px); 
@@ -1142,7 +1143,7 @@ font-size: 18px;}
         /*   슬라이드       */
 
  #slide {width: 100%; height: calc(100% - 70px); margin: 0 auto;
-   background-image: url("img/slide.png"); background-size: auto; 
+   background-image: url("img/slide1.png"); background-size: auto; 
  background-position: center; }
         
  .slbox {width: 100%; height: 50%; margin: 0 auto; display: flex; flex-direction: column;
@@ -1676,8 +1677,114 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
         
         
         </script>
+<!--         
         
-        
+<script>
+    $(function () {
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+   var ws = $(this).scrollTop();
+
+   if (ws > -10) {
+
+$('.slbox p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.ibox img').css("transform", "translateY(0px)").css("opacity", "1");
+$('.debox').css("transform", "translateY(0px)").css("opacity", "1");
+}
+
+if (ws > 700) {
+
+$('.te p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
+
+}
+
+if (ws > 1500) {
+
+$('.cha p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.racbox').css("transform", "translateY(0px)").css("opacity", "1");
+
+}
+
+if (ws > 2300) {
+
+$('.ditext p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+}
+
+
+if (ws > 3500) {
+
+$('#contentsbg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+
+
+if (ws > 4500) {
+
+$('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 5200) {
+
+$('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 5900) {
+
+$('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
+}
+
+
+
+if (ws > 7200) {
+
+$('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+
+if (ws > 7700) {
+       
+       $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
+       $('.container').css("transform", "translateY(0px)").css("opacity", "1");
+       
+      
+
+   }
+
+
+} else { 
+
+/* 뷰포트 너비가 400 픽셀 미만 */
+
+}
+    });
+
+
+
+
+
+
+
+
+</script> -->
         
         </head>
         
@@ -1790,32 +1897,11 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
 
                     $(function () {
 
-                        // 왼쪽에서
-
-                        // $('#a1').css("transform","translateX(0px)").css("opacity","1");
-
-
-
-                        // $(window).scroll(function(){
-
-                        //   var ws=$(this).scrollTop();
 
                         $(window).ready(function () {
 
                             var ws = $(this).scrollTop();
-
-                            // 오른쪽에서
-
-
-
-
-                            //   if(ws>2500){
-
-                            //     $('#ra').css("transform","translateX(0px)").css("opacity","1");
-
-                            //   }
-
-                            // 아래에서
+                        
 
                             if (ws > -10) {
 
@@ -1826,35 +1912,12 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
 
                             }
 
-                            // 위에서
-
-                            //   if(ws>2200){
-
-                            //     $('.s4').css("transform","translateY(0px)").css("opacity","1");
-
-                            //   }
-
-                            // 왼쪽위에서
-
-                            //   if(ws>3000){
-
-                            //     $('.s5').css("transform","translate(0px,0px)").css("opacity","1");
-
-                            //   }
-
-                            // 오른쪽위에서
-
-                            //   if(ws>3900){
-
-                            //     $('.s6').css("transform","translate(0px,0px)").css("opacity","1");
-
-                            //   }
-
+             
                         });
 
                     });
 
-
+            
 
 
 
@@ -1895,7 +1958,7 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
                     </div>
                 </div>
         
-                <script>
+                <!-- <script>
                     $(function () {
 
                         $(window).scroll(function () {
@@ -1911,7 +1974,9 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
 
                         });
                     });
-                </script>
+                </script> -->
+
+
                 <div id="characters">
         
                     <div class="cha">
@@ -1967,7 +2032,7 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
                     </div>
                 </div>
         
-                <script>
+                <!-- <script>
                     $(function () {
 
                         $(window).scroll(function () {
@@ -1983,7 +2048,7 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
 
                         });
                     });
-                </script>
+                </script> -->
         
         
                 <div id="directorbg">
@@ -2018,7 +2083,7 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
                     </div>
                 </div>
 
-                <script>
+                <!-- <script>
                     $(function () {
 
                         $(window).scroll(function () {
@@ -2036,7 +2101,7 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
 
                         });
                     });
-                </script>
+                </script> -->
 
 
 
@@ -2353,7 +2418,7 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
     </div>
 </div>
 
-<script>
+<!-- <script>
     $(function () {
 
         $(window).scroll(function () {
@@ -2371,7 +2436,7 @@ footer {width: 100%; height: 10%; margin: 0 auto; background-color: #04AA6D;}
 
         });
     });
-</script>
+</script> -->
 
 
         <script>
@@ -2430,7 +2495,7 @@ $(this).next('.content').stop().slideToggle();
      </div>
 </div>
 
-<script>
+<!-- <script>
     $(function () {
 
         $(window).scroll(function () {
@@ -2448,7 +2513,7 @@ $(this).next('.content').stop().slideToggle();
 
         });
     });
-</script>
+</script> -->
 
 <div id="gallerybg">
     <div class="gallery">
@@ -2475,7 +2540,7 @@ $(this).next('.content').stop().slideToggle();
     </div>
 </div>
 
-<script>
+<!-- <script>
     $(function () {
 
         $(window).scroll(function () {
@@ -2493,7 +2558,7 @@ $(this).next('.content').stop().slideToggle();
 
         });
     });
-</script>
+</script> -->
 
 <div id="locationbg">
     <div class="location">
@@ -2516,7 +2581,7 @@ $(this).next('.content').stop().slideToggle();
     </div>
 </div>
 
-<script>
+<!-- <script>
     $(function () {
 
         $(window).scroll(function () {
@@ -2534,7 +2599,7 @@ $(this).next('.content').stop().slideToggle();
 
         });
     });
-</script>
+</script> -->
 
 <div id="cardbg">
     <div class="rdbg">
@@ -2582,7 +2647,7 @@ $(this).next('.content').stop().slideToggle();
 
 </div>
 
-<script>
+<!-- <script>
     $(function () {
 
         $(window).scroll(function () {
@@ -2600,7 +2665,7 @@ $(this).next('.content').stop().slideToggle();
 
         });
     });
-</script>
+</script> -->
 
 <div id="containerbg">
     <div class="conbg">
@@ -2627,7 +2692,7 @@ $(this).next('.content').stop().slideToggle();
             </form>
         </div>
 
-        <script>
+        <!-- <script>
             $(function () {
         
                 $(window).scroll(function () {
@@ -2646,7 +2711,7 @@ $(this).next('.content').stop().slideToggle();
         
                 });
             });
-        </script>
+        </script> -->
 
         <div class="callbg">
             <div class="call">
@@ -2690,6 +2755,326 @@ $(this).next('.content').stop().slideToggle();
         </div>
     </div>
 </footer>
+
+
+
+
+<script>
+    $(function () {
+if (window.matchMedia("(max-width:599px)").matches) { 
+
+   $(window).scroll(function(){
+
+   var ws = $(this).scrollTop();
+
+
+
+if (ws > 200) {
+
+$('.te p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
+
+}
+
+if (ws > 700) {
+
+$('.cha p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.racbox').css("transform", "translateY(0px)").css("opacity", "1");
+
+}
+
+if (ws > 2300) {
+
+$('.ditext p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+}
+if (ws > 3500) {
+
+$('#contentsbg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 4100) {
+
+$('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 4700) {
+
+$('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 5200) {
+
+$('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
+}
+
+if (ws > 6000) {
+
+$('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+if (ws > 7000) {
+       
+       $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
+       $('.container').css("transform", "translateY(0px)").css("opacity", "1");
+       
+      
+
+   }     });
+
+} else { 
+
+/* 뷰포트 너비가 400 픽셀 미만 */
+
+}
+    });
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(function () {
+if (window.matchMedia("(min-width: 600px)and (max-width:1199px) ").matches) { 
+
+   $(window).scroll(function(){
+
+   var ws = $(this).scrollTop();
+
+   if (ws > -10) {
+
+$('.slbox p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.ibox img').css("transform", "translateY(0px)").css("opacity", "1");
+$('.debox').css("transform", "translateY(0px)").css("opacity", "1");
+}
+
+if (ws > 700) {
+
+$('.te p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
+
+}
+
+if (ws > 1500) {
+
+$('.cha p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.racbox').css("transform", "translateY(0px)").css("opacity", "1");
+
+}
+
+if (ws > 2300) {
+
+$('.ditext p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+}
+if (ws > 3500) {
+
+$('#contentsbg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 4500) {
+
+$('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 5300) {
+
+$('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 6200) {
+
+$('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
+}
+
+if (ws > 7200) {
+
+$('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+if (ws > 7900) {
+       
+       $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
+       $('.container').css("transform", "translateY(0px)").css("opacity", "1");
+       
+      
+
+   }     });
+
+} else { 
+
+/* 뷰포트 너비가 400 픽셀 미만 */
+
+}
+    });
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(function () {
+if (window.matchMedia("(min-width: 1200px)").matches) { 
+
+   $(window).scroll(function(){
+
+   var ws = $(this).scrollTop();
+
+
+
+if (ws > 700) {
+
+$('.te p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
+
+}
+
+if (ws > 1500) {
+
+$('.cha p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.racbox').css("transform", "translateY(0px)").css("opacity", "1");
+
+}
+
+if (ws > 2300) {
+
+$('.ditext p').css("transform", "translateY(0px)").css("opacity", "1");
+$('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+}
+if (ws > 3500) {
+
+$('#contentsbg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 4500) {
+
+$('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 5200) {
+
+$('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+
+if (ws > 5900) {
+
+$('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
+$('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
+}
+
+if (ws > 7200) {
+
+$('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
+
+
+
+}
+if (ws > 7700) {
+       
+       $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
+       $('.container').css("transform", "translateY(0px)").css("opacity", "1");
+       
+      
+
+   }     });
+
+} else { 
+
+/* 뷰포트 너비가 400 픽셀 미만 */
+
+}
+    });
+
+
+
+
+
+
+
+</script>
+
+
 
         </body>
         
