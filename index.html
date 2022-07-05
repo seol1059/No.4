@@ -36,7 +36,14 @@
      font-style: normal;
 }
 
-        * {margin: 0; font-size: 16px; font-family: 'S-CoreDream-3Light';  font-style: italic}
+@font-face {
+font-family: 'MyLotteLight';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/MyLotteLight.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+        * {margin: 0; font-size: 16px; font-family: 'MyLotteLight';  font-style: italic}
         html, body {width: 100%; height: 100%;}
         
         button {border: none; background:none;}
@@ -51,6 +58,8 @@
         
         .logo {width: 150px; line-height: 50px; background-color: #000; color:#fff;
              text-align: center;}
+
+             .logo b {color: red;}
         
 
         #a {display:none;}
@@ -264,8 +273,8 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
 
 
         .collapsible {
-  background-color: #777;
-  color: white;
+
+  color: #000;
   cursor: pointer;
 
   width: 100%;
@@ -282,9 +291,9 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
 
 .collapsible img {width: 8%; height: 55%; float: left; border-radius: 50%; margin-left: 10px; margin-top: 10px;}
 
-.active, .collapsible:hover {
+/* .active, .collapsible:hover {
   background-color: #555;
-}
+} */
 
 
 
@@ -454,7 +463,7 @@ background-position: center; background-size: cover;
   color: #f1f1f1;
 }
 
-#containerbg {width: 100%; height: 100vh; margin: 0 auto; background-image: url("img/0.jpg");
+#containerbg {width: 100%; height: 100vh; margin: 0 auto; background-image: url("img/40.jpg");
 background-position: center; background-size: cover; }
 .conbg {width: 100%; height: 100%; margin: 0 auto; margin: 0 auto; display: flex; 
     flex-direction: column; justify-content: center; align-items: center;}
@@ -787,8 +796,8 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
 
 
         .collapsible {
-  background-color: #777;
-  color: white;
+  
+  color: #000;
   cursor: pointer;
 
   width: 100%;
@@ -805,9 +814,9 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
 
 .collapsible img {width: 8%; height: 90%; float: left; border-radius: 50%; margin-left: 10px;}
 
-.active, .collapsible:hover {
+/* .active, .collapsible:hover {
   background-color: #555;
-}
+} */
 
 
 
@@ -983,7 +992,7 @@ border-radius: 15px;
   color: #f1f1f1;
 }
 
-#containerbg {width: 100%; height: 100%; margin: 0 auto; background-image: url("img/0.jpg");
+#containerbg {width: 100%; height: 100%; margin: 0 auto; background-image: url("img/40.jpg");
 background-position: center; background-size: cover; }
 .conbg {width: 100%; height: 100%; margin: 0 auto; margin: 0 auto; display: flex; 
     flex-direction: column; justify-content: center; align-items: center;}
@@ -1208,7 +1217,7 @@ transition: all 2s; opacity: 0;}
  .mu video {width: 100%; height: 100%;}
         
  #characters {width: 100%; height: 1600px; margin: 0 auto; }
- .cha {width: 1200px; height: 10%; margin: 0 auto;  display: flex;
+ .cha {width: 1200px; height: 200px; margin: 0 auto;  display: flex;
             flex-direction: column; justify-content: center; align-items: center;}
 .cha p:nth-of-type(1) {color: red; font-size: 20px; transform: translateY(100px); 
     transition: all 2s; opacity: 0;}
@@ -1240,9 +1249,9 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
     width:30px; margin:10px 0 0 0;}
 
 
-#directorbg {width: 100%; height: 500px; margin: 0 auto; background-color: #000; display: flex;}
+#directorbg {width: 100%; height: 580px; margin: 0 auto; background-color: #000; display: flex;}
 
-.director {width: 1200px; height: 100%; margin: 0 auto; background-color: #000; display: flex;}
+.director {width: 1200px; height: 90%; margin: 0 auto; background-color: #000; display: flex;}
 
 .ditext {width: 40%; height: 100%; margin: 0 auto; float: left; display: flex; flex-direction: column;
     justify-content: center; align-items: flex-start;}
@@ -1318,8 +1327,8 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
 
 
         .collapsible {
-  background-color: #777;
-  color: white;
+  
+  color: #000;
   cursor: pointer;
 
   width: 100%;
@@ -1336,9 +1345,9 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
 
 .collapsible img {width: 8%; height: 90%; float: left; border-radius: 50%; margin-left: 10px;}
 
-.active, .collapsible:hover {
+/* .active, .collapsible:hover {
   background-color: #555;
-}
+} */
 
 
 
@@ -1393,7 +1402,7 @@ flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
     display: flex; flex-direction: column;
      transform: translateY(100px); transition: all 1.5s; opacity: 0;}
 .ga {width: 100%; height: 30%; margin: 0 auto; background-color: #000; display: flex;
-    flex-direction: column; justify-content: space-evenly; align-items: center;}
+    flex-direction: column; justify-content: center; align-items: center;}
 .ga p:nth-of-type(1) {font-size: 20px; color: red;}
 .ga p:nth-of-type(2) {font-size: 30px; color: #f1f1f1;}
 .ga p:nth-of-type(3) {font-size: 16px; color: #777;}
@@ -1447,8 +1456,8 @@ background-position: center; background-size: cover;
 
 
 
-#cardbg {width: 100%; height: 80%; margin: 0 auto; background-color: #000;}
-.rdbg {width: 1200px; height: 100%; margin: 0 auto; background-color: #000; 
+#cardbg {width: 100%; height: 800px; margin: 0 auto; background-color: #000;}
+.rdbg {width: 1200px; height: 85%; margin: 0 auto; background-color: #000; 
     display: flex; flex-direction: column;  
     transform: translateY(100px); transition: all 1.5s; opacity: 0;}
  .cardtext {width: 100%; height:20%; margin: 0 auto; display: flex; flex-direction: column;
@@ -1512,7 +1521,7 @@ border-radius: 15px;
   color: #f1f1f1;
 }
 
-#containerbg {width: 100%; height: 100%; margin: 0 auto; background-image: url("img/0.jpg");
+#containerbg {width: 100%; height: 100%; margin: 0 auto; background-image: url("img/40.jpg");
 background-position: center; background-size: cover; }
 .conbg {width: 1200px; height: 100%; margin: 0 auto; margin: 0 auto; display: flex; 
     flex-direction: column; justify-content: center; align-items: center;}
@@ -2200,7 +2209,7 @@ if (ws > 7700) {
                     <h2>줄거리</h2>
 
                     <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>전체 줄거리</p></button>
+                    <button type="button" class="collapsible"><img src="img/12.jpg" alt=""><p>전체 줄거리</p></button>
                     <div class="content">
                         <p>신원 미상의 '교수'라 불리는 남자가 모은 8명의 범죄자들은 톨레도의 한 사냥터에서 마드리드 조폐국을 털기 위해 몇 달간 숙식을 하면서 교수의 작전에 동참한다.<br>
                             이들은 서로를 도시의 이름으로 부르며 이 기간 동안 교수의 치밀한 계획에 따라 사격 훈련 및 심리 전술, 작전 개요, 의술 등을 터득한다.<br>
@@ -2212,48 +2221,48 @@ if (ws > 7700) {
                     </div>
 
                     <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 1</p></button>
+                    <button type="button" class="collapsible"><img src="img/1.jpg" alt=""><p>Episode 1</p></button>
                     <div class="content">
                         <p>사상 최대의 무장강도를 치밀하게 계획해 온 '교수'.<br>
                             잃을 것 없는 8인을 지휘하여 스페인 조폐국에 침투시킨다.<br>
                             인질까지 잡았으니 이젠 독 안에 든 쥐가 될 차례.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 2</p></button>
+                    <button type="button" class="collapsible"><img src="img/2.jpg" alt=""><p>Episode 2</p></button>
                     <div class="content">
                         <p>인질 석방에 투입된 것은 협상가 라켈 무리요뿐만이 아니다.<br>
                             정보부가 얼쩡거리는 이유는? 석방 협상이 긴박해지고, 싸움은 시작되었다.<br>
                             숨겨둔 카드를 꺼내들 때.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 3</p></button>
+                    <button type="button" class="collapsible"><img src="img/3.jpg" alt=""><p>Episode 3</p></button>
                     <div class="content">
                         <p>일부 멤버의 이미지가 유출되고 아르투로는 필사적으로 살길을 모색한다.<br>
                             바에서 만난 남자를 의심하는 라켈.<br>
                             순조롭던 계획이 틀어진 것은 삶이 늘 그렇듯 사랑 탓이었다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 4</p></button>
+                    <button type="button" class="collapsible"><img src="img/31.jpg" alt=""><p>Episode 4</p></button>
                     <div class="content">
                         <p>라켈에게 개인적인 긴급상황이 발생한다.<br>
                             총성을 들은 인질들은 겁에 질리고, 모스크바는 베를린의 명령을 이행한 사람이 아들임을 알게 된다.<br>
                             열린 문은 투항의 신호인가?</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 5</p></button>
+                    <button type="button" class="collapsible"><img src="img/32.jpg" alt=""><p>Episode 5</p></button>
                     <div class="content">
                         <p>의료진 진입이 허용된 틈을 타 경찰이 잠입한다.<br>
                             지금껏 모든 걸 내다본 교수와 그보다 한 수 앞을 내다봐야 하는 라켈.<br>
                             트로이의 목마는 누구의 차지가 될 것인가.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 6</p></button>
+                    <button type="button" class="collapsible"><img src="img/33.jpg" alt=""><p>Episode 6</p></button>
                     <div class="content">
                         <p>상태가 나빠지는 모니카.<br>
                             리우는 뉴스 보도에 심기가 불편해지고, 교수는 계책이 통한 걸 즐긴다.<br>
                             베를린이 규칙을 어기자, 도쿄는 교수에게 보고하라고 종용한다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 7</p></button>
+                    <button type="button" class="collapsible"><img src="img/34.jpg" alt=""><p>Episode 7</p></button>
                     <div class="content">
                         <p>경찰이 단서를 잡고 한 멤버의 실수까지 더해져 정체가 드러나기 일보 직전.<br>
                             좁혀지는 수사망의 한가운데 선 교수는 위기를 모면하려면 촌각을 다투며 기지를 발휘해야 한다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 8</p></button>
+                    <button type="button" class="collapsible"><img src="img/35.jpg" alt=""><p>Episode 8</p></button>
                     <div class="content">
                         <p>리우와 대화하는 앨리슨을 보고 다그치는 도쿄.<br>
                             라켈은 언론의 호된 질타를 받고 벼랑 끝으로 몰린다.<br>
@@ -2271,7 +2280,7 @@ if (ws > 7700) {
                     <h2>줄거리</h2>
 
                     <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>전체 줄거리</p></button>
+                    <button type="button" class="collapsible"><img src="img/40.jpg" alt=""><p>전체 줄거리</p></button>
                     <div class="content">
                         <p>교수의 신원 파악에 부심하는 경찰.<br>
                             교수와 연락이 끊기자 혼란스러워진 조폐국 내의 팀원들은 반란을 일으키고, 한 멤버는 급기야 덜미를 잡힌다.
@@ -2280,51 +2289,51 @@ if (ws > 7700) {
                     </div>
 
                     <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 1</p></button>
+                    <button type="button" class="collapsible"><img src="img/41.jpg" alt=""><p>Episode 1</p></button>
                     <div class="content">
                         <p>감식반이 DNA 채취를 위해 톨레도 안가를 뒤진다.<br>
                             수사를 지켜볼수록 초조해지는 교수.<br>
                             조폐국에서는 갈등이 증폭되고, 팀은 최악을 각오한다.<br>
                             이제 '파티'를 준비하자.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 2</p></button>
+                    <button type="button" class="collapsible"><img src="img/42.png" alt=""><p>Episode 2</p></button>
                     <div class="content">
                         <p>체르노빌 작전은 무엇인가?<br>
                             반목 끝에 대치하는 팀원들. 강도, 자유, 사랑, 꿈. 그 끝이 시작됐다.<br>
                             붙잡힌 첫 멤버에 대한 경찰 조사도.<br>
                             이제 체포 시나리오를 가동한다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 3</p></button>
+                    <button type="button" class="collapsible"><img src="img/43.jpg" alt=""><p>Episode 3</p></button>
                     <div class="content">
                         <p>교수의 정체를 알아내려는 라켈. 포로의 심리를 자극한다.<br>
                             '배반'에 대한 처벌은 반란의 불씨를 댕기고, 체포 전략도 난항을 겪는다.<br>
                             한편, 드디어 걸려오는 전화.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 4</p></button>
+                    <button type="button" class="collapsible"><img src="img/100.jpg" alt=""><p>Episode 4</p></button>
                     <div class="content">
                         <p>계획이 뜻대로 흘러가지 않자 팀은 언론을 통해 대중의 지지를 얻으려 하고, 인질들은 반격을 모의한다.<br>
                             라켈은 애인과 더욱 가까워지는 한편, 교수를 잡을 함정을 판다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 5</p></button>
+                    <button type="button" class="collapsible"><img src="img/101.jpg" alt=""><p>Episode 5</p></button>
                     <div class="content">
                         <p>아르투로는 탈출 모의를 주도한다.<br>
                             살바와 대화를 나누던 중, 마음에 걸리는 사소한 사실을 깨닫고 모든 것이 극도로 혼란스러워지는 라켈.<br>
                             불행이 세 여자를 강타한다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 6</p></button>
+                    <button type="button" class="collapsible"><img src="img/102.jpg" alt=""><p>Episode 6</p></button>
                     <div class="content">
                         <p>오랫동안 간직해온 비밀을 털어놓는 모스크바.<br>
                             아들의 신뢰를 잃고 만다.<br>
                             도쿄를 위한 긴급계획이 암초를 만난다.<br>
                             수호천사가 없을 땐 혼자서 정면돌파하는 수밖에.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 7</p></button>
+                    <button type="button" class="collapsible"><img src="img/103.jpg" alt=""><p>Episode 7</p></button>
                     <div class="content">
                         <p>도쿄는 오열하고, 팀은 부상자를 살리려 백방으로 뛴다.<br>
                             방법은 투항뿐일까?<br>
                             아리아드나는 모니카에게 진실을 고백하고, 라켈은 나락으로 떨어지지 않으려 이를 악문다..</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 8</p></button>
+                    <button type="button" class="collapsible"><img src="img/104.jpg" alt=""><p>Episode 8</p></button>
                     <div class="content">
                         <p>교수 때문에 사건에서 물러나게 된 라켈은 홀로 추적에 나선다.<br>
                             탈출과 체포의 기로에서 분초를 다투는 팀.<br>
@@ -2344,7 +2353,7 @@ if (ws > 7700) {
                     <h2>줄거리</h2>
 
                     <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>전체 줄거리</p></button>
+                    <button type="button" class="collapsible"><img src="img/105.jpg" alt=""><p>전체 줄거리</p></button>
                     <div class="content">
                         <p>베를린, 모스크바, 오슬로를 잃었으나 결국 자신들이 찍어낸 9억 8천만 유로를 가지고 스페인 영해를 벗어나는 데 성공한 교수와 강도들.<br>
                             이들은 대서양을 건너 2인 1조로 안전가옥에 흩어져 공소시효가 끝날 때까지 지내게 된다.<br>
@@ -2354,53 +2363,53 @@ if (ws > 7700) {
                     </div>
 
                     <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 1</p></button>
+                    <button type="button" class="collapsible"><img src="img/106.jpg" alt=""><p>Episode 1</p></button>
                     <div class="content">
                         <p>평온한 휴식은 끝났다.<br>
                             리우가 붙잡히자, 실의에 빠진 도쿄.<br>
                             그녀는 교수에게 도움을 청하고, 팀원들이 다시 모인다.<br>
                             친구를 구하려는 그들, 한층 대범한 작전을 시작한다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 2</p></button>
+                    <button type="button" class="collapsible"><img src="img/107.jpg" alt=""><p>Episode 2</p></button>
                     <div class="content">
                         <p>형의 계획을 실행에 옮기기 위해, 교수는 마르틴을 영입한다.<br>
                             스페인 은행을 목표로 한 불가능해 보이는 작전.<br>
                             이를 어떻게 해낼 것인가.<br>
                             우선, 도시에 대혼란을 일으킨다!</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 3</p></button>
+                    <button type="button" class="collapsible"><img src="img/102.jpg" alt=""><p>Episode 3</p></button>
                     <div class="content">
                         <p>도쿄와 나이로비의 임무가 순탄하게 진행되지 않는다.<br>
                             엉망이 된 상황에서, 다음 계획을 지휘하는 나이로비.<br>
                             물로 차오르는 위험한 금고에 전문가들이 투입된다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 4</p></button>
+                    <button type="button" class="collapsible"><img src="img/2.jpg" alt=""><p>Episode 4</p></button>
                     <div class="content">
                         <p>가족 걱정에 불안해하는 덴버.<br>
                             이때, 타마요 대령이 절차를 무시한 채 밀고 들어오려 한다.<br>
                             시간이 없다! 사태가 위급해지자, 팔레르모는 돌고래 작전을 이용하기로 한다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 5</p></button>
+                    <button type="button" class="collapsible"><img src="img/31.jpg" alt=""><p>Episode 5</p></button>
                     <div class="content">
                         <p>예상치 못한 반격에 당황하는 정부.<br>
                             하지만 그들도 가만있진 않는다.<br>
                             새로운 경감이 라켈을 협박하자, 동요하는 그녀와 교수.<br>
                             팔레르모와 나이로비의 갈등도 심해진다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 6</p></button>
+                    <button type="button" class="collapsible"><img src="img/32.jpg" alt=""><p>Episode 6</p></button>
                     <div class="content">
                         <p>강력한 일격을 가하는 시에라 경감.<br>
                             경찰들이 스페인 은행으로 잠입하기 시작한다.<br>
                             교수와의 교신이 끊긴 상황.<br>
                             절박한 처지의 팔레르모는 그의 방식을 밀어붙인다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 7</p></button>
+                    <button type="button" class="collapsible"><img src="img/43.jpg" alt=""><p>Episode 7</p></button>
                     <div class="content">
                         <p>극단적인 지시에 씁쓸함을 느끼는 도쿄와 라켈.<br>
                             이 일로 다투던 라켈과 교수는 코앞에 닥친 추격에 당황한다.<br>
                             정부는 보상금을 걸고 교수 일당의 정보를 캐내려 한다.</p>
                     </div>
-                    <button type="button" class="collapsible"><img src="img/0.jpg" alt=""><p>Episode 8</p></button>
+                    <button type="button" class="collapsible"><img src="img/100.jpg" alt=""><p>Episode 8</p></button>
                     <div class="content">
                         <p>슬픔에 빠져 제정신을 차리지 못하는 도쿄.<br>
                             도주 중 궁지에 몰리는 라켈.<br>
@@ -2769,7 +2778,7 @@ if (window.matchMedia("(max-width:599px)").matches) {
 
 
 
-if (ws > 200) {
+if (ws > 150) {
 
 $('.te p').css("transform", "translateY(0px)").css("opacity", "1");
 $('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
@@ -2877,7 +2886,7 @@ $('.ibox img').css("transform", "translateY(0px)").css("opacity", "1");
 $('.debox').css("transform", "translateY(0px)").css("opacity", "1");
 }
 
-if (ws > 700) {
+if (ws > 650) {
 
 $('.te p').css("transform", "translateY(0px)").css("opacity", "1");
 $('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
@@ -2914,7 +2923,7 @@ $('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
 
 }
 
-if (ws > 5300) {
+if (ws > 5100) {
 
 $('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
 
@@ -2922,7 +2931,7 @@ $('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
 
 }
 
-if (ws > 6200) {
+if (ws > 5500) {
 
 $('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
 $('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
@@ -2930,14 +2939,14 @@ $('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
 $('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
 }
 
-if (ws > 7200) {
+if (ws > 6700) {
 
 $('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
 
 
 
 }
-if (ws > 7900) {
+if (ws > 7500) {
        
        $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
        $('.container').css("transform", "translateY(0px)").css("opacity", "1");
