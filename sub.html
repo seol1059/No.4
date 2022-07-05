@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        ul, ol, li {list-style: none; margin: 0; padding: 0;}
+        html,body {width: 100%; height: 100%;}
+        button {border: none; background:none;}
+        a {color:#fff; text-decoration: none;}
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ헤더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+        header {width: 100%; height: 70px; background-color: #000; }
+    
+        header .small{width: 100%; height: 70px; display: flex; align-items: center; justify-content:space-around;}
+  
+        header a{padding: 15px; text-decoration: none;}
+              
+        header a:hover { color:red;}
+
+      .logo {width: 160px; line-height: 50px; background-color: #000; color:#fff; text-align: center;
+      font-size: 18px;}
+      .logo b {color: red; font-size: 14px;}
+              
+    
+        #b {display: none;}
+              
+       #a {display:block;}
+      
+        header #a a:nth-of-type(4) {width: 100%; height: 70%; border: 1px solid red;
+       color: #f1f1f1; margin: 0 auto; border-radius: 4px; }
+      
+       header #a a:nth-of-type(4):hover {background-color: red ; color: #f1f1f1;}
+             
+     
+       #myNav {display: none;}
+
+   /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ슬라이더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+#slider {width: 100%; height: calc(100% - 70px); margin: 0 auto; background-color: darkgray; display: flex;
+    flex-direction: column; justify-content: center; align-items: center;}
+
+.sl1 {width: 13%; height: 25%; margin: 0 auto; display: flex;
+     flex-direction: column; justify-content: flex-end; align-items: center; font-size: 24px;}
+
+.sl2 {width: 13%; height: 25%; margin: 0 auto; display: flex; flex-direction: column; 
+    justify-content: center; align-items: center; border: 5px solid saddlebrown; font-size: 50px;}
+
+.sl3 {width: 13%; height: 25%; margin: 0 auto; display: flex; 
+    flex-direction: column; justify-content: flex-start; align-items: center; font-size: 24px;}
+
+.er {width: 13%; height: 25%; margin: 0 auto; display: flex; flex-direction: column; 
+    justify-content: flex-end; align-items: center; padding-bottom: 50px; font-size: 24px;}
+
+
+
+
+#abo {width: 100%; height: 500px; margin: 0 auto; background-color: aquamarine;}
+.bo {width: 1200px; height: 100%; margin: 0 auto; background-color: bisque; display: flex;
+    flex-direction: column; justify-content: space-evenly; align-items: center;}
+
+.bo hr {width: 90%; height: 2px;  }
+
+
+#const {width: 1200px; height: 700px; margin: 0 auto; background-color: blueviolet; display: flex; 
+    flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-around; }
+
+.con1 {width: 100%; height: 100px; display: flex; align-items: flex-end;}
+.con1 p {font-size: 30px; padding-left: 60px; }
+
+.st1 {width: 40%; height: 35%; display: flex; align-items: flex-end;
+    background-image: url("img/0.jpg"); background-position: center; background-size: cover;}
+    .st1 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
+
+.st2 {width: 40%; height: 35%; display: flex; align-items: flex-end;
+    background-image: url("img/0.jpg"); background-position: center; background-size: cover;}
+    .st2 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
+
+.st3 {width: 40%; height: 35%; display: flex; align-items: flex-end;
+    background-image: url("img/0.jpg"); background-position: center; background-size: cover;}
+    .st3 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
+
+.st4 {width: 40%; height: 35%; display: flex; align-items: flex-end;
+    background-image: url("img/0.jpg"); background-position: center; background-size: cover;}
+    .st4 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ푸터ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+
+       footer {width: 100%; height: 10%; margin: 0 auto; background-color: #000; color: #f1f1f1;}
+#footerbg {width: 80%; height: 100%; margin: 0 auto; }
+.foot {width: 50%; height: 100%; float: left; display: flex; justify-content: space-evenly;
+    align-items: center;}
+.ter {width: 50%; height: 100%; float: right; display: flex; justify-content: space-evenly;
+    align-items: center;}
+
+       
+    </style>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+    <script>
+        function openNav() {
+
+        
+// document.getElementById("myNav").style.width = "100%";
+document.getElementById("myNav").style.height = "50%";
+
+
+
+}
+
+
+
+function closeNav() {
+
+    
+// document.getElementById("myNav").style.width = "0%";
+document.getElementById("myNav").style.height = "0%";
+
+}
+    </script>
+
+    
+
+
+</head>
+
+<body>
+    <header>
+        
+        <div class="small">
+            <div class="logo">LA CASA <b>DE</b> PAPEL</div>
+
+            <div id="a">
+                <a href="#">Team</a>
+                <a href="#">Work</a>
+                <a href="#">Price</a>
+
+                <a href="#"><button class="abt" style="color: #f1f1f1;">Contact</button></a>
+
+            </div>
+
+
+
+            <img src="img/i.png" id="b" onclick="openNav()">
+
+        </div>
+
+
+
+        <div id="myNav" class="overlay">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+            <div class="overlay-content">
+
+                <a href="#">HOME</a>
+
+                <a href="#">PAGES</a>
+
+                <a href="#">SERVICES</a>
+
+                <a href="#">EVENT</a>
+
+                <a href="#"><button class="lo">GALLERY</button></a>
+
+            </div>
+
+        </div>
+
+    </header>
+    
+
+<div id="slider">
+
+    <div class="sl1">
+        <p>NETFLIX ORIGINAL</p>
+    </div>
+
+    <div class="sl2">
+        <p>test</p>
+        <p>test</p>
+        <p>test</p>
+    </div>
+
+    <div class="sl3">
+        <p>NETFLIX ORIGINAL</p>
+    </div>
+
+    <div class="er">
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>test</p>
+    </div>
+
+
+</div>
+
+<div id="abo">
+
+    <div class="bo">
+
+        <p>test</p>
+
+        <p><b>test</b><br>
+           test</p>
+        
+        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest<br>
+            testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest<br>
+            testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest<br>
+            testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+        </p>
+
+        <button>test</button>
+
+        <hr>
+
+
+    </div>
+
+</div>
+
+
+<div id="const">
+
+    <div class="con1">
+        <p><b>test</b> test</p>
+    </div>
+
+    <div class="st1">
+        
+        <p>test</p>
+    </div>
+
+    <div class="st2">
+        
+        <p>test</p>
+    </div>
+
+    <div class="st3">
+       
+        <p>test</p>
+    </div>
+
+    <div class="st4">
+        
+        <p>test</p>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <div id="footerbg">
+        <div class="foot">
+            <p>mluemoonstudio@</p>
+            <p>+</p>
+            <p>Powered by Webflow</p>
+        </div>
+        <div class="ter">
+            <p>Password</p>
+            <p>+</p>
+            <p>404</p>
+            <p>+</p>
+            <p>Style</p>
+            <p>+</p>
+            <p>License</p>
+            <p>+</p>
+            <p>Changelog</p>
+            <p>+</p>
+            <p>Terms</p>
+            <p>+</p>
+            <p>Privacy</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
