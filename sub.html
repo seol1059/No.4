@@ -15,14 +15,15 @@
 
         header {width: 100%; height: 70px; background-color: #000; }
     
-        header .small{width: 100%; height: 70px; display: flex; align-items: center; justify-content:space-around;}
+        header .small{width: 100%; height: 70px; display: flex; align-items: center; 
+            justify-content:space-around;}
   
         header a{padding: 15px; text-decoration: none;}
               
         header a:hover { color:red;}
 
-      .logo {width: 160px; line-height: 50px; background-color: #000; color:#fff; text-align: center;
-      font-size: 18px;}
+      .logo {width: 160px; line-height: 50px; background-color: #000; color:#fff; 
+        text-align: center; font-size: 18px;}
       .logo b {color: red; font-size: 14px;}
               
     
@@ -40,20 +41,33 @@
 
    /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ슬라이더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 
-#slider {width: 100%; height: calc(100% - 70px); margin: 0 auto; background-color: darkgray; display: flex;
-    flex-direction: column; justify-content: center; align-items: center;}
+#slider {width: 100%; height: calc(100% - 70px); margin: 0 auto; background-image: url(img/1.jpg);
+    background-position: center; background-size: cover;  color: #f1f1f1;
+     display: flex; flex-direction: column; justify-content: center; align-items: center;}
 
-.sl1 {width: 13%; height: 25%; margin: 0 auto; display: flex;
-     flex-direction: column; justify-content: flex-end; align-items: center; font-size: 24px;}
+.sl1 {width: 13%; height: 25%; margin: 0 auto; display: flex; flex-direction: column;
+     justify-content: flex-end; align-items: center;  }
+     .sl1 p {font-size: 20px; padding-bottom: 20px;}
+     
 
-.sl2 {width: 13%; height: 25%; margin: 0 auto; display: flex; flex-direction: column; 
-    justify-content: center; align-items: center; border: 5px solid saddlebrown; font-size: 50px;}
+.sl2 {width: 15%; height: 30%; margin: 0 auto; display: flex; flex-direction: column; 
+    justify-content: center; align-items: center; border: 5px solid red; }
+    .sl2 p:nth-of-type(1) {font-size: 60px;}
+     .sl2 p:nth-of-type(2) {font-size: 40px; color: red;}
+     .sl2 p:nth-of-type(3) {font-size: 60px;}
 
 .sl3 {width: 13%; height: 25%; margin: 0 auto; display: flex; 
-    flex-direction: column; justify-content: flex-start; align-items: center; font-size: 24px;}
+    flex-direction: column; justify-content: flex-start; align-items: center; }
+    .sl3 p {font-size: 20px; padding-top: 20px;}
 
 .er {width: 13%; height: 25%; margin: 0 auto; display: flex; flex-direction: column; 
-    justify-content: flex-end; align-items: center; padding-bottom: 50px; font-size: 24px;}
+    justify-content: flex-end; align-items: center; padding-bottom: 50px; }
+    .er p:nth-of-type(1) {font-size: 20px; font-weight: bold; color: rgb(37, 0, 0); }
+    .er p:nth-of-type(2) {font-size: 20px; font-weight: bold; color: rgb(71, 0, 0);}
+    .er p:nth-of-type(3) {font-size: 20px; font-weight: bold;  color: rgb(90, 0, 0);}
+    .er p:nth-of-type(4) {font-size: 20px; font-weight: bold; color: rgb(124, 0, 0);}
+    .er p:nth-of-type(5) {font-size: 20px; font-weight: bold; color: rgb(233, 0, 0);}
+    .er p:nth-of-type(6) {font-size:24px;  color: red;}
 
 
 
@@ -62,7 +76,11 @@
 .bo {width: 1200px; height: 100%; margin: 0 auto; background-color: bisque; display: flex;
     flex-direction: column; justify-content: space-evenly; align-items: center;}
 
+.bobtn {width: 100px; height: 50px; margin: 0 auto; border: 1px solid red; border-radius: 10px;}
+
 .bo hr {width: 90%; height: 2px;  }
+
+
 
 
 #const {width: 1200px; height: 700px; margin: 0 auto; background-color: blueviolet; display: flex; 
@@ -87,13 +105,189 @@
     background-image: url("img/0.jpg"); background-position: center; background-size: cover;}
     .st4 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
 
+/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 굿즈 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
+
+    #wrap {
+            width: 100%;
+            height: 1800px;
+            border: 1px solid #999;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+        }
+
+        .div1 {
+            width: 1200px;
+            height: 94%;
+            background-color: gold;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+        }
+
+        .div2 {
+            width: 1200px;
+            height: 94%;
+            background-color: pink;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+        }
+
+        .div3 {
+            width: 1200px;
+            height: 94%;
+            background-color: tomato;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+        }
+
+        .div4 {
+            width: 1200px;
+            height: 94%;
+            background-color: green;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+        }
+
+        .textbox {
+            width: 30%;
+    height: 30%;
+            margin: 30px auto;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+           
+         
+        }
+
+        .textbox a { margin: 0 auto; width: 95%; height: 70%;
+            text-decoration: none; text-align: center;
+        }
+
+        .textbox img { 
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        .b1, .b2, .b3, .b4 {
+            width: 100px;
+            height: 50px;
+            cursor: pointer;
+            border-bottom: 2px solid white;
+        }
+
+        #t1, #t2, #t3, #t4 {
+            font-size: 16px;
+          padding: 10px 0px;
+            cursor: pointer;
+            border-bottom: 2px solid white;
+        }
+
+      
+
+        .box {
+            width: 240px;
+            height: 395px;
+            border: 1px solid #eee;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .box img {
+            width: 100%;
+            height: 225px;
+        }
+
+        .box p {
+            border-bottom: 1px solid #eee;
+            font-size: 12px;
+            font-weight: bold;
+            height: 25px;
+        }
+
+        .box p a {
+            color: #000;
+        }
+
+        .c1 {
+            font-size: 12px;
+            color: #999;
+            display: block;
+        }
+
+        .c2 {
+            font-size: 14px;
+            color: #000;
+            display: block;
+            font-weight: bold;
+        }
+
+        .icon {
+            background-color: tomato;
+            font-size: 10px;
+            color: #fff;
+            padding: 2px;
+            border-radius: 2px;
+        }
+
+        .c3 {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .btn1 {
+            border: 1px solid #ddd;
+            color: tomato;
+            padding: 1px 5px 2px;
+            font-size: 10px;
+            display: block;
+            width: 30px;
+            margin: 10px 0 0 0;
+        }
+
+        .bu {width: 1200px; height: 100px; margin: 0 auto; display: flex; 
+            flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 
 
+#ne {width: 1200px; height: 350px; margin: 0 auto;}
+.we {width: 100%; height: 50px; margin: 0 auto; }
+.we p {font-size: 50px; padding-left: 20px;}
 
-
-
-
+.s1 {width: 20%; height: 300px; display: flex; flex-direction: column;
+    align-items: center;
+    justify-content: center;}
+.s1 img {width: 80%; height: 70%;}
+.s1 p:nth-of-type(1) {color: #000;}
+.s1 p:nth-of-type(2) {color: #999;}
+.s1 p:nth-of-type(3) {color: #000; font-weight: bold;} 
 
 
 
@@ -199,13 +393,13 @@ document.getElementById("myNav").style.height = "0%";
     </div>
 
     <div class="sl2">
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
+        <p>LA CASA</p>
+        <p>DE</p>
+        <p>PAPEL</p>
     </div>
 
     <div class="sl3">
-        <p>NETFLIX ORIGINAL</p>
+        <p>2022 . 06 . 24 OPEN</p>
     </div>
 
     <div class="er">
@@ -214,7 +408,7 @@ document.getElementById("myNav").style.height = "0%";
         <p>.</p>
         <p>.</p>
         <p>.</p>
-        <p>test</p>
+        <p>GOODS SHOP</p>
     </div>
 
 
@@ -224,18 +418,18 @@ document.getElementById("myNav").style.height = "0%";
 
     <div class="bo">
 
-        <p>test</p>
+        <p>ABOUT US</p>
 
-        <p><b>test</b><br>
-           test</p>
+        <p><b>NETFLIX ORIGINAL LA CASA DE PAPEL</b><br>
+           : 2022 . 06 . 24 GOODS SHOP OPEN</p>
         
-        <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest<br>
-            testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest<br>
-            testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest<br>
-            testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
+        <p>넷플릭스에서 방영된 스페인 드라마 종이의 집(La Casa de Papel)의 리메이크작이자 2022년에 공개한 넷플릭스 오리지널 한국 드라마.<br>
+            이 드라마의 시간적 배경은 2026년 9월 초,<br>
+            공간적 배경은 공동경제구역과 '한반도통일조폐국',<br>
+            한정판 굿즈 판매
         </p>
 
-        <button>test</button>
+        <button class="bobtn">test</button>
 
         <hr>
 
@@ -274,13 +468,490 @@ document.getElementById("myNav").style.height = "0%";
 </div>
 
 
+<div id="wrap">
+
+
+    <div class="bu">
+    <button class="b1"><p id="t1">test</p></button>
+    <button class="b2"><p id="t2">test</p></button>
+    <button class="b3"><p id="t3">test</p></button>
+    <button class="b4"><p id="t4">test</p></button>
+   </div>
+
+
+   <script>
+    $(function () {
+
+
+        $(window).ready(function () {
+
+            t1.style.borderColor="red";
+
+
+        });
+
+    });
+</script>
+
+
+
+<script>
+
+    this.onclick=function (e){
+    
+    if(e.target.id=="t1"){t1.style.borderColor="red";
+    
+    t2.style.borderColor="white";
+    t3.style.borderColor="white";
+    t4.style.borderColor="white";}
+    
+    if(e.target.id=="t2"){t2.style.borderColor="red";
+    
+    t1.style.borderColor="white";
+    t3.style.borderColor="white";
+    t4.style.borderColor="white";}
+    
+    if(e.target.id=="t3"){t3.style.borderColor="red";
+    
+    t1.style.borderColor="white";
+    t2.style.borderColor="white";
+    t4.style.borderColor="white";}
+
+    if(e.target.id=="t4"){t4.style.borderColor="red";
+    
+    t1.style.borderColor="white";
+    t2.style.borderColor="white";
+    t3.style.borderColor="white";}
+    
+    }
+    
+    </script>
 
 
 
 
+    <div class="div1">
+
+        <div class="textbox">
+            <a href="#"><img src="img/300.jpg" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+            
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/301.jpg" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/302.png" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/303.jpg" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/318.jpg" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/395.jpg" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/396.jpg" alt=""></a>
+            <p><a href="#">골드라인머그컵2P 스푼세트</a></p>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/383.jpg" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/305.jpg" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+    </div>
 
 
 
+    <div class="div2">
+
+        <div class="textbox">
+            <a href="#"><img src="img/307.PNG" alt=""></a>
+
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/313.PNG" alt=""></a>>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/316.webp" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/310.webp" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/311.jpg" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/314.jpg" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/315.jpg" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/328.jpg" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/330.jpg" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="div3">
+
+        <div class="textbox">
+            <a href="#"><img src="img/341.PNG" alt=""></a>
+
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/342.PNG" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/343.PNG" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/345.PNG" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/353.jpg" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/350.jpg" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/351.PNG" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/360.PNG" alt=""></a>
+          <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/361.PNG" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+    </div>
+
+    <div class="div4">
+
+        <div class="textbox">
+            <a href="#"><img src="img/369.webp" alt=""></a>
+
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/370.webp" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/371.jpg" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/372.webp" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/373.webp" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/374.webp" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/377.jpg" alt=""></a>
+           <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/378.jpg" alt=""></a>
+          <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+        <div class="textbox">
+            <a href="#"><img src="img/379.jpg" alt=""></a>
+            <p><a href="#"></a></p>
+            
+            <span class="c2">17,800원</span>
+            
+            <span class="c3">17,800원</span>
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
+
+<script>
+    $(function () {
+
+$(window).ready(function(){
+    $('.div1').show();
+            $('.div2').hide();
+            $('.div3').hide();
+            $('.div4').hide();
+});
+});     
+       
+</script>
+
+<script>
+    $(function () {
+
+       
+       
+        $('button:nth-of-type(1)').click(function () {
+            $('.div1').show();
+            $('.div2').hide();
+            $('.div3').hide();
+            $('.div4').hide();
+        });
+
+        $('button:nth-of-type(2)').click(function () {
+            $('.div2').show();
+            $('.div1').hide();
+            $('.div3').hide();
+            $('.div4').hide();
+        });
+
+        $('button:nth-of-type(3)').click(function () {
+            $('.div3').show();
+            $('.div1').hide();
+            $('.div2').hide();
+            $('.div4').hide();
+        });
+
+        $('button:nth-of-type(4)').click(function () {
+            $('.div4').show();
+            $('.div1').hide();
+            $('.div2').hide();
+            $('.div3').hide();
+        });
+    });
+</script>
+
+
+<div id="ne">
+
+
+    <div class="we">
+        <p>test</p>
+    </div>
+
+    <div class="s1">
+        <img src="img/0.jpg" alt="">
+        <p>test</p>
+        <p>test</p><br>
+        <p>test</p>
+    </div>
+
+</div>
 
 
 
