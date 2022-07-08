@@ -3,9 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
+   @font-face {
+    font-family: 'LeferiPoint-SpecialItalicA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+font-family: 'MyLotteLight';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/MyLotteLight.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+
+
+
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'MyLotteLight';  font-style: italic;}
         ul, ol, li {list-style: none; margin: 0; padding: 0;}
         html,body {width: 100%; height: 100%;}
         button {border: none; background:none;}
@@ -13,7 +53,7 @@
 
 
 
-        @media (max-width:599px) {
+        @media  (max-width:599px) {
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ헤더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 
@@ -70,7 +110,7 @@ background-position: center; background-size: cover;  color: #f1f1f1;
     transform: translateY(100px); transition: all 0.5s; opacity: 0;}
  
 
-.sl2 {width: 64%; height: 40%; margin: 0 auto; display: flex; flex-direction: column; 
+.sl2 {width: 80%; height: 40%; margin: 0 auto; display: flex; flex-direction: column; 
 justify-content: center; align-items: center; border: 5px solid red; margin-top: 35px; }
 .sl2 p:nth-of-type(1) {font-size: 60px; transform: translateY(100px); transition: all 1.0s; opacity: 0; display: none;}
  .sl2 p:nth-of-type(2) {font-size: 40px; color: red; transform: translateY(100px); transition: all 1.2s; opacity: 0; display: none;}
@@ -122,31 +162,31 @@ transform: translateY(100px); transition: all 0.5s; opacity: 0;}
 background-image: url("img/0.jpg"); background-position: center; background-size: cover;
 transform: translateY(0px); transition: all 0.7s; opacity: 0;
 -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st1 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
+.st1 p {font-size: 16px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
 
 .st2 {width: 40%; height: 35%; display: flex; align-items: flex-end;
 background-image: url("img/0.jpg"); background-position: center; background-size: cover;
 transform: translateY(0px); transition: all 1s; opacity: 0;
 -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st2 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
+.st2 p {font-size: 16px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
 
 .st3 {width: 40%; height: 35%; display: flex; align-items: flex-end;
 background-image: url("img/0.jpg"); background-position: center; background-size: cover;
 transform: translateY(0px); transition: all 1.3s; opacity: 0;
 -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st3 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
+.st3 p {font-size: 16px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
 
 .st4 {width: 40%; height: 35%; display: flex; align-items: flex-end;
 background-image: url("img/0.jpg"); background-position: center; background-size: cover;
 transform: translateY(0px); transition: all 1.5s; opacity: 0;
 -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st4 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
+.st4 p {font-size: 16px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 굿즈 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 
 #wrap {
         width: 100%;
-        height: 1000px;
+        height: 1700px;
         border-bottom:  1px solid #999;
         border-top:  1px solid #999;
         margin: 0 auto;
@@ -157,7 +197,7 @@ transform: translateY(0px); transition: all 1.5s; opacity: 0;
 
     .div1 {
         width: 100%;
-        height: 85%;
+        height: 45%;
  
         text-align: center;
         display: flex;
@@ -169,7 +209,7 @@ align-content: space-around;
 
     .div2 {
         width: 100%;
-        height: 85%;
+        height: 45%;
 
         text-align: center;
         display: flex;
@@ -181,7 +221,7 @@ align-content: space-around;
 
     .div3 {
         width: 100%;
-        height: 85%;
+        height: 45%;
   
         text-align: center;
         display: flex;
@@ -193,7 +233,7 @@ align-content: space-around;
 
     .div4 {
         width: 100%;
-        height: 85%;
+        height: 45%;
 
         text-align: center;
         display: flex;
@@ -204,8 +244,8 @@ align-content: space-around;
     }
 
     .textbox {
-        width: 30%;
-height: 30%;
+        width: 45%;
+height: 35%;
         margin: 30px auto;
  
         display: flex;
@@ -223,11 +263,11 @@ align-items: center;
     }
 
     .textbox img { 
-        width: 100%;
-        height: 100%;
+        width: 11rem;
+        height: 11rem;
         margin: 0 auto;
     }
-
+    .textbox img:hover {opacity: 0.7;}
     p {
         font-size: 12px;
     }
@@ -312,7 +352,7 @@ align-items: center;
 
     .btn1:hover {background-color: red; color: #f1f1f1;}
 
-    .bu {width: 100%; height: 10%; margin: 0 auto; display: flex; 
+    .bu {width: 100%; height: 100px; margin: 0 auto; display: flex; 
         flex-direction: row; justify-content: space-evenly;     align-items: center;}
 
 
@@ -437,35 +477,36 @@ header {width: 100%; height: 70px; background-color: #000; }
 
 /* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ슬라이더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
 
-#slider {width: 100%; height: calc(100% - 70px); margin: 0 auto; 
+#slider {width: 100%; height: 50%; margin: 0 auto; 
 background-image: url(img/s.jpg);
 background-position: center; background-size: cover;  color: #f1f1f1;
- display: flex; flex-direction: column; justify-content: center; align-items: center;}
+ display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;}
 
-.sl1 {width: 100%; height: 25%; margin: 0 auto; display: flex; flex-direction: column;
+.sl1 {width: 100%; height: 22%; margin: 0 auto; display: flex; flex-direction: column;
  justify-content: flex-end; align-items: center;  }
  .sl1 p {font-size: 20px; padding-bottom: 20px; 
     transform: translateY(100px); transition: all 0.5s; opacity: 0;}
  
 
-.sl2 {width: 80%; height: 35%; margin: 0 auto; display: flex; flex-direction: column; 
-justify-content: center; align-items: center; border: 5px solid red; margin-top: 83px; }
+.sl2 {width: 80%; height: 55%; margin: 0 auto; display: flex; flex-direction: column; 
+justify-content: center; align-items: center; border: 5px solid red; margin-top: 53px; }
 .sl2 p:nth-of-type(1) {font-size: 60px; transform: translateY(100px); transition: all 1.0s; opacity: 0; display: none;}
  .sl2 p:nth-of-type(2) {font-size: 40px; color: red; transform: translateY(100px); transition: all 1.2s; opacity: 0; display: none;}
  .sl2 p:nth-of-type(3) {font-size: 60px; transform: translateY(100px); transition: all 1.5s; opacity: 0; display: none;}
 
-.sl3 {width: 100%; height: 25%; margin: 0 auto; display: flex; 
+.sl3 {width: 100%; height: 23%; margin: 0 auto; display: flex; 
 flex-direction: column; 
 justify-content: flex-end; align-items: center; }
 .sl3 p {font-size: 20px; padding-top: 20px; transform: translateY(100px); transition: all 2s; opacity: 0;}
 
-.er {width: 100%; height: 25%; margin: 0 auto; display: flex; flex-direction: column; 
-justify-content: flex-end; align-items: center; padding-bottom: 50px; transform: translateY(100px); transition: all 2.3s; opacity: 0;}
-.er p:nth-of-type(1) {font-size: 20px; font-weight: bold; color: rgb(37, 0, 0); }
-.er p:nth-of-type(2) {font-size: 20px; font-weight: bold; color: rgb(71, 0, 0);}
-.er p:nth-of-type(3) {font-size: 20px; font-weight: bold;  color: rgb(90, 0, 0);}
-.er p:nth-of-type(4) {font-size: 20px; font-weight: bold; color: rgb(124, 0, 0);}
-.er p:nth-of-type(5) {font-size: 20px; font-weight: bold; color: rgb(233, 0, 0);}
+.er {width: 100%; height: 28%; margin: 0 auto; display: flex; flex-direction: column; 
+justify-content: flex-end; align-items: center; padding-bottom: 50px; padding-top: 30px;
+transform: translateY(100px); transition: all 2.3s; opacity: 0;}
+.er p:nth-of-type(1) {font-size: 10px; font-weight: bold; color: rgb(37, 0, 0); }
+.er p:nth-of-type(2) {font-size: 10px; font-weight: bold; color: rgb(71, 0, 0);}
+.er p:nth-of-type(3) {font-size: 10px; font-weight: bold;  color: rgb(90, 0, 0);}
+.er p:nth-of-type(4) {font-size: 10px; font-weight: bold; color: rgb(124, 0, 0);}
+.er p:nth-of-type(5) {font-size: 10px; font-weight: bold; color: rgb(233, 0, 0);}
 .er p:nth-of-type(6) {font-size:24px;  color: red;}
 
 
@@ -605,7 +646,7 @@ align-items: center;
         height: 100%;
         margin: 0 auto;
     }
-
+    .textbox img:hover {opacity: 0.7;}
     p {
         font-size: 12px;
     }
@@ -977,7 +1018,7 @@ align-items: center;
         height: 100%;
         margin: 0 auto;
     }
-
+    .textbox img:hover {opacity: 0.7;}
     p {
         font-size: 12px;
     }
@@ -1142,6 +1183,7 @@ align-items: center;}
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 
     <script>
+
         function openNav() {
 
         
@@ -1161,6 +1203,7 @@ function closeNav() {
 document.getElementById("myNav").style.height = "0%";
 
 }
+
     </script>
 
     
@@ -2035,14 +2078,14 @@ if (window.matchMedia("(min-width:600px) and (max-width:1199px) ").matches) {
 
 
 
-if (ws > 900) {
+if (ws > 700) {
 
 $('.con1').css("transform", "translateY(0px)").css("opacity", "1");
 
 
 }
 
-if (ws > 1000) {
+if (ws > 700) {
 
 $('.st1').css("transform", "translateY(0px)").css("opacity", "1");
 $('.st2').css("transform", "translateY(0px)").css("opacity", "1");
@@ -2051,7 +2094,7 @@ $('.st4').css("transform", "translateY(0px)").css("opacity", "1");
 
 }
 
-if (ws > 1600) {
+if (ws > 1200) {
 
 $('.div1 > .textbox:nth-of-type(1)').css("transform", "translateY(0px)").css("opacity", "1");
 $('.div1 > .textbox:nth-of-type(2)').css("transform", "translateY(0px)").css("opacity", "1");
