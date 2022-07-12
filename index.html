@@ -1,3125 +1,843 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LA CASA DE PAPEL</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        @font-face {
-    font-family: 'LeferiPoint-SpecialItalicA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+ <link rel="stylesheet" href="css/index.css">
 
-@font-face {
-    font-family: 'ChosunGu';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-@font-face {
-    font-family: 'LeferiPoint-WhiteObliqueA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+    <script>
 
-@font-face {
-     font-family: 'S-CoreDream-3Light';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
-}
 
-@font-face {
-font-family: 'MyLotteLight';
-src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/MyLotteLight.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-}
 
-        * {margin: 0; font-size: 16px; font-family: 'MyLotteLight';  font-style: italic;}
-        html, body {width: 100%; height: 100%; }
-        
-        button {border: none; background:none;}
-        a {color:#fff; text-decoration: none;}
-        
-         @media (max-width:599px) {
-        
-        
-        
-        header .small {width: 100%; display: flex; align-items: center; background-color: #000; 
-             justify-content: space-between;}
-        
-        .logo {width: 150px; line-height: 50px; background-color: #000; color:#fff;
-             text-align: center;}
-
-             .logo b {color: red;}
-        
-
-        #a {display:none;}
-        #a img {cursor: pointer;}
-
-        
-        
-
-        .overlay {height: 0%; width: 100%; position: fixed; z-index:103; top: 0; left: 0;
-             background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9);
-              overflow-y: hidden; transition: 0.5s;}
-        
-        .overlay-content {position: relative; top: 20%; width: 100%; text-align: center; 
-            display:block; }
-        
-        .overlay a { padding:15px; line-height:160%;  text-decoration: none; font-size: 20px; 
-            color: #818181; transition: 0.3s; font-weight: bold; display: block; height: 12%;}
-        
-        .overlay a:hover, .overlay a:focus {color: #f1f1f1;}
-        
-        .overlay .closebtn {position: absolute; top: -15px; right: 45px; font-size: 60px;}
-        
-        
-
-           .lo { color: #818181; font-size: 20px; font-weight: bold; }
-
-            .overlay a:nth-of-type(5) {width: 40%; height: 20%; border: 1px solid red; 
-                margin: 0 auto; border-radius: 4px;}
-
-                .overlay a:nth-of-type(5):hover {background-color: red; color: #f1f1f1;}
-
-
-
-      /*   슬라이드       */
-
-      #slide {width: 100%; height: 50vh; margin: 0 auto;
-   background-image: url("img/slide1.png"); background-size: auto; 
- background-position: center; }
-        
- .slbox {width: 100%; height: 60%; margin: 0 auto; display: flex; flex-direction: column;
-align-items: center;justify-content: center; }
-.slbox p:nth-of-type(1) {font-size: 20px; color: #f1f1f1; 
- transform: translateY(100px); transition: all 2.5s; opacity: 0;}
- .slbox b {font-size: 16px; color: red;}
- .slbox p:nth-of-type(2) {font-size: 16px; color: #f1f1f1; text-align: center;
- transform: translateY(100px); transition: all 2.5s; opacity: 0;}
- .slbox p:nth-of-type(3) {font-size: 16px; color: #f1f1f1; 
- transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-
-
- .ibox {width: 100%; height: 10%; margin: 0 auto;}
-.ibox img {width: 100%; height: 100%; margin: 0 auto; transform: translateY(100px);
-transition: all 2s; opacity: 0;}
-
-
-
- .debox {width: 100%; height: 30%; margin: 0 auto; display: flex; flex-direction: row;
- align-items: center; justify-content: center; transform: translateY(100px);
-  transition: all 1s; opacity: 0;}
-
- .de1 {width: 25%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de1 p:nth-of-type(1) {font-size: 20px; color: #f1f1f1; }
- .de1 p:nth-of-type(2) {font-size: 14px; color: #f1f1f1; }
-
- .de2 {width: 25%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de2 p:nth-of-type(1) {font-size: 20px; color: #f1f1f1; }
- .de2 p:nth-of-type(2) {font-size: 14px; color: #f1f1f1; }
-
- .de3 {width: 25%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de3 p:nth-of-type(1) {font-size: 20px; color: #f1f1f1; }
- .de3 p:nth-of-type(2) {font-size: 14px; color: #f1f1f1; }
-
- .de4 {width: 25%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de4 p:nth-of-type(1) {font-size: 20px; color: #f1f1f1; }
- .de4 p:nth-of-type(2) {font-size: 14px; color: #f1f1f1; }
-
-    
-.evebg {width: 100%; height:1000px; margin: 0 auto; background-color: #000; display: flex;
-   flex-direction: column; justify-content: center; align-items: center;}
- #eve {width: 100%; height: 100%; margin: 0 auto; background-color: #000; display: flex; 
-  align-items: center; flex-direction: column; justify-content: space-evenly;}
-
- .te {width: 90%; height: 55%; margin: 0 auto; display: flex;
-  flex-direction: column; justify-content: space-evenly; align-items: center;}
- .te p:nth-of-type(1) {font-size: 16px; color: red; transform: translateY(100px); transition: all 1s; opacity: 0;}
- .te p:nth-of-type(2) {font-size: 18px; font-weight: bold; color: #f1f1f1; transform: translateY(100px); transition: all 1s; opacity: 0;}
- .te p:nth-of-type(3) {font-size: 12px; color: #f1f1f1; transform: translateY(100px); transition: all 1s; opacity: 0;}
-
- .evmu {width: 80%; height: 35%; margin: 0 auto;  
- position: relative; transform: translateY(0px); transition: all 1s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.bor {width: 70%; height: 90%; margin: auto auto; border: 1px solid red; position: absolute;
-     z-index: 1; top: -5%; left: 15%;}
-.mu {width: 70%; height: 90%; margin: auto auto; position: absolute; z-index: 2; top: 0%; left: 10%; }
- .mu video {width: 100%; height: 100%;}
-        
- #characters {width: 100%; height: auto; margin: 0 auto; }
- .cha {width: 100%; height: 150px; margin: 0 auto;  display: flex;
-            flex-direction: column; justify-content: center; align-items: center;}
-.cha p:nth-of-type(1) {color: red; font-size: 16px; transform: translateY(100px); 
-    transition: all 2s; opacity: 0;}
-
-    .cha p:nth-of-type(2) {color: #000; font-size: 35px; transform: translateY(100px); 
-    transition: all 2s; opacity: 0;}
-
-
-.rac {width: 100%; height: 90%; margin: 0 auto; display: flex; flex-direction: row;
-flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
-.racbox {width:195px; height:390px; border:1px solid #eee; padding:10px; margin:10px;
- display:inline-block; transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-
-.racbox img {width:100%; height:250px;}
-
-.racbox p {border-bottom:1px solid #eee; font-size:12px;font-weight:bold; height:25px;}
-
-.racbox p a {color:#000;}
-
-.c1 {font-size:12px; color:#999; display:block; }
-
-.c2 {font-size:14px; color:#000; display:block; font-weight:bold;}
-
-.icon {background-color:tomato; font-size:10px; color:#fff; padding:2px; border-radius:2px;}
-
-.c3 {font-size:12px; color:#666; }
-
-.btn1 {border:1px solid #ddd; color:tomato; padding:1px 5px 2px; font-size:10px; display:block; 
-    width:30px; margin:10px 0 0 0;}
-
-
-#directorbg {width: 100%; height: 90vh; margin: 0 auto; background-color: #000; display: flex;}
-
-.director {width: 100%; height: 100%; margin: 0 auto; background-color: #000; display: flex; flex-direction: column;}
-
-.ditext {width: 90%; height: 35%; margin: 0 auto; float: left; display: flex; flex-direction: column;
-    justify-content: center; align-items: flex-start;}
-.ditext p:nth-of-type(1) {color: red; font-size: 16px; transform: translateY(100px); transition: all 2.5s; 
-    opacity: 0;}
-    .ditext p:nth-of-type(2) {color: #f1f1f1; font-size: 20px; transform: translateY(100px); transition: all 2.5s; 
-    opacity: 0;}
-    .ditext p:nth-of-type(3) {color: #f1f1f1; font-size: 14px; transform: translateY(100px); transition: all 2.5s; 
-    opacity: 0;}
-
-.diimg {width: 90%; height: 60%; margin: 0 auto; float: right; display: flex; 
-    transform: translateY(0px); transition: all 2s; opacity: 0;
-        -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.dile {width: 50%; height: 100%; margin: 0 auto; float: left; display: flex; position: relative;
-    flex-direction: column; justify-content: flex-end; align-items: center;}
-.dile p {color: #f1f1f1; font-size: 16px; margin-top: 20px;}
-
-
-
-
-.le1 {width: 90%; height: 60%; margin: 0 auto; border: 1px solid red; position: absolute;
-         z-index: 1; top: 10%; left: 0%;}
-.le2 {width: 90%; height: 60%; margin: 0 auto; position: absolute;
-         z-index: 2; top: 15%; left: 5%;}
-         .le2 img {width: 100%; height: 100%;}
-
-
- .diri {width: 50%; height: 100%; margin: 0 auto; float: right; display: flex; position: relative;
-    flex-direction: column; justify-content: flex-end; align-items: center;}
- .diri p {color: #f1f1f1; font-size: 24px;}
-.ri1 {width: 90%; height: 60%; margin: 0 auto; border: 1px solid red; position: absolute;
-         z-index: 1; top: 10%; left: 0%;}
-.ri2 {width: 90%; height: 60%; margin: 0 auto; position: absolute;
-         z-index: 2; top: 15%; left: 5%;}
-         .ri2 img {width: 100%; height: 100%;}
-.diri p {color: #f1f1f1; font-size: 16px; margin-top: 20px;}
-
-
-
-
-
-#contentsbg {width: 100%; height: 1200px; margin: 0 auto;  
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.contents {width: 100%; height: 75%; margin: 0 auto; }
-.ste {width: 100%; height: 170px; margin: 0 auto;}
-.sstt {width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;}
-.sstt p:nth-of-type(1) {color: red; font-size: 20px; }
-.sstt b {color: red; font-size: 16px;   }
-.sstt p:nth-of-type(2) {color: #000; font-size: 50px; }
-
-.wrap {width: 100%; height: 100%; margin: 0 auto;}
-        .po {width: 80%; height: 100px; margin: 0 auto; display: flex; flex-direction: row;
- justify-content: space-evenly; align-items: center; }
-
-        .div1 {width: 100%; height: 90%;  text-align: center; margin: 0 auto;}
-        .div2 {width: 100%; height: 90%;  text-align: center; display: none;}
-        .div3 {width: 100%; height: 90%;  text-align: center; display: none;}
-
-        .wrap img {width: 200px; height: 250px;}
-
-        .textbox {width: 90%; height: 250px; background-color: #fff; margin: 0 auto;}
-
-        .textbox > h3 {font-size: 20px;}
-        .textbox > p {font-size: 13px; text-align: left; color: #666;}
-
-        .po1, .po2, .po3 {width: 120px; height: 50px; color: #000; }
-
-        #xt {border-bottom: 2px solid white; font-size: 20px; cursor: pointer; color: #000;}
-    #xt2 {border-bottom: 2px solid white; font-size: 20px; cursor: pointer; color: #000;}
-    #xt3 {border-bottom: 2px solid white; font-size: 20px; cursor: pointer; color: #000;}
-
-
-
-        .collapsible {
-
-  color: #000;
-  cursor: pointer;
-
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  height:60px;
-  border-bottom: 1px solid #555;
-  
-}
-
-.collapsible p {margin-top: 10px; margin-left: 120px;}
-
-.collapsible img {width: 8%; height: 55%; float: left; border-radius: 50%; margin-left: 10px; margin-top: 10px;}
-
-/* .active, .collapsible:hover {
-  background-color: #555;
-} */
-
-
-
-.content {
-  padding: 0 18px;
-  background-color: white;
-  /* max-height: 0; */
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  display: none;
-}
-
-.collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-  margin-top: -20px;
-
-}
-.collapsible:before {  /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;}
-  
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-
-}
-
-
-.content:nth-of-type(1) p {font-size: 14px;}
-
-
-#movlogobg {width: 100%; height: 350px; margin: 0 auto; 
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.movlogo {width: 100%; height: 100%; margin: 0 auto;}
-
-.mltext {width: 80%; height: 45%; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;}
-.mltext p:nth-of-type(1) {font-size: 20px; color: red;}
-.mltext p:nth-of-type(2) {font-size: 30px; color: #000; font-weight: bold;}
-.mltext p:nth-of-type(3) {font-size: 16px; color: #777;}
-
-.mlimg {width: 85%; height:60%; margin: 0 auto; display: flex;  flex-direction: row;
-    flex-wrap: wrap; justify-content: space-evenly;  align-items: stretch;}
-.mlbox {width: 30%; height: 20%; margin: 0 auto;}
-
-#gallerybg {width: 100%; height: 40vh; margin: 0 auto; background-color: #000;}
-.gallery {width: 100%; height: 100%; margin: 0 auto; background-color: #000;
-    display: flex; flex-direction: column;
-     transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.ga {width: 100%; height: 200px; margin: 0 auto; background-color: #000; display: flex;
-    flex-direction: column; justify-content: center; align-items: center;}
-.ga p:nth-of-type(1) {font-size: 20px; color: red;}
-.ga p:nth-of-type(2) {font-size: 30px; color: #f1f1f1;}
-.ga p:nth-of-type(3) {font-size: 16px; color: #777;}
-
-.lery {width: 100%; height: 60%; margin: 0 auto; background-color: #000; display: flex;
- flex-direction: row; align-items: center; }
-.ry1 {width: 45%; height: 75%; margin: 0 auto; display: flex;
-background-image: url("img/35.jpg"); background-position: center; background-size: cover; }
-.ry2 {width: 50%; height: 80%; margin: 0 auto; background-color:#000; 
-    display: flex; flex-direction: row; flex-wrap: wrap;  align-items: center; }
-.ay1 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/31.jpg"); 
-background-position: center; background-size: cover;}
-.ay2 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/32.jpg"); 
-background-position: center; background-size: cover;}
-.ay3 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/33.jpg"); 
-background-position: center; background-size: cover;}
-.ay4 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/34.jpg"); 
-background-position: center; background-size: cover;}
-
-
-
-#locationbg{width: 100%; height: 100vh; margin: 0 auto; background-color: #000; 
-    display: flex; align-items: center;}
-.location {width: 100%; height: 100%; margin: 0 auto;  
-    display: flex; flex-direction: column;
-    flex-wrap: nowrap;     justify-content: space-around;
-    align-items: center;}
-
-.tion1 {width: 100%; height: 20%; margin: 0 auto;  
- display: flex; flex-direction: column; justify-content: space-evenly; 
- transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.tion1 p:nth-of-type(1) {color: red; font-size: 16px; padding-left: 20px;}
-.tion1 p:nth-of-type(2) {color: #f1f1f1; font-size: 30px; font-weight: bold; padding-left: 20px;}
-.tion1 p:nth-of-type(3) {color: #f1f1f1; font-size: 16px; padding-left: 20px;  padding-right: 20px;}
-
-.tion2 {width: 50%; height: 20%; margin: 0 auto; background-image: url("img/40.jpg"); 
-background-position: center; background-size: cover;
-    transform: translateY(0px); transition: all 1s; opacity: 0;
-        -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.tion3 {width: 50%; height: 20%; margin: 0 auto; background-image: url("img/41.jpg"); 
-background-position: center; background-size: cover;
-    transform: translateY(0px); transition: all 1s; opacity: 0;
-        -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.tion4 {width: 100%; height: 20%; margin: 0 auto; 
- display: flex; flex-direction: column; justify-content: space-evenly; 
- transform: translateY(100px); transition: all 1.5s; opacity: 0;}
- .tion4 p:nth-of-type(1) {color: red; font-size: 16px; padding-left: 20px;}
-.tion4 p:nth-of-type(2) {color: #f1f1f1; font-size: 30px; font-weight: bold; padding-left: 20px;}
-.tion4 p:nth-of-type(3) {color: #f1f1f1; font-size: 16px; padding-left: 20px; padding-right: 20px;}
-
-
-
-
-#cardbg {width: 100%; height: 1200px; margin: 0 auto; background-color: #000;}
-.rdbg {width: 100%; height: 100%; margin: 0 auto; background-color: #000; 
-    display: flex; flex-direction: column;  
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
- .cardtext {width: 100%; height:20%; margin: 0 auto; display: flex; flex-direction: column;
-    justify-content: center; align-items: center;}
-    .cardtext p:nth-of-type(1) {font-size: 16px; color: red;}
-    .cardtext p:nth-of-type(2) {font-size: 25px; color: #f1f1f1; font-weight: bold;}
-    .cardtext p:nth-of-type(3) {font-size: 20px; color: #f1f1f1;}
-
-.cards {width: 100% ; height: 75%; margin: 0 auto; display: flex ; flex-direction: column;}
-
-
-    .card { height: 30%; 
-        padding: 5px 10px 10px 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 95%;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  display: flex;
-  flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-
-.card:nth-of-type(2) { 
-    height: 35%; 
-        padding: 5px 10px 10px 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  display: flex;
-  flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #818181;
-    border-radius: 10px;
-}
-
-
-.card img {width: 20px; height: 20px; margin: 10px 11px 0px 0px;}
-.card p {color: #f1f1f1;}
-.card h3 {color: #f1f1f1;}
-.card h2 {background-color: red; color: #f1f1f1; border-radius: 5px; padding: 10px 10px 5px 10px;}
-
-.price {
-  color: grey;
-  font-size: 22px;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  border: 1px solid red;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 14px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-  background-color: red;
-  color: #f1f1f1;
-}
-
-#containerbg {width: 100%; height: 100vh; margin: 0 auto; background-image: url("img/40.jpg");
-background-position: center; background-size: cover; }
-.conbg {width: 100%; height: 100%; margin: 0 auto; margin: 0 auto; display: flex; 
-    flex-direction: column; justify-content: center; align-items: center;}
-
-.conbg p:nth-of-type(1) {font-size: 14px; color: #f1f1f1;
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-    .conbg p:nth-of-type(2) {font-size: 24px; color: #f1f1f1;
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-    
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-input[type=submit] {
-    background-color:#ccc ;
-  border: 1px solid red;
-  color: red;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: red;
-  color: #f1f1f1;
-}
-
-input:nth-of-type(1){
-    width: 40%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  float: left;
-}
-
-input:nth-of-type(2){
-    width: 40%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  float: right;
-}
-
-.container {width: 90%;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 20px;
-  transform: translateY(100px); transition: all 1.5s; opacity: 0;
-}
-
-.callbg {width: 50%; height: 20%; margin: 0 auto; }
-.call {width: 100%; height: 100%; margin: auto; display: flex; flex-direction: row;
-    justify-content: center; align-items: center;}
-
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-
-  color: white;
-}
-
-.fa-twitter {
-
-  color: white;
-}
-
-.fa-instagram {
-
-  color: white;
-}
-
-.calltext {width: 30%; height: 10%; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;}
-.calltext p:nth-of-type(1) {font-size: 12px; color: #f1f1f1;}
-.calltext p:nth-of-type(2) {font-size: 20px; color: #f1f1f1;}
-.calltext p:nth-of-type(3) {font-size: 16px; color: #f1f1f1;}
-
-
-footer {width: 100%; height: 8vh; margin: 0 auto; background-color: #000; 
-    color: #f1f1f1; }
-#footerbg {width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: column; }
-.foot {width: 100%; height: 50%; float: left; display: flex; justify-content: space-evenly;
-    align-items: center; font-size: 12px;}
-.ter {width: 100%; height: 50%; float: right; display: flex; justify-content: space-evenly;
-    align-items: center; font-size: 12px;}
-
-
-        
-        }
-
-     
-        @media (min-width:600px) and (max-width:1199px) {
- header {width: 100%; height: 70px; background-color: #000; }
-        
-
-  header .small{width: 100%; height: 70px; display: flex; align-items: center; justify-content:space-around;}
-        
-  header a{padding: 15px; text-decoration: none;}
-        
-  header a:hover { color:red;}
-        
-        
-        
-.logo {width: 160px; line-height: 50px; background-color: #000; color:#fff; text-align: center;
-font-size: 18px;}
-.logo b {color: red; font-size: 14px;}
-        
-        
-        
-  #b {display: none;}
-        
- #a {display:block;}
-
-  header #a a:nth-of-type(4) {width: 100%; height: 70%; border: 1px solid red;
- color: #f1f1f1; margin: 0 auto; border-radius: 4px; }
-
- header #a a:nth-of-type(4):hover {background-color: red ; color: #f1f1f1;}
-       
-        
-        
- #myNav {display: none;}
-
-
-
-        /*   슬라이드       */
-
- #slide {width: 100%; height: calc(100% - 70px); margin: 0 auto;
-   background-image: url("img/slide1.png"); background-size: auto; 
- background-position: center; }
-        
- .slbox {width: 100%; height: 50%; margin: 0 auto; display: flex; flex-direction: column;
-align-items: center;justify-content: center; }
-.slbox p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; 
- transform: translateY(100px); transition: all 2.5s; opacity: 0;}
- .slbox b {font-size: 40px; color: red;}
- .slbox p:nth-of-type(2) {font-size: 16px; color: #f1f1f1; text-align: center;
- transform: translateY(100px); transition: all 2.5s; opacity: 0;}
- .slbox p:nth-of-type(3) {font-size: 25px; color: #f1f1f1; 
- transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-
- .ibox {width: 100%; height: 10%; margin: 0 auto;}
-.ibox img {width: 100%; height: 100%; margin: 0 auto; transform: translateY(100px);
-transition: all 2s; opacity: 0;}
-
-
-
- .debox {width: 70%; height: 40%; margin: 0 auto; display: flex; flex-direction: row;
- align-items: center; justify-content: center; transform: translateY(100px);
-  transition: all 1s; opacity: 0;}
-
- .de1 {width: 20%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de1 p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; }
- .de1 p:nth-of-type(2) {font-size: 20px; color: #f1f1f1; }
-
- .de2 {width: 20%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de2 p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; }
- .de2 p:nth-of-type(2) {font-size: 20px; color: #f1f1f1; }
-
- .de3 {width: 20%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de3 p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; }
- .de3 p:nth-of-type(2) {font-size: 20px; color: #f1f1f1; }
-
- .de4 {width: 20%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de4 p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; }
- .de4 p:nth-of-type(2) {font-size: 20px; color: #f1f1f1; }
-
-    
-.evebg {width: 100%; height:1000px; margin: 0 auto; background-color: #000; display: flex;
-   flex-direction: column; justify-content: center; align-items: center;}
- #eve {width: 100%; height: 100%; margin: 0 auto; background-color: #000; display: flex; 
-  align-items: center; flex-direction: column;}
-
- .te {width: 80%; height: 700px; margin: 0 auto; display: flex;
-  flex-direction: column; justify-content: center; align-items: center;}
- .te p:nth-of-type(1) {font-size: 20px; color: red; transform: translateY(100px); transition: all 1s; opacity: 0;}
- .te p:nth-of-type(2) {font-size: 30px; font-weight: bold; color: #f1f1f1; transform: translateY(100px); transition: all 1s; opacity: 0;}
- .te p:nth-of-type(3) {font-size: 14px; color: #f1f1f1; transform: translateY(100px); transition: all 1s; opacity: 0;}
-
- .evmu {width: 80%; height: 60%; margin: 0 auto;  
- position: relative; transform: translateY(0px); transition: all 1s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.bor {width: 60%; height: 75%; margin: auto auto; border: 1px solid red; position: absolute;
-     z-index: 1; top: 12%; left: 15%;}
-.mu {width: 60%; height: 75%; margin: auto auto; position: absolute; z-index: 2; top: 15%; left: 10%; }
- .mu video {width: 100%; height: 100%;}
-        
- #characters {width: 100%; height: auto; margin: 0 auto; }
- .cha {width: 100%; height: 200px; margin: 0 auto;  display: flex;
-            flex-direction: column; justify-content: center; align-items: center;}
-.cha p:nth-of-type(1) {color: red; font-size: 16px; transform: translateY(100px); 
-    transition: all 2s; opacity: 0;}
-
-    .cha p:nth-of-type(2) {color: #000; font-size: 35px; transform: translateY(100px); 
-    transition: all 2s; opacity: 0;}
-
-
-.rac {width: 100%; height: 90%; margin: 0 auto; display: flex; flex-direction: row;
-flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
-.racbox {width:250px; height:450px; border:1px solid #eee; padding:10px; margin:10px;
- display:inline-block; transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-
-.racbox img {width:100%; height:340px;}
-
-.racbox p {border-bottom:1px solid #eee; font-size:12px;font-weight:bold; height:25px;}
-
-.racbox p a {color:#000;}
-
-.c1 {font-size:12px; color:#999; display:block; }
-
-.c2 {font-size:14px; color:#000; display:block; font-weight:bold;}
-
-.icon {background-color:tomato; font-size:10px; color:#fff; padding:2px; border-radius:2px;}
-
-.c3 {font-size:12px; color:#666; }
-
-.btn1 {border:1px solid #ddd; color:tomato; padding:1px 5px 2px; font-size:10px; display:block; 
-    width:30px; margin:10px 0 0 0;}
-
-
-#directorbg {width: 100%; height: 90vh; margin: 0 auto; background-color: #000; display: flex;}
-
-.director {width: 100%; height: 100%; margin: 0 auto; background-color: #000; display: flex; flex-direction: column;}
-
-.ditext {width: 60%; height: 60%; margin: 0 auto; float: left; display: flex; flex-direction: column;
-    justify-content: center; align-items: flex-start;}
-.ditext p:nth-of-type(1) {color: red; font-size: 16px; transform: translateY(100px); transition: all 2.5s; 
-    opacity: 0;}
-    .ditext p:nth-of-type(2) {color: #f1f1f1; font-size: 20px; transform: translateY(100px); transition: all 2.5s; 
-    opacity: 0;}
-    .ditext p:nth-of-type(3) {color: #f1f1f1; font-size: 16px; transform: translateY(100px); transition: all 2.5s; 
-    opacity: 0;}
-
-.diimg {width: 60%; height: 60%; margin: 0 auto; float: right; display: flex; 
-    transform: translateY(0px); transition: all 2s; opacity: 0;
-        -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.dile {width: 40%; height: 100%; margin: 0 auto; float: left; display: flex; position: relative;
-    flex-direction: column; justify-content: flex-end; align-items: center;}
-.dile p {color: #f1f1f1; font-size: 20px; margin-top: 20px;}
-
-
-
-
-.le1 {width: 90%; height: 60%; margin: 0 auto; border: 1px solid red; position: absolute;
-         z-index: 1; top: 10%; left: 5%;}
-.le2 {width: 90%; height: 60%; margin: 0 auto; position: absolute;
-         z-index: 2; top: 15%; left: 15%;}
-         .le2 img {width: 100%; height: 100%;}
-
-
- .diri {width: 40%; height: 100%; margin: 0 auto; float: right; display: flex; position: relative;
-    flex-direction: column; justify-content: flex-end; align-items: center;}
- .diri p {color: #f1f1f1; font-size: 24px;}
-.ri1 {width: 90%; height: 60%; margin: 0 auto; border: 1px solid red; position: absolute;
-         z-index: 1; top: 10%; left: 5%;}
-.ri2 {width: 90%; height: 60%; margin: 0 auto; position: absolute;
-         z-index: 2; top: 15%; left: 15%;}
-         .ri2 img {width: 100%; height: 100%;}
-.diri p {color: #f1f1f1; font-size: 20px; margin-top: 30px;}
-
-
-
-
-
-#contentsbg {width: 100%; height: 1300px; margin: 0 auto;  
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.contents {width: 100%; height: 75%; margin: 0 auto; }
-.ste {width: 100%; height: 170px; margin: 0 auto;}
-.sstt {width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;}
-.sstt p:nth-of-type(1) {color: red; font-size: 20px; }
-.sstt b {color: red; font-size: 16px;   }
-.sstt p:nth-of-type(2) {color: #000; font-size: 50px; }
-
-.wrap {width: 100%; height: 100%; margin: 0 auto;}
-        .po {width: 80%; height: 100px; margin: 0 auto; display: flex; flex-direction: row;
- justify-content: space-evenly; align-items: center; }
-
-        .div1 {width: 100%; height: 90%;  text-align: center; margin: 0 auto;}
-        .div2 {width: 100%; height: 90%;  text-align: center; display: none;}
-        .div3 {width: 100%; height: 90%;  text-align: center; display: none;}
-
-        .wrap img {width: 200px; height: 250px;}
-
-        .textbox {width: 90%; height: 250px; background-color: #fff; margin: 0 auto;}
-
-        .textbox > h3 {font-size: 20px;}
-        .textbox > p {font-size: 13px; text-align: left; color: #666;}
-
-        .po1, .po2, .po3 {width: 120px; height: 50px;  }
-
-        #xt {border-bottom: 2px solid white; font-size: 20px; cursor: pointer;}
-    #xt2 {border-bottom: 2px solid white; font-size: 20px; cursor: pointer;}
-    #xt3 {border-bottom: 2px solid white; font-size: 20px; cursor: pointer;}
-
-
-
-        .collapsible {
-  
-  color: #000;
-  cursor: pointer;
-
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  height: 85px;
-  border-bottom: 1px solid #555;
-  
-}
-
-.collapsible p {margin-top: 30px; margin-left: 120px;}
-
-.collapsible img {width: 8%; height: 90%; float: left; border-radius: 50%; margin-left: 10px;}
-
-/* .active, .collapsible:hover {
-  background-color: #555;
-} */
-
-
-
-.content {
-  padding: 0 18px;
-  background-color: white;
-  /* max-height: 0; */
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  display: none;
-}
-
-.collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-  margin-top: -20px;
-
-}
-.collapsible:before {  /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;}
-  
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-
-}
-
-
-#movlogobg {width: 100%; height: 350px; margin: 0 auto; 
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.movlogo {width: 100%; height: 100%; margin: 0 auto;}
-
-.mltext {width: 80%; height: 45%; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;}
-.mltext p:nth-of-type(1) {font-size: 20px; color: red;}
-.mltext p:nth-of-type(2) {font-size: 30px; color: #000; font-weight: bold;}
-.mltext p:nth-of-type(3) {font-size: 16px; color: #777;}
-
-.mlimg {width: 85%; height:60%; margin: 0 auto; display: flex;  flex-direction: row;
-    flex-wrap: wrap; justify-content: space-evenly;  align-items: stretch;}
-.mlbox {width: 30%; height: 20%; margin: 0 auto;}
-
-#gallerybg {width: 100%; height: 80vh; margin: 0 auto; background-color: #000;}
-.gallery {width: 100%; height: 100%; margin: 0 auto; background-color: #000;
-    display: flex; flex-direction: column;
-     transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.ga {width: 100%; height: 30%; margin: 0 auto; background-color: #000; display: flex;
-    flex-direction: column; justify-content: space-evenly; align-items: center;}
-.ga p:nth-of-type(1) {font-size: 20px; color: red;}
-.ga p:nth-of-type(2) {font-size: 30px; color: #f1f1f1;}
-.ga p:nth-of-type(3) {font-size: 16px; color: #777;}
-
-.lery {width: 100%; height: 70%; margin: 0 auto; background-color: #000; display: flex;
- flex-direction: row; align-items: center; }
-.ry1 {width: 45%; height: 75%; margin: 0 auto; display: flex;
-background-image: url("img/35.jpg"); background-position: center; background-size: cover; }
-.ry2 {width: 50%; height: 80%; margin: 0 auto; background-color:#000; 
-    display: flex; flex-direction: row; flex-wrap: wrap;  align-items: center; }
-.ay1 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/31.jpg"); 
-background-position: center; background-size: cover;}
-.ay2 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/32.jpg"); 
-background-position: center; background-size: cover;}
-.ay3 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/33.jpg"); 
-background-position: center; background-size: cover;}
-.ay4 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/34.jpg"); 
-background-position: center; background-size: cover;}
-
-
-
-#locationbg{width: 100%; height: 100vh; margin: 0 auto; background-color: #000; 
-    display: flex; align-items: center;}
-.location {width: 100%; height: 100%; margin: 0 auto;  
-    display: flex; flex-direction: column;
-    flex-wrap: nowrap;     justify-content: space-around;
-    align-items: center;}
-
-.tion1 {width: 100%; height: 20%; margin: 0 auto;  
- display: flex; flex-direction: column; justify-content: space-evenly; 
- transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.tion1 p:nth-of-type(1) {color: red; font-size: 16px;}
-.tion1 p:nth-of-type(2) {color: #f1f1f1; font-size: 30px; font-weight: bold;}
-.tion1 p:nth-of-type(3) {color: #f1f1f1; font-size: 20px;}
-
-.tion2 {width: 50%; height: 20%; margin: 0 auto; background-image: url("img/40.jpg"); 
-background-position: center; background-size: cover;
-    transform: translateY(0px); transition: all 1s; opacity: 0;
-        -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.tion3 {width: 50%; height: 20%; margin: 0 auto; background-image: url("img/41.jpg"); 
-background-position: center; background-size: cover;
-    transform: translateY(0px); transition: all 1s; opacity: 0;
-        -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.tion4 {width: 100%; height: 20%; margin: 0 auto; 
- display: flex; flex-direction: column; justify-content: space-evenly; 
- transform: translateY(100px); transition: all 1.5s; opacity: 0;}
- .tion4 p:nth-of-type(1) {color: red; font-size: 16px;}
-.tion4 p:nth-of-type(2) {color: #f1f1f1; font-size: 30px; font-weight: bold;}
-.tion4 p:nth-of-type(3) {color: #f1f1f1; font-size: 20px;}
-
-
-
-
-#cardbg {width: 100%; height: 80vh; margin: 0 auto; background-color: #000;}
-.rdbg {width: 100%; height: 100%; margin: 0 auto; background-color: #000; 
-    display: flex; flex-direction: column;  
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
- .cardtext {width: 100%; height:30%; margin: 0 auto; display: flex; flex-direction: column;
-    justify-content: center; align-items: center;}
-    .cardtext p:nth-of-type(1) {font-size: 16px; color: red;}
-    .cardtext p:nth-of-type(2) {font-size: 25px; color: #f1f1f1; font-weight: bold;}
-    .cardtext p:nth-of-type(3) {font-size: 20px; color: #f1f1f1;}
-
-.cards {width: 100% ; height: 70%; margin: 0 auto; display: flex ; }
-
-
-    .card { height: 60%; 
-        padding: 10px 10px 10px 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 21%;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  display: flex;
-  flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-.card:nth-of-type(2) {  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 25%;
-  margin: auto;
-  text-align: center;
-  font-family: arial; background-color: #555;
-border-radius: 15px;
- transform: scale(1.1);}
-
- .card:nth-of-type(3) {margin-left: 20px;}
-
-.card img {width: 20px; height: 20px; margin: 10px 11px 0px 0px;}
-.card p {color: #f1f1f1;}
-.card h3 {color: #f1f1f1;}
-.card h2 {background-color: red; color: #f1f1f1; border-radius: 5px; padding: 10px 10px 5px 10px;}
-
-.price {
-  color: grey;
-  font-size: 22px;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  border: 1px solid red;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 14px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-  background-color: red;
-  color: #f1f1f1;
-}
-
-#containerbg {width: 100%; height: 100%; margin: 0 auto; background-image: url("img/40.jpg");
-background-position: center; background-size: cover; }
-.conbg {width: 100%; height: 100%; margin: 0 auto; margin: 0 auto; display: flex; 
-    flex-direction: column; justify-content: center; align-items: center;}
-
-.conbg p:nth-of-type(1) {font-size: 14px; color: #f1f1f1;
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-    .conbg p:nth-of-type(2) {font-size: 24px; color: #f1f1f1;
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-    
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-input[type=submit] {
-    background-color:#ccc ;
-  border: 1px solid red;
-  color: red;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: red;
-  color: #f1f1f1;
-}
-
-input:nth-of-type(1){
-    width: 40%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  float: left;
-}
-
-input:nth-of-type(2){
-    width: 40%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  float: right;
-}
-
-.container {width: 90%;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 20px;
-  transform: translateY(100px); transition: all 1.5s; opacity: 0;
-}
-
-.callbg {width: 50%; height: 20%; margin: 0 auto; }
-.call {width: 100%; height: 100%; margin: auto; display: flex; flex-direction: row;
-    justify-content: center; align-items: center;}
-
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-
-  color: white;
-}
-
-.fa-twitter {
-
-  color: white;
-}
-
-.fa-instagram {
-
-  color: white;
-}
-
-.calltext {width: 30%; height: 10%; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;}
-.calltext p:nth-of-type(1) {font-size: 12px; color: #f1f1f1;}
-.calltext p:nth-of-type(2) {font-size: 20px; color: #f1f1f1;}
-.calltext p:nth-of-type(3) {font-size: 24px; color: #f1f1f1;}
-
-
-footer {width: 100%; height: 10%; margin: 0 auto; background-color: #000; color: #f1f1f1;}
-#footerbg {width: 100%; height: 100%; margin: 0 auto; }
-.foot {width: 35%; height: 100%; float: left; display: flex; justify-content: space-evenly;
-    align-items: center;}
-.ter {width: 65%; height: 100%; float: right; display: flex; justify-content: space-evenly;
-    align-items: center;}
-
-        }
-
-
-
-
-
-
-
-        @media (min-width:1200px) {
-        header {width: 100%; height: 70px; background-color: #000; }
-        
-
-  header .small{width: 100%; height: 70px; display: flex; align-items: center; justify-content:space-around;}
-        
-  header a{padding: 15px; text-decoration: none;}
-        
-  header a:hover { color:red;}
-        
-        
-        
-.logo {width: 160px; line-height: 50px; background-color: #000; color:#fff; text-align: center;
-font-size: 18px;}
-.logo b {color: red; font-size: 14px;}
-        
-        
-        
-  #b {display: none;}
-        
- #a {display:block;}
-
-  header #a a:nth-of-type(4) {width: 100%; height: 70%; border: 1px solid red;
- color: #f1f1f1; margin: 0 auto; border-radius: 4px; }
-
- header #a a:nth-of-type(4):hover {background-color: red ; color: #f1f1f1;}
-       
-        
-        
- #myNav {display: none;}
-
-
-
-        /*   슬라이드       */
-
- #slide {width: 100%; height: calc(100% - 70px); margin: 0 auto;
-   background-image: url("img/slide1.png"); background-size: auto; 
- background-position: center; }
-        
- .slbox {width: 100%; height: 50%; margin: 0 auto; display: flex; flex-direction: column;
-align-items: center;justify-content: center; }
-.slbox p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; 
- transform: translateY(100px); transition: all 2.5s; opacity: 0;}
- .slbox b {font-size: 40px; color: red;}
- .slbox p:nth-of-type(2) {font-size: 16px; color: #f1f1f1; text-align: center;
- transform: translateY(100px); transition: all 2.5s; opacity: 0;}
- .slbox p:nth-of-type(3) {font-size: 25px; color: #f1f1f1; 
- transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-
- .ibox {width: 100%; height: 10%; margin: 0 auto;}
-.ibox img {width: 100%; height: 100%; margin: 0 auto; transform: translateY(100px);
-transition: all 2s; opacity: 0;}
-
-
-
- .debox {width: 70%; height: 40%; margin: 0 auto; display: flex; flex-direction: row;
- align-items: center; justify-content: center; transform: translateY(100px);
-  transition: all 1s; opacity: 0;}
-
- .de1 {width: 20%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de1 p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; }
- .de1 p:nth-of-type(2) {font-size: 20px; color: #f1f1f1; }
-
- .de2 {width: 20%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de2 p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; }
- .de2 p:nth-of-type(2) {font-size: 20px; color: #f1f1f1; }
-
- .de3 {width: 20%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de3 p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; }
- .de3 p:nth-of-type(2) {font-size: 20px; color: #f1f1f1; }
-
- .de4 {width: 20%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
- align-items: center; justify-content: center;}
- .de4 p:nth-of-type(1) {font-size: 50px; color: #f1f1f1; }
- .de4 p:nth-of-type(2) {font-size: 20px; color: #f1f1f1; }
-
-    
-.evebg {width: 100%; height:900px; margin: 0 auto; background-color: #000; display: flex;
-   flex-direction: column; justify-content: center; align-items: center;}
- #eve {width: 1200px; height: 100%; margin: 0 auto; background-color: #000; display: flex; 
-  align-items: center;}
-
- .te {width: 45%; height: 70%; margin: 0 auto; display: flex;
-  flex-direction: column; justify-content: space-evenly; align-items: center;}
- .te p:nth-of-type(1) {font-size: 20px; color: red; transform: translateY(100px); transition: all 1s; opacity: 0;}
- .te p:nth-of-type(2) {font-size: 30px; font-weight: bold; color: #f1f1f1; transform: translateY(100px); transition: all 1s; opacity: 0;}
- .te p:nth-of-type(3) {font-size: 14px; color: #f1f1f1; transform: translateY(100px); transition: all 1s; opacity: 0;}
-
- .evmu {width: 45%; height: 70%; margin: 0 auto;  
- position: relative; transform: translateY(0px); transition: all 1s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.bor {width: 80%; height: 75%; margin: auto auto; border: 1px solid red; position: absolute;
-     z-index: 1; top: 10%; left: 5%;}
-.mu {width: 80%; height: 75%; margin: auto auto; position: absolute; z-index: 2; top: 15%; left: 10%; }
- .mu video {width: 100%; height: 100%;}
-        
- #characters {width: 100%; height: 1600px; margin: 0 auto; }
- .cha {width: 1200px; height: 200px; margin: 0 auto;  display: flex;
-            flex-direction: column; justify-content: center; align-items: center;}
-.cha p:nth-of-type(1) {color: red; font-size: 20px; transform: translateY(100px); 
-    transition: all 2s; opacity: 0;}
-
-    .cha p:nth-of-type(2) {color: #000; font-size: 30px; transform: translateY(100px); 
-    transition: all 2s; opacity: 0;}
-
-
-.rac {width: 1200px; height: 90%; margin: 0 auto; display: flex; flex-direction: row;
-flex-wrap: wrap; align-content: flex-start; justify-content: space-evenly;}
-.racbox {width:350px; height:620px; border:1px solid #eee; padding:10px; margin:10px;
- display:inline-block; transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-
-.racbox img {width:100%; height:510px;}
-
-.racbox p {border-bottom:1px solid #eee; font-size:12px;font-weight:bold; height:25px;}
-
-.racbox p a {color:#000;}
-
-.c1 {font-size:12px; color:#999; display:block; }
-
-.c2 {font-size:14px; color:#000; display:block; font-weight:bold;}
-
-.icon {background-color:tomato; font-size:10px; color:#fff; padding:2px; border-radius:2px;}
-
-.c3 {font-size:12px; color:#666; }
-
-.btn1 {border:1px solid #ddd; color:tomato; padding:1px 5px 2px; font-size:10px; display:block; 
-    width:30px; margin:10px 0 0 0;}
-
-
-#directorbg {width: 100%; height: 580px; margin: 0 auto; background-color: #000; display: flex;}
-
-.director {width: 1200px; height: 90%; margin: 0 auto; background-color: #000; display: flex;}
-
-.ditext {width: 40%; height: 100%; margin: 0 auto; float: left; display: flex; flex-direction: column;
-    justify-content: center; align-items: flex-start;}
-.ditext p:nth-of-type(1) {color: red; font-size: 20px; transform: translateY(100px); transition: all 2.5s; 
-    opacity: 0;}
-    .ditext p:nth-of-type(2) {color: #f1f1f1; font-size: 25px; transform: translateY(100px); transition: all 2.5s; 
-    opacity: 0;}
-    .ditext p:nth-of-type(3) {color: #f1f1f1; font-size: 16px; transform: translateY(100px); transition: all 2.5s; 
-    opacity: 0;}
-
-.diimg {width: 60%; height: 100%; margin: 0 auto; float: right; display: flex; 
-    transform: translateY(0px); transition: all 2s; opacity: 0;
-        -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.dile {width: 40%; height: 100%; margin: 0 auto; float: left; display: flex; position: relative;
-    flex-direction: column; justify-content: flex-end; align-items: center;}
-.dile p {color: #f1f1f1; font-size: 24px; margin-top: 30px;}
-
-
-
-.le1 {width: 90%; height: 65%; margin: 0 auto; border: 1px solid red; position: absolute;
-         z-index: 1; top: 10%; left: 5%;}
-.le2 {width: 90%; height: 65%; margin: 0 auto; position: absolute;
-         z-index: 2; top: 15%; left: 15%;}
-         .le2 img {width: 100%; height: 100%;}
-
-
- .diri {width: 40%; height: 100%; margin: 0 auto; float: right; display: flex; position: relative;
-    flex-direction: column; justify-content: flex-end; align-items: center;}
- .diri p {color: #f1f1f1; font-size: 24px;}
-.ri1 {width: 90%; height: 65%; margin: 0 auto; border: 1px solid red; position: absolute;
-         z-index: 1; top: 10%; left: 5%;}
-.ri2 {width: 90%; height: 65%; margin: 0 auto; position: absolute;
-         z-index: 2; top: 15%; left: 15%;}
-         .ri2 img {width: 100%; height: 100%;}
-.diri p {color: #f1f1f1; font-size: 24px; margin-top: 30px;}
-
-
-
-
-
-#contentsbg {width: 100%; height: 1400px; margin: 0 auto;  
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.contents {width: 1200px; height: 75%; margin: 0 auto; }
-.ste {width: 1200px; height: 300px; margin: 0 auto;}
-.sstt {width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;}
-.sstt p:nth-of-type(1) {color: red; font-size: 20px; }
-.sstt b {color: red; font-size: 16px;   }
-.sstt p:nth-of-type(2) {color: #000; font-size: 50px; }
-
-.wrap {width: 100%; height: 100%; margin: 0 auto;}
-        .po {width: 80%; height: 100px; margin: 0 auto; display: flex; flex-direction: row;
- justify-content: space-evenly; align-items: center; }
-
-        .div1 {width: 100%; height: 90%;  text-align: center; margin: 0 auto;}
-        .div2 {width: 100%; height: 90%;  text-align: center; display: none;}
-        .div3 {width: 100%; height: 90%;  text-align: center; display: none;}
-
-        .wrap img {width: 200px; height: 250px;}
-
-        .textbox {width: 80%; height: 250px; background-color: #fff; margin: 0 auto;}
-
-        .textbox > h3 {font-size: 20px;}
-        .textbox > p {font-size: 13px; text-align: left; color: #666;}
-
-        .po1, .po2, .po3 {width: 120px; height: 50px;  }
-
-        #xt {border-bottom: 2px solid white; font-size: 20px; cursor: pointer;}
-    #xt2 {border-bottom: 2px solid white; font-size: 20px; cursor: pointer;}
-    #xt3 {border-bottom: 2px solid white; font-size: 20px; cursor: pointer;}
-
-
-
-        .collapsible {
-  
-  color: #000;
-  cursor: pointer;
-
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  height: 85px;
-  border-bottom: 1px solid #555;
-  
-}
-
-.collapsible p {margin-top: 30px; margin-left: 120px;}
-
-.collapsible img {width: 8%; height: 90%; float: left; border-radius: 50%; margin-left: 10px;}
-
-/* .active, .collapsible:hover {
-  background-color: #555;
-} */
-
-
-
-.content {
-  padding: 0 18px;
-  background-color: white;
-  /* max-height: 0; */
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  display: none;
-}
-
-.collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-  margin-top: -20px;
-
-}
-.collapsible:before {  /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: right;
-  margin-left: 5px;
-    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;}
-  
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-
-}
-
-
-#movlogobg {width: 100%; height: 500px; margin: 0 auto; 
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.movlogo {width: 1200px; height: 100%; margin: 0 auto;}
-
-.mltext {width: 80%; height: 35%; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;}
-.mltext p:nth-of-type(1) {font-size: 20px; color: red;}
-.mltext p:nth-of-type(2) {font-size: 30px; color: #000; font-weight: bold;}
-.mltext p:nth-of-type(3) {font-size: 16px; color: #777;}
-
-.mlimg {width: 70%; height: 65%; margin: 0 auto; display: flex;  flex-direction: row;
-    flex-wrap: wrap; justify-content: space-evenly;  align-items: stretch;}
-.mlbox {width: 30%; height: 20%; margin: 0 auto;}
-
-#gallerybg {width: 100%; height: 100vh; margin: 0 auto; background-color: #000;}
-.gallery {width: 1200px; height: 100%; margin: 0 auto; background-color: #000;
-    display: flex; flex-direction: column;
-     transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.ga {width: 100%; height: 30%; margin: 0 auto; background-color: #000; display: flex;
-    flex-direction: column; justify-content: center; align-items: center;}
-.ga p:nth-of-type(1) {font-size: 20px; color: red;}
-.ga p:nth-of-type(2) {font-size: 30px; color: #f1f1f1;}
-.ga p:nth-of-type(3) {font-size: 16px; color: #777;}
-
-.lery {width: 100%; height: 70%; margin: 0 auto; background-color: #000; display: flex;
- flex-direction: row; align-items: center; }
-.ry1 {width: 45%; height: 75%; margin: 0 auto; display: flex;
-background-image: url("img/35.jpg"); background-position: center; background-size: cover; }
-.ry2 {width: 50%; height: 80%; margin: 0 auto; background-color:#000; 
-    display: flex; flex-direction: row; flex-wrap: wrap;  align-items: center; }
-.ay1 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/31.jpg"); 
-background-position: center; background-size: cover;}
-.ay2 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/32.jpg"); 
-background-position: center; background-size: cover;}
-.ay3 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/33.jpg"); 
-background-position: center; background-size: cover;}
-.ay4 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/34.jpg"); 
-background-position: center; background-size: cover;}
-
-
-
-#locationbg{width: 100%; height: 100vh; margin: 0 auto; background-color: #000; 
-    display: flex; align-items: center;}
-.location {width: 1200px; height: 80%; margin: 0 auto;  
-    display: flex; flex-direction: row; flex-wrap: wrap; align-items: center;}
-
-.tion1 {width: 45%; height: 45%; margin: 0 auto;  
- display: flex; flex-direction: column; justify-content: space-evenly; 
- transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.tion1 p:nth-of-type(1) {color: red; font-size: 16px;}
-.tion1 p:nth-of-type(2) {color: #f1f1f1; font-size: 30px; font-weight: bold;}
-.tion1 p:nth-of-type(3) {color: #f1f1f1; font-size: 20px;}
-
-.tion2 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/40.jpg"); 
-background-position: center; background-size: cover;
-    transform: translateY(0px); transition: all 1s; opacity: 0;
-        -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.tion3 {width: 45%; height: 45%; margin: 0 auto; background-image: url("img/41.jpg"); 
-background-position: center; background-size: cover;
-    transform: translateY(0px); transition: all 1s; opacity: 0;
-        -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-
-.tion4 {width: 45%; height: 45%; margin: 0 auto; 
- display: flex; flex-direction: column; justify-content: space-evenly; 
- transform: translateY(100px); transition: all 1.5s; opacity: 0;}
- .tion4 p:nth-of-type(1) {color: red; font-size: 16px;}
-.tion4 p:nth-of-type(2) {color: #f1f1f1; font-size: 30px; font-weight: bold;}
-.tion4 p:nth-of-type(3) {color: #f1f1f1; font-size: 20px;}
-
-
-
-
-#cardbg {width: 100%; height: 800px; margin: 0 auto; background-color: #000;}
-.rdbg {width: 1200px; height: 85%; margin: 0 auto; background-color: #000; 
-    display: flex; flex-direction: column;  
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
- .cardtext {width: 100%; height:20%; margin: 0 auto; display: flex; flex-direction: column;
-    justify-content: space-evenly; align-items: center;}
-    .cardtext p:nth-of-type(1) {font-size: 16px; color: red;}
-    .cardtext p:nth-of-type(2) {font-size: 25px; color: #f1f1f1; font-weight: bold;}
-    .cardtext p:nth-of-type(3) {font-size: 20px; color: #f1f1f1;}
-
-.cards {width: 100% ; height: 80%; margin: 0 auto; display: flex ; }
-
-
-    .card { height: 80%; 
-        padding: 10px 10px 10px 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 21%;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  display: flex;
-  flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-.card:nth-of-type(2) {  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 25%;
-  margin: auto;
-  text-align: center;
-  font-family: arial; background-color: #555;
-border-radius: 15px;
- transform: scale(1.1);}
-
- .card:nth-of-type(3) {margin-left: 20px;}
-
-.card img {width: 20px; height: 20px; margin: 10px 20px 0px 0px;}
-.card p {color: #f1f1f1;}
-.card h3 {color: #f1f1f1;}
-.card h2 {background-color: red; color: #f1f1f1; border-radius: 5px; padding: 10px 10px 5px 10px;}
-
-.price {
-  color: grey;
-  font-size: 22px;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  border: 1px solid red;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 14px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-  background-color: red;
-  color: #f1f1f1;
-}
-
-#containerbg {width: 100%; height: 100%; margin: 0 auto; background-image: url("img/40.jpg");
-background-position: center; background-size: cover; }
-.conbg {width: 1200px; height: 100%; margin: 0 auto; margin: 0 auto; display: flex; 
-    flex-direction: column; justify-content: center; align-items: center;}
-
-.conbg p:nth-of-type(1) {font-size: 14px; color: #f1f1f1;
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-    .conbg p:nth-of-type(2) {font-size: 24px; color: #f1f1f1;
-    transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-    
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-input[type=submit] {
-    background-color:#ccc ;
-  border: 1px solid red;
-  color: red;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: red;
-  color: #f1f1f1;
-}
-
-input:nth-of-type(1){
-    width: 40%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  float: left;
-}
-
-input:nth-of-type(2){
-    width: 40%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  float: right;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 20px;
-  transform: translateY(100px); transition: all 1.5s; opacity: 0;
-}
-
-.callbg {width: 50%; height: 20%; margin: 0 auto; }
-.call {width: 100%; height: 100%; margin: auto; display: flex; flex-direction: row;
-    justify-content: center; align-items: center;}
-
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-
-  color: white;
-}
-
-.fa-twitter {
-
-  color: white;
-}
-
-.fa-instagram {
-
-  color: white;
-}
-
-.calltext {width: 30%; height: 10%; margin: 0 auto; display: flex; flex-direction: column;
-    align-items: center; justify-content: center;}
-.calltext p:nth-of-type(1) {font-size: 12px; color: #f1f1f1;}
-.calltext p:nth-of-type(2) {font-size: 20px; color: #f1f1f1;}
-.calltext p:nth-of-type(3) {font-size: 24px; color: #f1f1f1;}
-
-
-footer {width: 100%; height: 10%; margin: 0 auto; background-color: #000; color: #f1f1f1;}
-#footerbg {width: 80%; height: 100%; margin: 0 auto; }
-.foot {width: 50%; height: 100%; float: left; display: flex; justify-content: space-evenly;
-    align-items: center;}
-.ter {width: 50%; height: 100%; float: right; display: flex; justify-content: space-evenly;
-    align-items: center;}
-
-
-}
-
-
-        
-        
-        </style>
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        
-        <script>
-        
-        
-        
         function openNav() {
 
-        
-        // document.getElementById("myNav").style.width = "100%";
-        document.getElementById("myNav").style.height = "50%";
-        
-        
-        
-        }
-        
-        
-        
-        function closeNav() {
-        
-            
-        // document.getElementById("myNav").style.width = "0%";
-        document.getElementById("myNav").style.height = "0%";
-        
-        }
-        
 
-
-//         $(function(){
-
-// $('#b').click(function(){
-
-// $('#myNav').stop().slideToggle('fast');
-
-// }) // nav
-
-// }); // ready end
-
-        
-        
-        </script>
-<!--         
-        
-<script>
-    $(function () {
-if (window.matchMedia("(min-width: 1200px)").matches) { 
-
-   var ws = $(this).scrollTop();
-
-   if (ws > -10) {
-
-$('.slbox p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.ibox img').css("transform", "translateY(0px)").css("opacity", "1");
-$('.debox').css("transform", "translateY(0px)").css("opacity", "1");
-}
-
-if (ws > 700) {
-
-$('.te p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 1500) {
-
-$('.cha p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.racbox').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 2300) {
-
-$('.ditext p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-
-
-if (ws > 3500) {
-
-$('#contentsbg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-
-
-if (ws > 4500) {
-
-$('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 5200) {
-
-$('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 5900) {
-
-$('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
-}
-
-
-
-if (ws > 7200) {
-
-$('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-
-if (ws > 7700) {
-       
-       $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
-       $('.container').css("transform", "translateY(0px)").css("opacity", "1");
-       
-      
-
-   }
-
-
-} else { 
-
-/* 뷰포트 너비가 400 픽셀 미만 */
-
-}
-    });
-
-
-
-
-
-
-
-
-</script> -->
-        
-        </head>
-        
-        
-        
-        
-        
-        <body>
-        
-        
-        
-            <header>
-        
-                <div class="small">
-                    <div class="logo">LA CASA <b>DE</b> PAPEL</div>
-        
-                    <div id="a">
-                        <a href="sub.html">Team</a>
-                        <a href="sub.html">Work</a>
-                        <a href="sub.html">Price</a>
-        
-                        <a href="sub.html"><button class="abt" style="color: #f1f1f1;">Contact</button></a>
-        
-                    </div>
-        
-        
-        
-                    <img src="img/i.png" id="b" onclick="openNav()">
-        
-                </div>
-        
-        
-        
-                <div id="myNav" class="overlay">
-        
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        
-                    <div class="overlay-content">
-        
-                        <a href="sub.html">HOME</a>
-        
-                        <a href="sub.html">PAGES</a>
-        
-                        <a href="sub.html">SERVICES</a>
-        
-                        <a href="sub.html">EVENT</a>
-        
-                        <a href="sub.html"><button class="lo">GALLERY</button></a>
-        
-                    </div>
-        
-                </div>
-        
-            </header>
-        
-        
-            <div id="slide">
-        
-                <div class="slbox">
-                    <p>LA CASA<br>
-                        <b>DE</b><br>
-                        PAPEL<br>
-                   </p><br><br>
-
-                    <p>
-                        2022 . 06 . 24 <br>
-                        OPEN<br>
-                        </p><br><br>
-
-                    <p>NETFLIX ORIGINAL</p>
-        
-                </div>
-        
-                <div class="ibox">
-                    <img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618b99e61831b9b5b9b3bb97_arrow.svg"
-                        alt="">
-                </div>
-        
-                <div class="debox">
-        
-                    <div class="de1">
-                        <p>19+</p><br>
-                        <p>청소년<br>
-                            관람불가</p>
-                    </div>
-        
-                    <div class="de2">
-                        <p>19+</p><br>
-                        <p>유해성<br>
-                            높음</p>
-                    </div>
-        
-                    <div class="de3">
-                        <p>15+</p><br>
-                        <p>폭력성<br>
-                            보통</p>
-                    </div>
-        
-                    <div class="de4">
-                        <p>19+</p><br>
-                        <p>대사<br>
-                            높음</p>
-                    </div>
-        
-                </div>
-        
-                <script>
-
-
-
-                    $(function () {
-
-
-                        $(window).ready(function () {
-
-                            var ws = $(this).scrollTop();
-                        
-
-                            if (ws > -10) {
-
-                                $('.slbox p').css("transform", "translateY(0px)").css("opacity", "1");
-                                $('.ibox img').css("transform", "translateY(0px)").css("opacity", "1");
-                                $('.debox').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-                            }
-
-             
-                        });
-
-                    });
-
-            
-
-
-
-
-                </script>
-        
-                <div class="evebg">
-                    <div id="eve">
-        
-                        <div class="te">
-                            <p>Netflix original</p>
-                            <p>La Casa de Papel</p>
-                            <p>스페인에서 강도 행각을 벌이다 파트너 겸 연인이었던 공범자를 잃은 올리베이라.<br>
-                                어떻게 돈은 건졌지만 전국에 자신의 얼굴이 공개되어 현상수배까지 걸린 그녀는 어머니한테 전화를 걸어 같이 도망가자고 권유하고,<br>
-                                긍정적인 대답이 돌아오자 변장을 하고 어머니의 집을 찾으려 한다.<br><br>
-
-                                하지만 그때 그녀를 차량 한 대가 미행하며 따라오고,<br>
-                                그 안에 타고 있던 남자가 별안간 문을 열며 탈 것을 요구한다.<br>
-                                이에 그녀는 미심쩍어 하면서도 일단 탑승한 뒤 그를 경찰의 끄나풀로 단정내리고 총을 겨누며 협박하지만,<br>
-                                남자는 그녀의 어머니와 경찰이 나란히 찍혀있는 사진을 보여주며 지금 어머니의 집을 찾으면 체포될 거라고 말한다.<br>
-                                이에 그녀는 잠시 침묵한 끝에 대체 당신은 누구냐고 물어보고 남자는 교수라고 부르라며 답한다.<br>
-                                그리고 자신이 꾸미고 있는 큰 건수가 있으니 거기에 참여할 것을 권해오는 교수의 말에 넘어간 올리베이라는 외딴 곳에 위치한 낡은 대저택에서 다른 팀원들과 만나고 서로가 서로를 도시명으로 부르게 되면서 도쿄라는 코드 네임을 칭하게 된다.<br>
-                                스페인 드라마인 만큼 도시의 스페인어명과 스페인어 발음을 사용한다.<br><br>
-                                
-                                그리고 거기서 공개되는 교수의 계획 목표는 다름 아닌 스페인 조폐국.<br>
-                                이를 위해 수개월간의 훈련을 거친 그들은 마침내 조폐국에 침입하고 작전을 개시한다.<br>
-                                하지만 중간에 발생하는 몇 가지 트러블과 예상치 못한 사태로 인해 계획이 틀어지기 시작하는데...</p>
-                        </div>
-        
-                        <div class="evmu">
-                            <div class="bor"></div>
-                            <div class="mu">
-                                <video controls="controls" poster="img/vipo.png" width="100%" height="100%">
-                                    <source src="img/vi1.mp4" type="audio/mp4">
-                            </div>
-                        </div>
-        
-                    </div>
-                </div>
-        
-                <!-- <script>
-                    $(function () {
-
-                        $(window).scroll(function () {
-
-                            var ws = $(this).scrollTop();
-
-                            if (ws > 700) {
-
-                                $('.te p').css("transform", "translateY(0px)").css("opacity", "1");
-                                $('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
-
-                            }
-
-                        });
-                    });
-                </script> -->
-
-
-                <div id="characters">
-        
-                    <div class="cha">
-                        <p>LA CASA <b>DE</b> PAPEL</p><br>
-                        <p>CHARACTERS</p>
-                    </div>
-        
-                    <div class="rac">
-        
-                        <div class="racbox">
-                            <a href="sub.html"><img src="img/10.jpg" alt=""></a>
-                            <p><a href="sub.html">교수</a></p>
-                            <span class="c2">유지태</span><br>
-                            <span class="c1"><strike>Asi que olvidaos de vuestros cabales.</strike></span>
-                        </div>
-        
-                        <div class="racbox">
-                            <a href="sub.html"><img src="img/11.jpg" alt=""></a>
-                            <p><a href="sub.html">베를린</a></p>
-                            <span class="c2">박해수</span><br>
-                            <span class="c1"><strike>Este es un momento marabilloso.</strike></span>
-                        </div>
-        
-                        <div class="racbox">
-                            <a href="sub.html"><img src="img/12.jpg" alt=""></a>
-                            <p><a href="sub.html">도쿄</a></p>
-                            <span class="c2">전종서</span><br>
-                            <span class="c1"><strike>La esperanza es como las fichas del domino,<br>
-                                    cuardo una cae, acaban cayendo todas</strike></span>
-                        </div>
-        
-                        <div class="racbox">
-                            <a href="sub.html"><img src="img/13.jpg" alt=""></a>
-                            <p><a href="sub.html">덴버</a></p>
-                            <span class="c2">김지훈</span><br>
-                            <span class="c1"><strike>Lo que yo he vivido contigo no lo he vivido con nadie.</strike></span>
-                        </div>
-        
-                        <div class="racbox">
-                            <a href="sub.html"><img src="img/14.jpg" alt=""></a>
-                            <p><a href="sub.html">나이로비</a></p>
-                            <span class="c2">장윤주</span><br>
-                            <span class="c1"><strike>Senores, hay que vivir hasta el final</strike></span>
-                        </div>
-        
-                        <div class="racbox">
-                            <a href="sub.html"><img src="img/15.jpg" alt=""></a>
-                            <p><a href="sub.html">리우</a></p>
-                            <span class="c2">이현우</span><br>
-                            <span class="c1"><strike>El caos enteromete con la vida todo el tiempo</strike></span>
-                        </div>
-        
-                    </div>
-                </div>
-        
-                <!-- <script>
-                    $(function () {
-
-                        $(window).scroll(function () {
-
-                            var ws = $(this).scrollTop();
-
-                            if (ws > 1500) {
-
-                                $('.cha p').css("transform", "translateY(0px)").css("opacity", "1");
-                                $('.racbox').css("transform", "translateY(0px)").css("opacity", "1");
-
-                            }
-
-                        });
-                    });
-                </script> -->
-        
-        
-                <div id="directorbg">
-                    <div class="director">
-        
-                        <div class="ditext">
-                            <p>DIRECTORS</p><br>
-                            <p>우리의 목표는 세상에 없는 돈이다.</p><br>
-                            <p>넷플릭스에서 방영된 스페인 드라마 종이의 집(La Casa de Papel)의
-                                리메이크작이자 2022년에 공개한 넷플릭스 오리지널 한국 드라마.<br>
-                                이 드라마의 시간적 배경은 2026년 9월 초,<br>
-                                공간적 배경은 공동경제구역과 '한반도통일조폐국',<br>
-                                그리고 경기도 파주시 등지이다.</p>
-                        </div>
-        
-                        <div class="diimg">
-        
-                            <div class="dile">
-                                <div class="le1"></div>
-                                <div class="le2"><img src="img/200.jpg" alt=""></div>
-                                <p>DIRECTOR</p>
-                                <p>김홍선</p>
-                            </div>
-        
-                            <div class="diri">
-                                <div class="ri1"></div>
-                                <div class="ri2"><img src="img/201.jpg" alt=""></div>
-                                <p>AUTHOR</p>
-                                <p>류용재</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <script>
-                    $(function () {
-
-                        $(window).scroll(function () {
-
-                            var ws = $(this).scrollTop();
-
-                            if (ws > 2300) {
-
-                                $('.ditext p').css("transform", "translateY(0px)").css("opacity", "1");
-                                $('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
-                               
-
-                            }
-
-
-                        });
-                    });
-                </script> -->
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    $(function() {
-
-
-
-        $('.po1').click(function() {
-            $(".div1").fadeIn();
-            $(".div2").hide();
-            $(".div3").hide();
-        });
-
-
-        $('.po2').click(function() {
-            $(".div2").fadeIn();
-            $(".div1").hide();
-            $(".div3").hide();
-        });
-
-
-        $('.po3').click(function() {
-            $(".div3").fadeIn();
-            $(".div1").hide();
-            $(".div2").hide();
-        });
-    });
-</script>
-
-
-
-      
-
-
-<div id="contentsbg">
-
-    <div class="ste">
-        <div class="sstt">
-            <p>LA CASA  <b>  DE  </b>  PAPEL</p>
-            <p>CONTENTS</p>
-        </div>
-    </div>
-    
-    <div class="contents">
-        <div class="wrap">
-            <div class="po">
-                <button type="button" class="po1" id="x"  onclick="hom()"><p id="xt">season 1</p></button>
-                <button type="button" class="po2" id="y" onclick="homm()"><p id="xt2">season 2</p></button>
-                <button type="button" class="po3" id="z" onclick="homm()"><p id="xt3">season 3</p></button>
-            </div>
-
-
-            <script>
-                $(function () {
-
-
-                    $(window).ready(function () {
-
-                        xt.style.borderColor="red";
-
-
-                    });
-
-                });
-            </script>
-
-
-
-            <script>
-
-                this.onclick=function (e){
-                
-                if(e.target.id=="xt"){xt.style.borderColor="red";
-                
-                xt2.style.borderColor="white";
-                
-                xt3.style.borderColor="white";}
-                
-                if(e.target.id=="xt2"){xt2.style.borderColor="red";
-                
-                xt.style.borderColor="white";
-                
-                xt3.style.borderColor="white";}
-                
-                if(e.target.id=="xt3"){xt3.style.borderColor="red";
-                
-                xt.style.borderColor="white";
-                
-                xt2.style.borderColor="white";}
-                
-                }
-                
-                </script>
-         
-               
-
-
-            <div class="div1">
-
-                <div class="textbox">
-
-                    <h2>줄거리</h2>
-
-                    <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/12.jpg" alt=""><p>전체 줄거리</p></button>
-                    <div class="content">
-                        <p>신원 미상의 '교수'라 불리는 남자가 모은 8명의 범죄자들은 톨레도의 한 사냥터에서 마드리드 조폐국을 털기 위해 몇 달간 숙식을 하면서 교수의 작전에 동참한다.<br>
-                            이들은 서로를 도시의 이름으로 부르며 이 기간 동안 교수의 치밀한 계획에 따라 사격 훈련 및 심리 전술, 작전 개요, 의술 등을 터득한다.<br>
-                            교수는 단순히 조폐국을 터는 것이 아니라 장기점거를 하며 24억 유로를 찍어낼 계획을 가지고 있었다.<br>
-                            이들은 성공적으로 조폐국을 점거하고 계획은 순조롭게 진행된다. 교수는 조폐국 주변의 낡은 창고에서 외부지원을 맡는다.<br>
-                            언론 및 경찰은 교수가 미리 말했던 대로 움직였고, 이들은 경찰을 농락한다.<br>
-                            
-                            </p>
-                    </div>
-
-                    <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/1.jpg" alt=""><p>Episode 1</p></button>
-                    <div class="content">
-                        <p>사상 최대의 무장강도를 치밀하게 계획해 온 '교수'.<br>
-                            잃을 것 없는 8인을 지휘하여 스페인 조폐국에 침투시킨다.<br>
-                            인질까지 잡았으니 이젠 독 안에 든 쥐가 될 차례.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/2.jpg" alt=""><p>Episode 2</p></button>
-                    <div class="content">
-                        <p>인질 석방에 투입된 것은 협상가 라켈 무리요뿐만이 아니다.<br>
-                            정보부가 얼쩡거리는 이유는? 석방 협상이 긴박해지고, 싸움은 시작되었다.<br>
-                            숨겨둔 카드를 꺼내들 때.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/3.jpg" alt=""><p>Episode 3</p></button>
-                    <div class="content">
-                        <p>일부 멤버의 이미지가 유출되고 아르투로는 필사적으로 살길을 모색한다.<br>
-                            바에서 만난 남자를 의심하는 라켈.<br>
-                            순조롭던 계획이 틀어진 것은 삶이 늘 그렇듯 사랑 탓이었다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/31.jpg" alt=""><p>Episode 4</p></button>
-                    <div class="content">
-                        <p>라켈에게 개인적인 긴급상황이 발생한다.<br>
-                            총성을 들은 인질들은 겁에 질리고, 모스크바는 베를린의 명령을 이행한 사람이 아들임을 알게 된다.<br>
-                            열린 문은 투항의 신호인가?</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/32.jpg" alt=""><p>Episode 5</p></button>
-                    <div class="content">
-                        <p>의료진 진입이 허용된 틈을 타 경찰이 잠입한다.<br>
-                            지금껏 모든 걸 내다본 교수와 그보다 한 수 앞을 내다봐야 하는 라켈.<br>
-                            트로이의 목마는 누구의 차지가 될 것인가.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/33.jpg" alt=""><p>Episode 6</p></button>
-                    <div class="content">
-                        <p>상태가 나빠지는 모니카.<br>
-                            리우는 뉴스 보도에 심기가 불편해지고, 교수는 계책이 통한 걸 즐긴다.<br>
-                            베를린이 규칙을 어기자, 도쿄는 교수에게 보고하라고 종용한다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/34.jpg" alt=""><p>Episode 7</p></button>
-                    <div class="content">
-                        <p>경찰이 단서를 잡고 한 멤버의 실수까지 더해져 정체가 드러나기 일보 직전.<br>
-                            좁혀지는 수사망의 한가운데 선 교수는 위기를 모면하려면 촌각을 다투며 기지를 발휘해야 한다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/35.jpg" alt=""><p>Episode 8</p></button>
-                    <div class="content">
-                        <p>리우와 대화하는 앨리슨을 보고 다그치는 도쿄.<br>
-                            라켈은 언론의 호된 질타를 받고 벼랑 끝으로 몰린다.<br>
-                            놈들이 늘 미꾸라지처럼 빠져나가다니, 누군가 정보를 흘리는 걸까?</p>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="div2">
-
-                <div class="textbox">
-
-                    <h2>줄거리</h2>
-
-                    <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/40.jpg" alt=""><p>전체 줄거리</p></button>
-                    <div class="content">
-                        <p>교수의 신원 파악에 부심하는 경찰.<br>
-                            교수와 연락이 끊기자 혼란스러워진 조폐국 내의 팀원들은 반란을 일으키고, 한 멤버는 급기야 덜미를 잡힌다.
-
-                        </p>
-                    </div>
-
-                    <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/41.jpg" alt=""><p>Episode 1</p></button>
-                    <div class="content">
-                        <p>감식반이 DNA 채취를 위해 톨레도 안가를 뒤진다.<br>
-                            수사를 지켜볼수록 초조해지는 교수.<br>
-                            조폐국에서는 갈등이 증폭되고, 팀은 최악을 각오한다.<br>
-                            이제 '파티'를 준비하자.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/42.png" alt=""><p>Episode 2</p></button>
-                    <div class="content">
-                        <p>체르노빌 작전은 무엇인가?<br>
-                            반목 끝에 대치하는 팀원들. 강도, 자유, 사랑, 꿈. 그 끝이 시작됐다.<br>
-                            붙잡힌 첫 멤버에 대한 경찰 조사도.<br>
-                            이제 체포 시나리오를 가동한다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/43.jpg" alt=""><p>Episode 3</p></button>
-                    <div class="content">
-                        <p>교수의 정체를 알아내려는 라켈. 포로의 심리를 자극한다.<br>
-                            '배반'에 대한 처벌은 반란의 불씨를 댕기고, 체포 전략도 난항을 겪는다.<br>
-                            한편, 드디어 걸려오는 전화.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/100.jpg" alt=""><p>Episode 4</p></button>
-                    <div class="content">
-                        <p>계획이 뜻대로 흘러가지 않자 팀은 언론을 통해 대중의 지지를 얻으려 하고, 인질들은 반격을 모의한다.<br>
-                            라켈은 애인과 더욱 가까워지는 한편, 교수를 잡을 함정을 판다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/101.jpg" alt=""><p>Episode 5</p></button>
-                    <div class="content">
-                        <p>아르투로는 탈출 모의를 주도한다.<br>
-                            살바와 대화를 나누던 중, 마음에 걸리는 사소한 사실을 깨닫고 모든 것이 극도로 혼란스러워지는 라켈.<br>
-                            불행이 세 여자를 강타한다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/102.jpg" alt=""><p>Episode 6</p></button>
-                    <div class="content">
-                        <p>오랫동안 간직해온 비밀을 털어놓는 모스크바.<br>
-                            아들의 신뢰를 잃고 만다.<br>
-                            도쿄를 위한 긴급계획이 암초를 만난다.<br>
-                            수호천사가 없을 땐 혼자서 정면돌파하는 수밖에.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/103.jpg" alt=""><p>Episode 7</p></button>
-                    <div class="content">
-                        <p>도쿄는 오열하고, 팀은 부상자를 살리려 백방으로 뛴다.<br>
-                            방법은 투항뿐일까?<br>
-                            아리아드나는 모니카에게 진실을 고백하고, 라켈은 나락으로 떨어지지 않으려 이를 악문다..</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/104.jpg" alt=""><p>Episode 8</p></button>
-                    <div class="content">
-                        <p>교수 때문에 사건에서 물러나게 된 라켈은 홀로 추적에 나선다.<br>
-                            탈출과 체포의 기로에서 분초를 다투는 팀.<br>
-                            의외의 인물이 손을 내민다.<br>
-                            새 조력자를 정말 믿어도 될까?</p>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-            <div class="div3">
-
-                <div class="textbox">
-
-                    <h2>줄거리</h2>
-
-                    <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/105.jpg" alt=""><p>전체 줄거리</p></button>
-                    <div class="content">
-                        <p>베를린, 모스크바, 오슬로를 잃었으나 결국 자신들이 찍어낸 9억 8천만 유로를 가지고 스페인 영해를 벗어나는 데 성공한 교수와 강도들.<br>
-                            이들은 대서양을 건너 2인 1조로 안전가옥에 흩어져 공소시효가 끝날 때까지 지내게 된다.<br>
-                            그러나 2년쯤 지난 어느 날, 리오가 몰래 위성 전화기를 썼다가 체포당한다.<br>
-                            간신히 경찰을 따돌린 도쿄는 교수를 부르고, 교수는 다시 강도들을 소집한다.<br>
-                            보고타와 마르세유, 스톡홀름, 리스본, 팔레르모가 합세하고, 교수는 이번엔 스페인 국립 준비은행 지하 48m에 보관되어 있는 90톤의 금을 털기로 하는데...</p>
-                    </div>
-
-                    <p><br></p>
-                    <button type="button" class="collapsible"><img src="img/106.jpg" alt=""><p>Episode 1</p></button>
-                    <div class="content">
-                        <p>평온한 휴식은 끝났다.<br>
-                            리우가 붙잡히자, 실의에 빠진 도쿄.<br>
-                            그녀는 교수에게 도움을 청하고, 팀원들이 다시 모인다.<br>
-                            친구를 구하려는 그들, 한층 대범한 작전을 시작한다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/107.jpg" alt=""><p>Episode 2</p></button>
-                    <div class="content">
-                        <p>형의 계획을 실행에 옮기기 위해, 교수는 마르틴을 영입한다.<br>
-                            스페인 은행을 목표로 한 불가능해 보이는 작전.<br>
-                            이를 어떻게 해낼 것인가.<br>
-                            우선, 도시에 대혼란을 일으킨다!</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/102.jpg" alt=""><p>Episode 3</p></button>
-                    <div class="content">
-                        <p>도쿄와 나이로비의 임무가 순탄하게 진행되지 않는다.<br>
-                            엉망이 된 상황에서, 다음 계획을 지휘하는 나이로비.<br>
-                            물로 차오르는 위험한 금고에 전문가들이 투입된다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/2.jpg" alt=""><p>Episode 4</p></button>
-                    <div class="content">
-                        <p>가족 걱정에 불안해하는 덴버.<br>
-                            이때, 타마요 대령이 절차를 무시한 채 밀고 들어오려 한다.<br>
-                            시간이 없다! 사태가 위급해지자, 팔레르모는 돌고래 작전을 이용하기로 한다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/31.jpg" alt=""><p>Episode 5</p></button>
-                    <div class="content">
-                        <p>예상치 못한 반격에 당황하는 정부.<br>
-                            하지만 그들도 가만있진 않는다.<br>
-                            새로운 경감이 라켈을 협박하자, 동요하는 그녀와 교수.<br>
-                            팔레르모와 나이로비의 갈등도 심해진다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/32.jpg" alt=""><p>Episode 6</p></button>
-                    <div class="content">
-                        <p>강력한 일격을 가하는 시에라 경감.<br>
-                            경찰들이 스페인 은행으로 잠입하기 시작한다.<br>
-                            교수와의 교신이 끊긴 상황.<br>
-                            절박한 처지의 팔레르모는 그의 방식을 밀어붙인다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/43.jpg" alt=""><p>Episode 7</p></button>
-                    <div class="content">
-                        <p>극단적인 지시에 씁쓸함을 느끼는 도쿄와 라켈.<br>
-                            이 일로 다투던 라켈과 교수는 코앞에 닥친 추격에 당황한다.<br>
-                            정부는 보상금을 걸고 교수 일당의 정보를 캐내려 한다.</p>
-                    </div>
-                    <button type="button" class="collapsible"><img src="img/100.jpg" alt=""><p>Episode 8</p></button>
-                    <div class="content">
-                        <p>슬픔에 빠져 제정신을 차리지 못하는 도쿄.<br>
-                            도주 중 궁지에 몰리는 라켈.<br>
-                            시에라 경감은 개인적인 약점을 이용해 나이로비를 뒤흔든다.<br>
-                            그들은 이대로 무너지는 걸까.</p>
-                    </div>
-
-                </div>
-            </div>
-
-
-
-        </div>
-
-    </div>
-</div>
-
-<!-- <script>
-    $(function () {
-
-        $(window).scroll(function () {
-
-            var ws = $(this).scrollTop();
-
-            if (ws > 3500) {
-
-                $('#contentsbg').css("transform", "translateY(0px)").css("opacity", "1");
-                
-               
-
-            }
-
-
-        });
-    });
-</script> -->
-
-
-        <script>
-    $(function(){
-
-$('.collapsible').click(function(){
-
-
-$('.collapsible').stop().removeClass("active");
-$('.content').stop().slideUp();
-
-$(this).stop().addClass("active");
-$(this).next('.content').stop().slideToggle();
-});
-
-});
-
-
-</script>
-<!-- <script>
-                    var coll = document.getElementsByClassName("collapsible");
-                    var i;
-                    
-                    for (i = 0; i < coll.length; i++) {
-                      coll[i].addEventListener("click", function() {
-                        this.classList.toggle("active");
-                        var content = this.nextElementSibling;
-                        if (content.style.maxHeight != null){
-                          content.style.maxHeight = null;
-                        } else {
-                          
-                            content.style.maxHeight = 100;
-                        //   content.style.maxHeight = content.scrollHeight + "px";
-                        }
-                      });
-                    }
-                    </script> -->
-
-
-<div id="movlogobg">
-     <div class="movlogo">
-
-        <div class="mltext">
-            <p>INVESTOR</p><br>
-            <p>PRODUCER</p><br>
-            <p>producers involved in the production</p><br>
-        </div>
-
-        <div class="mlimg">
-            <div class="mlbox" style="background-image: url('img/70.png'); background-position: center; background-size: cover;"></div>
-            <div class="mlbox" style="background-image: url('img/75.jpg'); background-position: center; background-size: cover;"></div>
-            <div class="mlbox" style="background-image: url('img/72.png'); background-position: center; background-size: cover;"></div>
-            <div class="mlbox" style="background-image: url('img/73.jpg'); background-position: center; background-size: cover;"></div>
-            <div class="mlbox" style="background-image: url('img/74.jpg'); background-position: center; background-size: cover;"></div>
-        </div>
-     </div>
-</div>
-
-<!-- <script>
-    $(function () {
-
-        $(window).scroll(function () {
-
-            var ws = $(this).scrollTop();
-
-            if (ws > 4500) {
-
-                $('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
-                
-               
-
-            }
-
-
-        });
-    });
-</script> -->
-
-<div id="gallerybg">
-    <div class="gallery">
-
-        <div class="ga">
-            <p>OUR STAGE</p>
-            <p>EVENT GALLERY</p>
-            <p>photo while shooting</p>
-        </div>
-
-        <div class="lery">
-            <div class="ry1">
-
-            </div>
-            <div class="ry2">
-                <div class="ay1"></div>
-                <div class="ay2"></div>
-                <div class="ay3"></div>
-                <div class="ay4"></div>
-            </div>
-
-        </div>
-
-    </div>
-</div>
-
-<!-- <script>
-    $(function () {
-
-        $(window).scroll(function () {
-
-            var ws = $(this).scrollTop();
-
-            if (ws > 5200) {
-
-                $('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
-                
-               
-
-            }
-
-
-        });
-    });
-</script> -->
-
-<div id="locationbg">
-    <div class="location">
-        <div class="tion1">
-            <p>EVENT LOCATION</p>
-            <p>SEE YOU THERE</p>
-            <p>Eight criminals, assembled by an unknown man called 'the professor',<br>
-                join the professor's operation by staying at a hunting ground in Toledo for<br>
-                several months to rob the Madrid Mint.</p>
-        </div>
-        <div class="tion2"></div>
-        <div class="tion3"></div>
-        <div class="tion4">
-            <p>EVENT LOCATION</p>
-            <p>OR JOIN US REMOTELY</p>
-            <p>They call each other by the city's name, and during this period,<br>
-                they learn shooting training, psychological tactics, operational outlines,<br> 
-                and medicine according to the professor's meticulous plan.</p>
-        </div>
-    </div>
-</div>
-
-<!-- <script>
-    $(function () {
-
-        $(window).scroll(function () {
-
-            var ws = $(this).scrollTop();
-
-            if (ws > 5900) {
-
-                $('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
-                $('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
-                $('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
-                $('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
-            }
-
-
-        });
-    });
-</script> -->
-
-<div id="cardbg">
-    <div class="rdbg">
-        <div class="cardtext">
-            <p>EVENT PRICING</p>
-            <p>GET YOUR TICKET NOW</p>
-            <p>Most Popular Subscriptions on Netflix</p>
-        </div>
-        <div class="cards">
-
-            <div class="card">
-                <h3>BASIC</h3>
-                <p class="price">$15.99</p>
-                <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg" alt="">good video quality</p>
-                <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be89083b7a4cbe0a8ddb3_close-icon.svg" alt="">Resolution 480p</p>
-                <p><img src="	https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be89083b7a4cbe0a8ddb3_close-icon.svg" alt="">
-                    4 devices available</p>
-                <p><button>BUY TICKETS</button></p>
-            </div>
-
-            <div class="card">
-                <h2>MOST POPULAR</h2>
-                <h3>PREMIUM</h3>
-                <p class="price">$19.99</p>
-                <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg" alt="">very good video quality</p>
-                <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg" alt="">Resolution 1080p</p>
-                <p><img src="	https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be89083b7a4cbe0a8ddb3_close-icon.svg" alt="">
-                    4 devices available</p>
-                <p><button>BUY TICKETS</button></p>
-            </div>
-
-            <div class="card">
-                <h3>VIP</h3>
-                <p class="price">$28.99</p>
-                <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg" alt="">best video quality</p>
-                <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg" alt="">Resolution 4K+HDR</p>
-                <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg" alt="">
-                    4 devices available</p>
-                <p><button>BUY TICKETS</button></p>
-            </div>
-            
-        </div>
-
-    </div>
-
-</div>
-
-<!-- <script>
-    $(function () {
-
-        $(window).scroll(function () {
-
-            var ws = $(this).scrollTop();
-
-            if (ws > 7200) {
-
-                $('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
-                
-               
-
-            }
-
-
-        });
-    });
-</script> -->
-
-<div id="containerbg">
-    <div class="conbg">
-        <p>GOT QUESTIONS?</p><br>
-            <p>CONTACT US</p><br><br>
           
-        <div class="container">
-            
-            <form action="action_page.php">
+            document.getElementById("myNav").style.height = "50%";
 
-                <label for="fname"></label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name">
 
-                <label for="lname"></label>
-                <input type="text" id="lname" name="lastname" placeholder="Email">
 
-                
+        }
 
-                <label for="subject"></label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-                <input type="submit" value="Submit">
 
-            </form>
+        function closeNav() {
+
+
+      
+            document.getElementById("myNav").style.height = "0%";
+
+        }
+
+
+
+
+
+
+
+    </script>
+  
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+    <header>
+
+        <div class="small">
+            <div class="logo"><a href="./sub.html">LA CASA <b>DE</b> PAPEL</a></div>
+
+            <div id="a">
+                <a href="./sub.html">HOME</a>
+                <a href="./sub.html">PAGES</a>
+                <a href="./sub.html">EVENT</a>
+
+                <button class="abt" style="color: #f1f1f1;">BUY TICKETS</button>
+
+            </div>
+
+
+
+            <img src="img/i.png" id="b" alt="." onclick="openNav()">
+
         </div>
 
-        <!-- <script>
-            $(function () {
-        
-                $(window).scroll(function () {
-        
-                    var ws = $(this).scrollTop();
-        
-                    if (ws > 7700) {
-        
-                        $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
-                        $('.container').css("transform", "translateY(0px)").css("opacity", "1");
-                        
-                       
-        
-                    }
-        
-        
-                });
-            });
-        </script> -->
 
-        <div class="callbg">
-            <div class="call">
-                <a href="sub.html" class="fa fa-facebook"></a>
-                <a href="sub.html" class="fa fa-twitter"></a>
-                <a href="sub.html" class="fa fa-instagram"></a>
+
+        <div id="myNav" class="overlay">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+            <div class="overlay-content">
+
+                <a href="./sub.html">HOME</a>
+
+                <a href="./sub.html">PAGES</a>
+
+                <a href="./sub.html">SERVICES</a>
+
+                <a href="./sub.html">EVENT</a>
+
+              <button class="lo">BUY TICKETS</button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div id="slide" style="background-image: url(img/slide1.png); background-position: center; background-size: cover;">
+
+        <div class="slbox">
+            <p>LA CASA<br>
+                <b>DE</b><br>
+                PAPEL<br>
+            </p><br><br>
+
+            <p>
+                2022 . 06 . 24 <br>
+                OPEN<br>
+            </p><br><br>
+
+            <p>NETFLIX ORIGINAL</p>
+
+        </div>
+
+        <div class="ibox">
+            <img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618b99e61831b9b5b9b3bb97_arrow.svg"
+                alt="">
+        </div>
+
+        <div class="debox">
+
+            <div class="de1">
+                <p>19+</p><br>
+                <p>청소년<br>
+                    관람불가</p>
+            </div>
+
+            <div class="de2">
+                <p>19+</p><br>
+                <p>유해성<br>
+                    높음</p>
+            </div>
+
+            <div class="de3">
+                <p>15+</p><br>
+                <p>폭력성<br>
+                    보통</p>
+            </div>
+
+            <div class="de4">
+                <p>19+</p><br>
+                <p>대사<br>
+                    높음</p>
+            </div>
+
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="js/index1.js"></script>
+
+        <div class="evebg">
+            <div id="eve">
+
+                <div class="te">
+                    <p>Netflix original</p>
+                    <p>La Casa de Papel</p>
+                    <p>스페인에서 강도 행각을 벌이다 파트너 겸 연인이었던 공범자를 잃은 올리베이라.<br>
+                        어떻게 돈은 건졌지만 전국에 자신의 얼굴이 공개되어 현상수배까지 걸린 그녀는 어머니한테 전화를 걸어 같이 도망가자고 권유하고,<br>
+                        긍정적인 대답이 돌아오자 변장을 하고 어머니의 집을 찾으려 한다.<br><br>
+
+                        하지만 그때 그녀를 차량 한 대가 미행하며 따라오고,<br>
+                        그 안에 타고 있던 남자가 별안간 문을 열며 탈 것을 요구한다.<br>
+                        이에 그녀는 미심쩍어 하면서도 일단 탑승한 뒤 그를 경찰의 끄나풀로 단정내리고 총을 겨누며 협박하지만,<br>
+                        남자는 그녀의 어머니와 경찰이 나란히 찍혀있는 사진을 보여주며 지금 어머니의 집을 찾으면 체포될 거라고 말한다.<br>
+                        이에 그녀는 잠시 침묵한 끝에 대체 당신은 누구냐고 물어보고 남자는 교수라고 부르라며 답한다.<br>
+                        그리고 자신이 꾸미고 있는 큰 건수가 있으니 거기에 참여할 것을 권해오는 교수의 말에 넘어간 올리베이라는 외딴 곳에 위치한 낡은 대저택에서 다른 팀원들과 만나고 서로가
+                        서로를 도시명으로 부르게 되면서 도쿄라는 코드 네임을 칭하게 된다.<br>
+                        스페인 드라마인 만큼 도시의 스페인어명과 스페인어 발음을 사용한다.<br><br>
+
+                        그리고 거기서 공개되는 교수의 계획 목표는 다름 아닌 스페인 조폐국.<br>
+                        이를 위해 수개월간의 훈련을 거친 그들은 마침내 조폐국에 침입하고 작전을 개시한다.<br>
+                        하지만 중간에 발생하는 몇 가지 트러블과 예상치 못한 사태로 인해 계획이 틀어지기 시작하는데...</p>
+                </div>
+
+                <div class="evmu">
+                    <div class="bor"></div>
+                    <div class="mu">
+                        <video controls="controls" src="img/vi1.mp4"  poster="img/vipo.png" width="100" height="100"></video> 
+                    
+                    </div>
+                    
+                </div>
+
             </div>
         </div>
 
-        <div class="calltext">
-            <p>+82 123456789</p>
-            <p>eventspeech@example.com</p><br>
-            <p>LA CASA <b>DE</b> PAPEL</p>
-        </div>
-
-
-    </div>
-</div>
-
-<footer>
-    <div id="footerbg">
-        <div class="foot">
-            <p>mluemoonstudio@</p>
-            <p>+</p>
-            <p>Powered by Webflow</p>
-        </div>
-        <div class="ter">
-            <p>Password</p>
-            <p>+</p>
-            <p>404</p>
-            <p>+</p>
-            <p>Style</p>
-            <p>+</p>
-            <p>License</p>
-            <p>+</p>
-            <p>Changelog</p>
-            <p>+</p>
-            <p>Terms</p>
-            <p>+</p>
-            <p>Privacy</p>
-        </div>
-    </div>
-</footer>
-
-
-
-
-<script>
-    $(function () {
-if (window.matchMedia("(max-width:599px)").matches) { 
-
-   $(window).scroll(function(){
-
-   var ws = $(this).scrollTop();
-
-
-
-if (ws > 150) {
-
-$('.te p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 700) {
-
-$('.cha p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.racbox').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 2300) {
-
-$('.ditext p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-if (ws > 3100) {
-
-$('#contentsbg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 4100) {
-
-$('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 4700) {
-
-$('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 5200) {
-
-$('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
-}
-
-if (ws > 6000) {
-
-$('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-if (ws > 7000) {
-       
-       $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
-       $('.container').css("transform", "translateY(0px)").css("opacity", "1");
-       
       
 
-   }     });
 
-} else { 
+        <div id="characters">
 
-/* 뷰포트 너비가 400 픽셀 미만 */
+            <div class="cha">
+                <p>LA CASA <b>DE</b> PAPEL</p><br>
+                <p>CHARACTERS</p>
+            </div>
 
-}
-    });
+            <div class="rac">
 
+                <div class="racbox">
+                    <a href="./sub.html"><img src="img/10.jpg" alt=""></a>
+                    <p><a href="./sub.html">교수</a></p>
+                    <span class="c2">유지태</span><br>
+                    <span class="c1">Asi que olvidaos de vuestros cabales.</span>
+                </div>
 
+                <div class="racbox">
+                    <a href="./sub.html"><img src="img/11.jpg" alt=""></a>
+                    <p><a href="./sub.html">베를린</a></p>
+                    <span class="c2">박해수</span><br>
+                    <span class="c1">Este es un momento marabilloso.</span>
+                </div>
 
+                <div class="racbox">
+                    <a href="./sub.html"><img src="img/12.jpg" alt=""></a>
+                    <p><a href="./sub.html">도쿄</a></p>
+                    <span class="c2">전종서</span><br>
+                    <span class="c1">La esperanza es como las fichas del domino,<br>
+                            cuardo una cae, acaban cayendo todas</span>
+                </div>
 
+                <div class="racbox">
+                    <a href="./sub.html"><img src="img/13.jpg" alt=""></a>
+                    <p><a href="./sub.html">덴버</a></p>
+                    <span class="c2">김지훈</span><br>
+                    <span class="c1">Lo que yo he vivido contigo no lo he vivido con nadie.</span>
+                </div>
 
+                <div class="racbox">
+                    <a href="./sub.html"><img src="img/14.jpg" alt=""></a>
+                    <p><a href="./sub.html">나이로비</a></p>
+                    <span class="c2">장윤주</span><br>
+                    <span class="c1">Senores, hay que vivir hasta el final</span>
+                </div>
 
+                <div class="racbox">
+                    <a href="./sub.html"><img src="img/15.jpg" alt=""></a>
+                    <p><a href="./sub.html">리우</a></p>
+                    <span class="c2">이현우</span><br>
+                    <span class="c1">El caos enteromete con la vida todo el tiempo</span>
+                </div>
 
-</script>
+            </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-<script>
-    $(function () {
-if (window.matchMedia("(min-width: 600px)and (max-width:1199px) ").matches) { 
-
-   $(window).scroll(function(){
-
-   var ws = $(this).scrollTop();
-
-   if (ws > -10) {
-
-$('.slbox p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.ibox img').css("transform", "translateY(0px)").css("opacity", "1");
-$('.debox').css("transform", "translateY(0px)").css("opacity", "1");
-}
-
-if (ws > 650) {
-
-$('.te p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 1500) {
-
-$('.cha p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.racbox').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 2300) {
-
-$('.ditext p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-if (ws > 3500) {
-
-$('#contentsbg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 4500) {
-
-$('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 5100) {
-
-$('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 5500) {
-
-$('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
-}
-
-if (ws > 6700) {
-
-$('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-if (ws > 7500) {
-       
-       $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
-       $('.container').css("transform", "translateY(0px)").css("opacity", "1");
-       
       
 
-   }     });
 
-} else { 
+        <div id="directorbg">
+            <div class="director">
+
+                <div class="ditext">
+                    <p>DIRECTORS</p><br>
+                    <p>우리의 목표는 세상에 없는 돈이다.</p><br>
+                    <p>넷플릭스에서 방영된 스페인 드라마 종이의 집(La Casa de Papel)의
+                        리메이크작이자 2022년에 공개한 넷플릭스 오리지널 한국 드라마.<br>
+                        이 드라마의 시간적 배경은 2026년 9월 초,<br>
+                        공간적 배경은 공동경제구역과 '한반도통일조폐국',<br>
+                        그리고 경기도 파주시 등지이다.</p>
+                </div>
+
+                <div class="diimg">
+
+                    <div class="dile">
+                        <div class="le1"></div>
+                        <div class="le2"><img src="img/200.jpg" alt=""></div>
+                        <p>DIRECTOR</p>
+                        <p>김홍선</p>
+                    </div>
+
+                    <div class="diri">
+                        <div class="ri1"></div>
+                        <div class="ri2"><img src="img/201.jpg" alt=""></div>
+                        <p>AUTHOR</p>
+                        <p>류용재</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-/* 뷰포트 너비가 400 픽셀 미만 */
-
-}
-    });
-
-
-
-
-
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    $(function () {
-if (window.matchMedia("(min-width: 1200px)").matches) { 
-
-   $(window).scroll(function(){
-
-   var ws = $(this).scrollTop();
-
-
-
-if (ws > 700) {
-
-$('.te p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.evmu').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 1500) {
-
-$('.cha p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.racbox').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 2300) {
-
-$('.ditext p').css("transform", "translateY(0px)").css("opacity", "1");
-$('.diimg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-if (ws > 3500) {
-
-$('#contentsbg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 4500) {
-
-$('#movlogobg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 5200) {
-
-$('.gallery').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-
-if (ws > 5900) {
-
-$('.tion1').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion2').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion3').css("transform", "translateY(0px)").css("opacity", "1");
-$('.tion4').css("transform", "translateY(0px)").css("opacity", "1");
-}
-
-if (ws > 7200) {
-
-$('.rdbg').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-
-}
-if (ws > 7700) {
        
-       $('.conbg p').css("transform", "translateY(0px)").css("opacity", "1");
-       $('.container').css("transform", "translateY(0px)").css("opacity", "1");
-       
+
+
+
+        <script type="text/javascript" src="js/index2.js"></script>
+
+
+
+        <div id="contentsbg" >
+
+            <div class="ste">
+                <div class="sstt">
+                    <p>LA CASA <b> DE </b> PAPEL</p>
+                    <p>CONTENTS</p>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="wrap">
+                    <div class="po">
+                      
+                            <p id="xt">season 1</p>
+                  
+                            <p id="xt2">season 2</p>
+              
+                            <p id="xt3">season 3</p>
+                      
+                    </div>
+
+
+                    <script type="text/javascript" src="js/index3.js"></script>
+
+
+
+                    <div class="div1">
+
+                        <div class="textbox">
+
+                            <h2>줄거리</h2>
+
+                            <p><br></p>
+                            <button type="button" class="collapsible"><img src="img/12.jpg" alt="">
+                              전체 줄거리
+                            </button>
+                            <div class="content">
+                             신원 미상의 '교수'라 불리는 남자가 모은 8명의 범죄자들은 톨레도의 한 사냥터에서 마드리드 조폐국을 털기 위해 몇 달간 숙식을 하면서 교수의 작전에
+                                    동참한다.<br>
+                                    이들은 서로를 도시의 이름으로 부르며 이 기간 동안 교수의 치밀한 계획에 따라 사격 훈련 및 심리 전술, 작전 개요, 의술 등을 터득한다.<br>
+                                    교수는 단순히 조폐국을 터는 것이 아니라 장기점거를 하며 24억 유로를 찍어낼 계획을 가지고 있었다.<br>
+                                    이들은 성공적으로 조폐국을 점거하고 계획은 순조롭게 진행된다. 교수는 조폐국 주변의 낡은 창고에서 외부지원을 맡는다.<br>
+                                    언론 및 경찰은 교수가 미리 말했던 대로 움직였고, 이들은 경찰을 농락한다.<br>
+
+                           
+                            </div>
+
+                            <p><br></p>
+                            <button type="button" class="collapsible"><img src="img/1.jpg" alt="">
+                               Episode 1
+                            </button>
+                            <div class="content">
+                                <p>사상 최대의 무장강도를 치밀하게 계획해 온 '교수'.<br>
+                                    잃을 것 없는 8인을 지휘하여 스페인 조폐국에 침투시킨다.<br>
+                                    인질까지 잡았으니 이젠 독 안에 든 쥐가 될 차례.</p>
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/2.jpg" alt="">
+                            Episode 2
+                            </button>
+                            <div class="content">
+                             인질 석방에 투입된 것은 협상가 라켈 무리요뿐만이 아니다.<br>
+                                    정보부가 얼쩡거리는 이유는? 석방 협상이 긴박해지고, 싸움은 시작되었다.<br>
+                                    숨겨둔 카드를 꺼내들 때.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/3.jpg" alt="">
+                            Episode 3
+                            </button>
+                            <div class="content">
+                               일부 멤버의 이미지가 유출되고 아르투로는 필사적으로 살길을 모색한다.<br>
+                                    바에서 만난 남자를 의심하는 라켈.<br>
+                                    순조롭던 계획이 틀어진 것은 삶이 늘 그렇듯 사랑 탓이었다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/31.jpg" alt="">
+                           Episode 4
+                            </button>
+                            <div class="content">
+                          라켈에게 개인적인 긴급상황이 발생한다.<br>
+                                    총성을 들은 인질들은 겁에 질리고, 모스크바는 베를린의 명령을 이행한 사람이 아들임을 알게 된다.<br>
+                                    열린 문은 투항의 신호인가?
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/32.jpg" alt="">
+                            Episode 5
+                            </button>
+                            <div class="content">
+                             의료진 진입이 허용된 틈을 타 경찰이 잠입한다.<br>
+                                    지금껏 모든 걸 내다본 교수와 그보다 한 수 앞을 내다봐야 하는 라켈.<br>
+                                    트로이의 목마는 누구의 차지가 될 것인가.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/33.jpg" alt="">
+                       Episode 6
+                            </button>
+                            <div class="content">
+                            상태가 나빠지는 모니카.<br>
+                                    리우는 뉴스 보도에 심기가 불편해지고, 교수는 계책이 통한 걸 즐긴다.<br>
+                                    베를린이 규칙을 어기자, 도쿄는 교수에게 보고하라고 종용한다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/34.jpg" alt="">
+                              Episode 7
+                            </button>
+                            <div class="content">
+                              경찰이 단서를 잡고 한 멤버의 실수까지 더해져 정체가 드러나기 일보 직전.<br>
+                                    좁혀지는 수사망의 한가운데 선 교수는 위기를 모면하려면 촌각을 다투며 기지를 발휘해야 한다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/35.jpg" alt="">
+                             Episode 8
+                            </button>
+                            <div class="content">
+                             리우와 대화하는 앨리슨을 보고 다그치는 도쿄.<br>
+                                    라켈은 언론의 호된 질타를 받고 벼랑 끝으로 몰린다.<br>
+                                    놈들이 늘 미꾸라지처럼 빠져나가다니, 누군가 정보를 흘리는 걸까?
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="div2">
+
+                        <div class="textbox">
+
+                            <h2>줄거리</h2>
+
+                            <p><br></p>
+                            <button type="button" class="collapsible"><img src="img/40.jpg" alt="">
+                              전체 줄거리
+                            </button>
+                            <div class="content">
+                                교수의 신원 파악에 부심하는 경찰.<br>
+                                    교수와 연락이 끊기자 혼란스러워진 조폐국 내의 팀원들은 반란을 일으키고, 한 멤버는 급기야 덜미를 잡힌다.
+
+                                
+                            </div>
+
+                            <p><br></p>
+                            <button type="button" class="collapsible"><img src="img/41.jpg" alt="">
+                                Episode 1
+                            </button>
+                            <div class="content">
+                                감식반이 DNA 채취를 위해 톨레도 안가를 뒤진다.<br>
+                                    수사를 지켜볼수록 초조해지는 교수.<br>
+                                    조폐국에서는 갈등이 증폭되고, 팀은 최악을 각오한다.<br>
+                                    이제 '파티'를 준비하자.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/42.png" alt="">
+                                Episode 2
+                            </button>
+                            <div class="content">
+                                체르노빌 작전은 무엇인가?<br>
+                                    반목 끝에 대치하는 팀원들. 강도, 자유, 사랑, 꿈. 그 끝이 시작됐다.<br>
+                                    붙잡힌 첫 멤버에 대한 경찰 조사도.<br>
+                                    이제 체포 시나리오를 가동한다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/43.jpg" alt="">
+                                Episode 3
+                            </button>
+                            <div class="content">
+                                교수의 정체를 알아내려는 라켈. 포로의 심리를 자극한다.<br>
+                                    '배반'에 대한 처벌은 반란의 불씨를 댕기고, 체포 전략도 난항을 겪는다.<br>
+                                    한편, 드디어 걸려오는 전화.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/100.jpg" alt="">
+                                Episode 4
+                            </button>
+                            <div class="content">
+                                계획이 뜻대로 흘러가지 않자 팀은 언론을 통해 대중의 지지를 얻으려 하고, 인질들은 반격을 모의한다.<br>
+                                    라켈은 애인과 더욱 가까워지는 한편, 교수를 잡을 함정을 판다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/101.jpg" alt="">
+                            Episode 5
+                            </button>
+                            <div class="content">
+                                아르투로는 탈출 모의를 주도한다.<br>
+                                    살바와 대화를 나누던 중, 마음에 걸리는 사소한 사실을 깨닫고 모든 것이 극도로 혼란스러워지는 라켈.<br>
+                                    불행이 세 여자를 강타한다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/102.jpg" alt="">
+                                Episode 6
+                            </button>
+                            <div class="content">
+                                오랫동안 간직해온 비밀을 털어놓는 모스크바.<br>
+                                    아들의 신뢰를 잃고 만다.<br>
+                                    도쿄를 위한 긴급계획이 암초를 만난다.<br>
+                                    수호천사가 없을 땐 혼자서 정면돌파하는 수밖에.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/103.jpg" alt="">
+                                Episode 7
+                            </button>
+                            <div class="content">
+                                도쿄는 오열하고, 팀은 부상자를 살리려 백방으로 뛴다.<br>
+                                    방법은 투항뿐일까?<br>
+                                    아리아드나는 모니카에게 진실을 고백하고, 라켈은 나락으로 떨어지지 않으려 이를 악문다..
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/104.jpg" alt="">
+                                Episode 8
+                            </button>
+                            <div class="content">
+                                교수 때문에 사건에서 물러나게 된 라켈은 홀로 추적에 나선다.<br>
+                                    탈출과 체포의 기로에서 분초를 다투는 팀.<br>
+                                    의외의 인물이 손을 내민다.<br>
+                                    새 조력자를 정말 믿어도 될까?
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="div3">
+
+                        <div class="textbox">
+
+                            <h2>줄거리</h2>
+
+                            <p><br></p>
+                            <button type="button" class="collapsible"><img src="img/105.jpg" alt="">
+                                전체 줄거리
+                            </button>
+                            <div class="content">
+                베를린, 모스크바, 오슬로를 잃었으나 결국 자신들이 찍어낸 9억 8천만 유로를 가지고 스페인 영해를 벗어나는 데 성공한 교수와 강도들.<br>
+                                    이들은 대서양을 건너 2인 1조로 안전가옥에 흩어져 공소시효가 끝날 때까지 지내게 된다.<br>
+                                    그러나 2년쯤 지난 어느 날, 리오가 몰래 위성 전화기를 썼다가 체포당한다.<br>
+                                    간신히 경찰을 따돌린 도쿄는 교수를 부르고, 교수는 다시 강도들을 소집한다.<br>
+                                    보고타와 마르세유, 스톡홀름, 리스본, 팔레르모가 합세하고, 교수는 이번엔 스페인 국립 준비은행 지하 48m에 보관되어 있는 90톤의 금을 털기로
+                                    하는데...
+                            </div>
+
+                            <p><br></p>
+                            <button type="button" class="collapsible"><img src="img/106.jpg" alt="">
+                               Episode 1
+                            </button>
+                            <div class="content">
+                                평온한 휴식은 끝났다.<br>
+                                    리우가 붙잡히자, 실의에 빠진 도쿄.<br>
+                                    그녀는 교수에게 도움을 청하고, 팀원들이 다시 모인다.<br>
+                                    친구를 구하려는 그들, 한층 대범한 작전을 시작한다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/107.jpg" alt="">
+                                Episode 2
+                            </button>
+                            <div class="content">
+                                형의 계획을 실행에 옮기기 위해, 교수는 마르틴을 영입한다.<br>
+                                    스페인 은행을 목표로 한 불가능해 보이는 작전.<br>
+                                    이를 어떻게 해낼 것인가.<br>
+                                    우선, 도시에 대혼란을 일으킨다!
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/102.jpg" alt="">
+                                Episode 3
+                            </button>
+                            <div class="content">
+                                도쿄와 나이로비의 임무가 순탄하게 진행되지 않는다.<br>
+                                    엉망이 된 상황에서, 다음 계획을 지휘하는 나이로비.<br>
+                                    물로 차오르는 위험한 금고에 전문가들이 투입된다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/2.jpg" alt="">
+                                Episode 4
+                            </button>
+                            <div class="content">
+                                가족 걱정에 불안해하는 덴버.<br>
+                                    이때, 타마요 대령이 절차를 무시한 채 밀고 들어오려 한다.<br>
+                                    시간이 없다! 사태가 위급해지자, 팔레르모는 돌고래 작전을 이용하기로 한다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/31.jpg" alt="">
+                                Episode 5
+                            </button>
+                            <div class="content">
+                                예상치 못한 반격에 당황하는 정부.<br>
+                                    하지만 그들도 가만있진 않는다.<br>
+                                    새로운 경감이 라켈을 협박하자, 동요하는 그녀와 교수.<br>
+                                    팔레르모와 나이로비의 갈등도 심해진다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/32.jpg" alt="">
+                                Episode 6
+                            </button>
+                            <div class="content">
+                                강력한 일격을 가하는 시에라 경감.<br>
+                                    경찰들이 스페인 은행으로 잠입하기 시작한다.<br>
+                                    교수와의 교신이 끊긴 상황.<br>
+                                    절박한 처지의 팔레르모는 그의 방식을 밀어붙인다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/43.jpg" alt="">
+                                Episode 7
+                            </button>
+                            <div class="content">
+                                극단적인 지시에 씁쓸함을 느끼는 도쿄와 라켈.<br>
+                                    이 일로 다투던 라켈과 교수는 코앞에 닥친 추격에 당황한다.<br>
+                                    정부는 보상금을 걸고 교수 일당의 정보를 캐내려 한다.
+                            </div>
+                            <button type="button" class="collapsible"><img src="img/100.jpg" alt="">
+                                Episode 8
+                            </button>
+                            <div class="content">
+                                슬픔에 빠져 제정신을 차리지 못하는 도쿄.<br>
+                                    도주 중 궁지에 몰리는 라켈.<br>
+                                    시에라 경감은 개인적인 약점을 이용해 나이로비를 뒤흔든다.<br>
+                                    그들은 이대로 무너지는 걸까.
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
       
 
-   }     });
-
-} else { 
-
-/* 뷰포트 너비가 400 픽셀 미만 */
-
-}
-    });
+        <script type="text/javascript" src="js/index4.js"></script>
+      
 
 
+        <div id="movlogobg">
+            <div class="movlogo">
+
+                <div class="mltext">
+                    <p>INVESTOR</p><br>
+                    <p>PRODUCER</p><br>
+                    <p>producers involved in the production</p><br>
+                </div>
+
+                <div class="mlimg">
+                    <div class="mlbox"
+                        style="background-image: url('img/70.png'); background-position: center; background-size: cover;">
+                    </div>
+                    <div class="mlbox"
+                        style="background-image: url('img/75.jpg'); background-position: center; background-size: cover;">
+                    </div>
+                    <div class="mlbox"
+                        style="background-image: url('img/72.png'); background-position: center; background-size: cover;">
+                    </div>
+                    <div class="mlbox"
+                        style="background-image: url('img/73.jpg'); background-position: center; background-size: cover;">
+                    </div>
+                    <div class="mlbox"
+                        style="background-image: url('img/74.jpg'); background-position: center; background-size: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+
+        <div id="gallerybg">
+            <div class="gallery">
+
+                <div class="ga">
+                    <p>OUR STAGE</p>
+                    <p>EVENT GALLERY</p>
+                    <p>photo while shooting</p>
+                </div>
+
+                <div class="lery">
+                    <div class="ry1" style=" background-image: url(img/35.jpg);
+                    background-position: center;
+                    background-size: cover;">
+
+                    </div>
+                    <div class="ry2" >
+
+                        <div class="ay1" style="
+                        background-image: url(img/31.jpg);
+                               background-position: center;
+                               background-size: cover;"></div>
+                               
+                        <div class="ay2" style="  background-image: url(img/32.jpg);
+                        background-position: center;
+                        background-size: cover;"></div>
+                        <div class="ay3" style="   background-image: url(img/33.jpg);
+                        background-position: center;
+                        background-size: cover;"></div>
+                        <div class="ay4" style="  background-image: url(img/34.jpg);
+                        background-position: center;
+                        background-size: cover;"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+      
+
+        <div id="locationbg">
+            <div class="location">
+                <div class="tion1">
+                    <p>EVENT LOCATION</p>
+                    <p>SEE YOU THERE</p>
+                    <p>Eight criminals, assembled by an unknown man called 'the professor',<br>
+                        join the professor's operation by staying at a hunting ground in Toledo for<br>
+                        several months to rob the Madrid Mint.</p>
+                </div>
+                <div class="tion2" style=" background-image: url(img/40.jpg);
+                background-position: center;
+                background-size: cover;"></div>
+                <div class="tion3" style=" background-image: url(img/41.jpg);
+                background-position: center;
+                background-size: cover;"></div>
+                <div class="tion4">
+                    <p>EVENT LOCATION</p>
+                    <p>OR JOIN US REMOTELY</p>
+                    <p>They call each other by the city's name, and during this period,<br>
+                        they learn shooting training, psychological tactics, operational outlines,<br>
+                        and medicine according to the professor's meticulous plan.</p>
+                </div>
+            </div>
+        </div>
+
+     
+
+        <div id="cardbg">
+            <div class="rdbg">
+                <div class="cardtext">
+                    <p>EVENT PRICING</p>
+                    <p>GET YOUR TICKET NOW</p>
+                    <p>Most Popular Subscriptions on Netflix</p>
+                </div>
+                <div class="cards">
+
+                    <div class="card">
+                        <h3>BASIC</h3>
+                        <p class="price">$15.99</p>
+                        <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg"
+                                alt="">good video quality</p>
+                        <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be89083b7a4cbe0a8ddb3_close-icon.svg"
+                                alt="">Resolution 480p</p>
+                        <p><img src="	https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be89083b7a4cbe0a8ddb3_close-icon.svg"
+                                alt="">
+                            4 devices available</p>
+                        <p><button>BUY TICKETS</button></p>
+                    </div>
+
+                    <div class="card">
+                        <h2>MOST POPULAR</h2>
+                        <h3>PREMIUM</h3>
+                        <p class="price">$19.99</p>
+                        <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg"
+                                alt="">very good video quality</p>
+                        <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg"
+                                alt="">Resolution 1080p</p>
+                        <p><img src="	https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be89083b7a4cbe0a8ddb3_close-icon.svg"
+                                alt="">
+                            4 devices available</p>
+                        <p><button>BUY TICKETS</button></p>
+                    </div>
+
+                    <div class="card">
+                        <h3>VIP</h3>
+                        <p class="price">$28.99</p>
+                        <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg"
+                                alt="">best video quality</p>
+                        <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg"
+                                alt="">Resolution 4K+HDR</p>
+                        <p><img src="https://uploads-ssl.webflow.com/618b88b55d2c93ef18d4c265/618be890d5bebc5ab0bf94bb_check-icon.svg"
+                                alt="">
+                            4 devices available</p>
+                        <p><button>BUY TICKETS</button></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+     
+
+        <div id="containerbg" style="background-image: url(img/40.jpg); background-position: center; background-size: cover;">
+            <div class="conbg" >
+                <p>GOT QUESTIONS?</p><br>
+                <p>CONTACT US</p><br><br>
+
+                <div class="container">
+
+                    <form action="action_page.php">
+
+                        <label for="fname"></label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name">
+
+                        <label for="lname"></label>
+                        <input type="text" id="lname" name="lastname" placeholder="Email">
 
 
 
+                        <label for="subject"></label>
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                            style="height:200px"></textarea>
+
+                        <input type="submit" value="Submit">
+
+                    </form>
+                </div>
+
+            
+
+                <div class="callbg">
+                    <div class="call">
+                        <a href="./sub.html" class="fa fa-facebook"></a>
+                        <a href="./sub.html" class="fa fa-twitter"></a>
+                        <a href="./sub.html" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+
+                <div class="calltext">
+                    <p>+82 123456789</p>
+                    <p>eventspeech@example.com</p><br>
+                    <p>LA CASA <b>DE</b> PAPEL</p>
+                </div>
 
 
-</script>
+            </div>
+        </div>
+
+        <footer>
+            <div id="footerbg">
+                <div class="foot">
+                    <p>mluemoonstudio@</p>
+                    <p>+</p>
+                    <p>Powered by Webflow</p>
+                </div>
+                <div class="ter">
+                    <p>Password</p>
+                    <p>+</p>
+                    <p>404</p>
+                    <p>+</p>
+                    <p>Style</p>
+                    <p>+</p>
+                    <p>License</p>
+                    <p>+</p>
+                    <p>Changelog</p>
+                    <p>+</p>
+                    <p>Terms</p>
+                    <p>+</p>
+                    <p>Privacy</p>
+                </div>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript" src="js/index.js"></script>
+    
 
 
 
-        </body>
-        
-        
-        
-        </html>
+</body>
+
+
+
+</html>

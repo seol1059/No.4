@@ -5,1244 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-   @font-face {
-    font-family: 'LeferiPoint-SpecialItalicA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-SpecialItalicA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ChosunGu';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'LeferiPoint-WhiteObliqueA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-     font-family: 'S-CoreDream-3Light';
-     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
-}
-
-@font-face {
-font-family: 'MyLotteLight';
-src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/MyLotteLight.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-}
-
-
-
-
-        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'MyLotteLight';  font-style: italic;}
-        ul, ol, li {list-style: none; margin: 0; padding: 0;}
-        html,body {width: 100%; height: 100%;}
-        button {border: none; background:none;}
-        a {color:#fff; text-decoration: none;}
-
-
-
-        @media  (max-width:599px) {
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ헤더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-  
-header .small {width: 100%; display: flex; align-items: center; background-color: #000; 
-             justify-content: space-between;}
-        
-        .logo {width: 150px; line-height: 50px; background-color: #000; color:#fff;
-             text-align: center;}
-
-             .logo b {color: red;}
-        
-
-        #a {display:none;}
-        #a img {cursor: pointer;}
-
-        
-        
-
-        .overlay {height: 0%; width: 100%; position: fixed; z-index:103; top: 0; left: 0;
-             background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.9);
-              overflow-y: hidden; transition: 0.5s;}
-        
-        .overlay-content {position: relative; top: 20%; width: 100%; text-align: center; 
-            display:block; }
-        
-        .overlay a { padding:15px; line-height:160%;  text-decoration: none; font-size: 20px; 
-            color: #818181; transition: 0.3s; font-weight: bold; display: block; height: 12%;}
-        
-        .overlay a:hover, .overlay a:focus {color: #f1f1f1;}
-        
-        .overlay .closebtn {position: absolute; top: -15px; right: 45px; font-size: 60px;}
-        
-        
-
-           .lo { color: #818181; font-size: 20px; font-weight: bold; }
-
-            .overlay a:nth-of-type(5) {width: 40%; height: 20%; border: 1px solid red; 
-                margin: 0 auto; border-radius: 4px;}
-
-                .overlay a:nth-of-type(5):hover {background-color: red; color: #f1f1f1;}
-
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ슬라이더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-#slider {width: 100%; height: 35%; margin: 0 auto; 
-background-image: url(img/s.jpg);
-background-position: center; background-size: cover;  color: #f1f1f1;
- display: flex; flex-direction: column; justify-content: center; align-items: center;}
-
-.sl1 {width: 100%; height: 25%; margin: 0 auto; display: flex; flex-direction: column;
- justify-content: flex-end; align-items: center;  }
- .sl1 p {font-size: 20px; 
-    transform: translateY(100px); transition: all 0.5s; opacity: 0;}
+    <title>LA CASA DE PAPEL</title>
  
-
-.sl2 {width: 80%; height: 40%; margin: 0 auto; display: flex; flex-direction: column; 
-justify-content: center; align-items: center; border: 5px solid red; margin-top: 35px; }
-.sl2 p:nth-of-type(1) {font-size: 60px; transform: translateY(100px); transition: all 1.0s; 
-    opacity: 0; display: none;}
- .sl2 p:nth-of-type(2) {font-size: 40px; color: red; 
-    transform: translateY(100px); transition: all 1.2s; opacity: 0; display: none;}
- .sl2 p:nth-of-type(3) {font-size: 60px; 
-    transform: translateY(100px); transition: all 1.5s; opacity: 0; display: none;}
-
-.sl3 {width: 100%; height: 25%; margin: 0 auto; display: flex; 
-flex-direction: column; 
-justify-content: flex-end; align-items: center; }
-.sl3 p {font-size: 20px; padding-top: 20px;
-     transform: translateY(100px); transition: all 2s; opacity: 0;}
-
-.er {width: 100%; height: 25%; margin: 0 auto; display: flex; flex-direction: column; 
-justify-content: flex-end; align-items: center; padding-bottom: 7px;
- transform: translateY(100px); transition: all 2.3s; opacity: 0;}
-.er p:nth-of-type(1) {font-size: 10px; font-weight: bold; color: rgb(37, 0, 0); }
-.er p:nth-of-type(2) {font-size: 10px; font-weight: bold; color: rgb(71, 0, 0);}
-.er p:nth-of-type(3) {font-size: 10px; font-weight: bold;  color: rgb(90, 0, 0);}
-.er p:nth-of-type(4) {font-size: 10px; font-weight: bold; color: rgb(124, 0, 0);}
-.er p:nth-of-type(5) {font-size: 10px; font-weight: bold; color: rgb(233, 0, 0);}
-.er p:nth-of-type(6) {font-size:24px;  color: red;}
-
-
-
-
-#abo {width: 100%; height: 500px; margin: 0 auto;}
-.bo {width: 100%; height: 100%; margin: 0 auto; display: flex;
-flex-direction: column; justify-content: space-evenly; align-items: center;}
-.bo p:nth-of-type(1) {text-align: center; font-size: 18px;}
-.bo p:nth-of-type(2) {text-align: center; font-size: 16px;}
-.bo p:nth-of-type(3) {text-align: center; font-size: 14px; padding: 10px 10px 10px 10px;  }
-
-.bobtn {width: 150px; height: 50px; margin: 0 auto; border: 1px solid red;
- border-radius: 10px;}
- .bobtn:hover {background-color: red; color: #f1f1f1; cursor: pointer;}
-
-.bo hr {width: 90%; height: 2px;  }
-
-
-
-
-#const {width: 100%; height: 600px; margin: 0 auto; padding-bottom: 85px;
-display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; 
-justify-content: space-around; }
-
-.con1 {width: 100%; height: 100px; display: flex; align-items: flex-start; 
-transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.con1 b {font-size: 5vw;  color: #000; }
-.con1 p {font-size: 4vw;  color: #666; padding-left: 25px; }
-
-.st1 {width: 45%; height: 30%; display: flex; align-items: flex-end;
-background-image: url("img/601.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 0.7s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st1 p {font-size: 16px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-.st2 {width: 45%; height: 30%; display: flex; align-items: flex-end;
-background-image: url("img/607.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 1s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st2 p {font-size: 16px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-.st3 {width: 45%; height: 30%; display: flex; align-items: flex-end;
-background-image: url("img/611.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 1.3s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st3 p {font-size: 16px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-.st4 {width: 45%; height: 30%; display: flex; align-items: flex-end;
-background-image: url("img/616.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 1.5s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st4 p {font-size: 16px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 굿즈 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-#wrap {
-        width: 100%;
-        height: 1700px;
-        border-bottom:  1px solid #999;
-        border-top:  1px solid #999;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        flex-flow: row wrap;
-    }
-
-    .div1 {
-        width: 100%;
-        height: 45%;
- 
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .div2 {
-        width: 100%;
-        height: 45%;
-
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .div3 {
-        width: 100%;
-        height: 45%;
-  
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .div4 {
-        width: 100%;
-        height: 45%;
-
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .textbox {
-        width: 45%;
-height: 35%;
-        margin: 30px auto;
- 
-        display: flex;
-        flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-       
-     
-    }
-
-    .textbox:hover {opacity: 0.7; }
-
-    .textbox a { margin: 0 auto; width: 95%; height: 70%;
-        text-decoration: none; text-align: center;
-    }
-
-    .textbox img { 
-        width: 10rem;
-        height: 10rem;
-        margin: 0 auto;
-    }
-    .textbox img:hover {opacity: 0.7;}
-    .textbox p {
-        font-size: 12px;
-    }
-
-    .b1, .b2, .b3, .b4 {
-        width: 100px;
-        height: 50px;
-        cursor: pointer;
-        border-bottom: 2px solid white;
-    }
-
-    #tt1, #tt2, #tt3, #tt4 {
-        font-size: 16px;
-      padding: 10px 0px;
-        cursor: pointer;
-        border-bottom: 2px solid white;
-    }
-
-  
-
-    .box {
-        width: 240px;
-        height: 395px;
-        border: 1px solid #eee;
-        padding: 10px;
-        margin: 10px;
-        display: inline-block;
-    }
-
-    .box img {
-        width: 100%;
-        height: 225px;
-    }
-
-    .box p {
-        border-bottom: 1px solid #eee;
-        font-size: 12px;
-        font-weight: bold;
-        height: 25px;
-    }
-
-    .box p a {
-        color: #000;
-    }
-
-    .c1 {
-        font-size: 12px;
-        color: #999;
-        display: block;
-    }
-
-    .c2 {
-        font-size: 14px;
-        color: #000;
-        display: block;
-        font-weight: bold;
-    }
-
-    .icon {
-        background-color: tomato;
-        font-size: 10px;
-        color: #fff;
-        padding: 2px;
-        border-radius: 2px;
-    }
-
-    .c3 {
-        font-size: 12px;
-        color: #666;
-    }
-
-    .btn1 {border-radius: 10px;
-        border: 1px solid red;
-        color:#000;
-        padding: 1px 5px 2px;
-        font-size: 10px;
-        display: block;
-        width: 150px;
-        height: 50px;
-        margin: 10px 0 0 0;
-    }
-
-    .btn1:hover {background-color: red; color: #f1f1f1;}
-
-    .bu {width: 100%; height: 100px; margin: 0 auto; display: flex; 
-        flex-direction: row; justify-content: space-evenly;     align-items: center;}
-
-
-.div1 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div1 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div1 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div1 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-
-
-.div2 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div2 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div2 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 2s; opacity: 0;}
-.div2 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-.div2 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 3s; opacity: 0;}
-.div2 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 3.5s; opacity: 0;}
-.div2 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 4s; opacity: 0;}
-.div2 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 4.5; opacity: 0;}
-.div2 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 5s; opacity: 0;}
-
-.div3 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div3 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 2s; opacity: 0;}
-.div3 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 3s; opacity: 0;}
-.div3 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 3.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 4s; opacity: 0;}
-.div3 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 4.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 5s; opacity: 0;}
-
-.div4 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div4 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 2s; opacity: 0;}
-.div4 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 3s; opacity: 0;}
-.div4 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 3.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 4s; opacity: 0;}
-.div4 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 4.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 5s; opacity: 0;}
-
-
-#ne {width: 100%; height: 350px; margin: 0 auto;}
-.we {width: 100%; height: 50px; margin: 0 auto; padding-top: 15px; }
-.we p {font-size: 30px; padding-left: 35px;}
-
-.s1 {width: 50%; height: 300px; display: flex; flex-direction: column;
-align-items: center;
-justify-content: center;}
-.s1 img {width: 70%; height: 60%;}
-.s1 p:nth-of-type(1) {color: #000; font-size: 3.5vw;}
-.s1 p:nth-of-type(2) {color: #999; font-size: 14px;}
-.s1 a{color: #000; font-weight: bold; font-size: 12px;} 
-
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ푸터ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-
-footer {width: 100%; height: 8vh; margin: 0 auto; background-color: #000; color: #f1f1f1;}
-#footerbg {width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: column; }
-.foot {width: 100%; height: 50%; float: left; display: flex; justify-content: space-evenly;
-    align-items: center;}
-.ter {width: 100%; height: 50%; float: right; display: flex; justify-content: space-evenly;
-    align-items: center;}
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        @media (min-width:600px) and (max-width:1199px) {
-
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ헤더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-header {width: 100%; height: 70px; background-color: #000; }
-    
-    header .small{width: 100%; height: 70px; display: flex; align-items: center; 
-        justify-content:space-around;}
-
-    header a{padding: 15px; text-decoration: none;}
-          
-    header a:hover { color:red;}
-
-  .logo {width: 160px; line-height: 50px; background-color: #000; color:#fff; 
-    text-align: center; font-size: 18px;}
-  .logo b {color: red; font-size: 14px;}
-          
-
-    #b {display: none;}
-          
-   #a {display:block;}
-  
-    header #a a:nth-of-type(4) {width: 100%; height: 70%; border: 1px solid red;
-   color: #f1f1f1; margin: 0 auto; border-radius: 4px; }
-  
-   header #a a:nth-of-type(4):hover {background-color: red ; color: #f1f1f1;}
-         
- 
-   #myNav {display: none;}
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ슬라이더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-#slider {width: 100%; height: 50%; margin: 0 auto; 
-background-image: url(img/s.jpg);
-background-position: center; background-size: cover;  color: #f1f1f1;
- display: flex; flex-direction: column; justify-content: space-evenly; align-items: center;}
-
-.sl1 {width: 100%; height: 22%; margin: 0 auto; display: flex; flex-direction: column;
- justify-content: flex-end; align-items: center;  }
- .sl1 p {font-size: 20px; padding-bottom: 20px; 
-    transform: translateY(100px); transition: all 0.5s; opacity: 0;}
- 
-
-.sl2 {width: 80%; height: 55%; margin: 0 auto; display: flex; flex-direction: column; 
-justify-content: center; align-items: center; border: 5px solid red; margin-top: 53px; }
-.sl2 p:nth-of-type(1) {font-size: 60px; transform: translateY(100px); transition: all 1.0s; 
-    opacity: 0; display: none;}
- .sl2 p:nth-of-type(2) {font-size: 40px; color: red; 
-    transform: translateY(100px); transition: all 1.2s; opacity: 0; display: none;}
- .sl2 p:nth-of-type(3) {font-size: 60px; 
-    transform: translateY(100px); transition: all 1.5s; opacity: 0; display: none;}
-
-.sl3 {width: 100%; height: 23%; margin: 0 auto; display: flex; 
-flex-direction: column; 
-justify-content: flex-end; align-items: center; }
-.sl3 p {font-size: 20px; padding-top: 20px; 
-    transform: translateY(100px); transition: all 2s; opacity: 0;}
-
-.er {width: 100%; height: 28%; margin: 0 auto; display: flex; flex-direction: column; 
-justify-content: flex-end; align-items: center; padding-bottom: 50px; padding-top: 30px;
-transform: translateY(100px); transition: all 2.3s; opacity: 0;}
-.er p:nth-of-type(1) {font-size: 10px; font-weight: bold; color: rgb(37, 0, 0); }
-.er p:nth-of-type(2) {font-size: 10px; font-weight: bold; color: rgb(71, 0, 0);}
-.er p:nth-of-type(3) {font-size: 10px; font-weight: bold;  color: rgb(90, 0, 0);}
-.er p:nth-of-type(4) {font-size: 10px; font-weight: bold; color: rgb(124, 0, 0);}
-.er p:nth-of-type(5) {font-size: 10px; font-weight: bold; color: rgb(233, 0, 0);}
-.er p:nth-of-type(6) {font-size:24px;  color: red;}
-
-
-
-
-#abo {width: 100%; height: 500px; margin: 0 auto;}
-.bo {width: 100%; height: 100%; margin: 0 auto; display: flex;
-flex-direction: column; justify-content: space-evenly; align-items: center;}
-.bo p:nth-of-type(1) {text-align: center; font-size: 18px;}
-.bo p:nth-of-type(2) {text-align: center; font-size: 16px;}
-.bo p:nth-of-type(3) {text-align: center; font-size: 14px;}
-
-.bobtn {width: 150px; height: 50px; margin: 0 auto; border: 1px solid red;
- border-radius: 10px;}
- .bobtn:hover {background-color: red; color: #f1f1f1; cursor: pointer;}
-
-.bo hr {width: 90%; height: 2px;  }
-
-
-
-
-#const {width: 100%; height: 800px; margin: 0 auto; padding-bottom: 85px;
-display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; 
-justify-content: space-around; }
-
-.con1 {width: 100%; height: 100px; display: flex; align-items: flex-start; 
-transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.con1 b {font-size: 24px; padding-left: 60px; color: #000; }
-.con1 p {font-size: 20px;  color: #666; }
-
-.st1 {width: 40%; height: 35%; display: flex; align-items: flex-end;
-background-image: url("img/601.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 0.7s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st1 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-.st2 {width: 40%; height: 35%; display: flex; align-items: flex-end;
-background-image: url("img/607.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 1s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st2 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-.st3 {width: 40%; height: 35%; display: flex; align-items: flex-end;
-background-image: url("img/611.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 1.3s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st3 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-.st4 {width: 40%; height: 35%; display: flex; align-items: flex-end;
-background-image: url("img/616.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 1.5s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st4 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 굿즈 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-#wrap {
-        width: 100%;
-        height: 1800px;
-        border-bottom:  1px solid #999;
-        border-top:  1px solid #999;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        flex-flow: row wrap;
-    }
-
-    .div1 {
-        width: 100%;
-        height: 94%;
- 
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .div2 {
-        width: 100%;
-        height: 94%;
-
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .div3 {
-        width: 100%;
-        height: 94%;
-  
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .div4 {
-        width: 100%;
-        height: 94%;
-
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .textbox {
-        width: 30%;
-height: 30%;
-        margin: 30px auto;
- 
-        display: flex;
-        flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-       
-     
-    }
-
-    .textbox:hover {opacity: 0.7; }
-
-    .textbox a { margin: 0 auto; width: 95%; height: 70%;
-        text-decoration: none; text-align: center;
-    }
-
-    .textbox img { 
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-    }
-    .textbox img:hover {opacity: 0.7;}
-    .textbox p {
-        font-size: 12px;
-    }
-
-    .b1, .b2, .b3, .b4 {
-        width: 100px;
-        height: 50px;
-        cursor: pointer;
-        border-bottom: 2px solid white;
-    }
-
-    #tt1, #tt2, #tt3, #tt4 {
-        font-size: 16px;
-      padding: 10px 0px;
-        cursor: pointer;
-        border-bottom: 2px solid white;
-    }
-
-  
-
-    .box {
-        width: 240px;
-        height: 395px;
-        border: 1px solid #eee;
-        padding: 10px;
-        margin: 10px;
-        display: inline-block;
-    }
-
-    .box img {
-        width: 100%;
-        height: 225px;
-    }
-
-    .box p {
-        border-bottom: 1px solid #eee;
-        font-size: 12px;
-        font-weight: bold;
-        height: 25px;
-    }
-
-    .box p a {
-        color: #000;
-    }
-
-    .c1 {
-        font-size: 12px;
-        color: #999;
-        display: block;
-    }
-
-    .c2 {
-        font-size: 14px;
-        color: #000;
-        display: block;
-        font-weight: bold;
-    }
-
-    .icon {
-        background-color: tomato;
-        font-size: 10px;
-        color: #fff;
-        padding: 2px;
-        border-radius: 2px;
-    }
-
-    .c3 {
-        font-size: 12px;
-        color: #666;
-    }
-
-    .btn1 {border-radius: 10px;
-        border: 1px solid red;
-        color:#000;
-        padding: 1px 5px 2px;
-        font-size: 10px;
-        display: block;
-        width: 150px;
-        height: 50px;
-        margin: 10px 0 0 0;
-    }
-
-    .btn1:hover {background-color: red; color: #f1f1f1;}
-
-    .bu {width: 100%; height: 100px; margin: 0 auto; display: flex; 
-        flex-direction: row;
-justify-content: space-evenly;
-align-items: flex-end;
-}
-
-
-.div1 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div1 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div1 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div1 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-
-
-.div2 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div2 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div2 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 2s; opacity: 0;}
-.div2 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-.div2 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 3s; opacity: 0;}
-.div2 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 3.5s; opacity: 0;}
-.div2 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 4s; opacity: 0;}
-.div2 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 4.5; opacity: 0;}
-.div2 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 5s; opacity: 0;}
-
-.div3 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div3 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 2s; opacity: 0;}
-.div3 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 3s; opacity: 0;}
-.div3 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 3.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 4s; opacity: 0;}
-.div3 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 4.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 5s; opacity: 0;}
-
-.div4 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div4 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 2s; opacity: 0;}
-.div4 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 3s; opacity: 0;}
-.div4 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 3.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 4s; opacity: 0;}
-.div4 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 4.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 5s; opacity: 0;}
-
-
-#ne {width: 100%; height: 350px; margin: 0 auto;}
-.we {width: 100%; height: 50px; margin: 0 auto; padding-top: 15px; }
-.we p {font-size: 30px; padding-left: 45px;}
-
-.s1 {width: 30%; height: 300px; display: flex; flex-direction: column;
-align-items: center;
-justify-content: center;}
-.s1 img {width: 70%; height: 60%;}
-.s1 p:nth-of-type(1) {color: #000; font-size: 16px;}
-.s1 p:nth-of-type(2) {color: #999; font-size: 14px;}
-.s1 a{color: #000; font-weight: bold; font-size: 12px;} 
-
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ푸터ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-
-   footer {width: 100%; height: 10%; margin: 0 auto; background-color: #000; color: #f1f1f1;}
-#footerbg {width: 80%; height: 100%; margin: 0 auto; }
-.foot {width: 50%; height: 100%; float: left; display: flex; justify-content: space-evenly;
-align-items: center;}
-.ter {width: 50%; height: 100%; float: right; display: flex; justify-content: space-evenly;
-align-items: center;}
-
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        @media (min-width:1200px) {
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ헤더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-header {width: 100%; height: 70px; background-color: #000; }
-    
-    header .small{width: 100%; height: 70px; display: flex; align-items: center; 
-        justify-content:space-around;}
-
-    header a{padding: 15px; text-decoration: none;}
-          
-    header a:hover { color:red;}
-
-  .logo {width: 160px; line-height: 50px; background-color: #000; color:#fff; 
-    text-align: center; font-size: 18px;}
-  .logo b {color: red; font-size: 14px;}
-          
-
-    #b {display: none;}
-          
-   #a {display:block;}
-  
-    header #a a:nth-of-type(4) {width: 100%; height: 70%; border: 1px solid red;
-   color: #f1f1f1; margin: 0 auto; border-radius: 4px; }
-  
-   header #a a:nth-of-type(4):hover {background-color: red ; color: #f1f1f1;}
-         
- 
-   #myNav {display: none;}
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ슬라이더ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-#slider {width: 100%; height: calc(100% - 70px); margin: 0 auto; 
-background-image: url(img/s.jpg);
-background-position: center; background-size: cover;  color: #f1f1f1;
- display: flex; flex-direction: column; justify-content: center; align-items: center;}
-
-.sl1 {width: 20%; height: 25%; margin: 0 auto; display: flex; flex-direction: column;
- justify-content: flex-end; align-items: center;  }
- .sl1 p {font-size: 20px; padding-bottom: 20px; 
-    transform: translateY(100px); transition: all 0.5s; opacity: 0;}
- 
-
-.sl2 {width: 62%; height: 50%; margin: 0 auto; display: flex; flex-direction: column; 
-justify-content: center; align-items: center; border: 5px solid red; }
-.sl2 p:nth-of-type(1) {font-size: 60px; transform: translateY(100px); transition: all 1.0s; 
-    opacity: 0; display: none;}
- .sl2 p:nth-of-type(2) {font-size: 40px; color: red; 
-    transform: translateY(100px); transition: all 1.2s; opacity: 0; display: none;}
- .sl2 p:nth-of-type(3) {font-size: 60px; 
-    transform: translateY(100px); transition: all 1.5s; opacity: 0; display: none;}
-
-.sl3 {width: 20%; height: 25%; margin: 0 auto; display: flex; 
-flex-direction: column; 
-justify-content: flex-end; align-items: center; }
-.sl3 p {font-size: 20px; padding-top: 20px; 
-    transform: translateY(100px); transition: all 2s; opacity: 0;}
-
-.er {width: 20%; height: 25%; margin: 0 auto; display: flex; flex-direction: column; 
-justify-content: flex-end; align-items: center; padding-bottom: 30px; 
-transform: translateY(100px); transition: all 2.3s; opacity: 0;}
-.er p:nth-of-type(1) {font-size: 20px; font-weight: bold; color: rgb(37, 0, 0); }
-.er p:nth-of-type(2) {font-size: 20px; font-weight: bold; color: rgb(71, 0, 0);}
-.er p:nth-of-type(3) {font-size: 20px; font-weight: bold;  color: rgb(90, 0, 0);}
-.er p:nth-of-type(4) {font-size: 20px; font-weight: bold; color: rgb(124, 0, 0);}
-.er p:nth-of-type(5) {font-size: 20px; font-weight: bold; color: rgb(233, 0, 0);}
-.er p:nth-of-type(6) {font-size:24px;  color: red;}
-
-
-
-
-#abo {width: 100%; height: 500px; margin: 0 auto;}
-.bo {width: 1200px; height: 100%; margin: 0 auto; display: flex;
-flex-direction: column; justify-content: space-evenly; align-items: center;}
-.bo p:nth-of-type(1) {text-align: center; font-size: 18px;}
-.bo p:nth-of-type(2) {text-align: center; font-size: 16px;}
-.bo p:nth-of-type(3) {text-align: center; font-size: 14px;}
-
-.bobtn {width: 150px; height: 50px; margin: 0 auto; border: 1px solid red;
- border-radius: 10px;}
- .bobtn:hover {background-color: red; color: #f1f1f1; cursor: pointer;}
-
-.bo hr {width: 90%; height: 2px;  }
-
-
-
-
-#const {width: 1200px; height: 800px; margin: 0 auto; padding-bottom: 85px;
-display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; 
-justify-content: space-around; }
-
-.con1 {width: 100%; height: 100px; display: flex; align-items: flex-start; 
-transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.con1 b {font-size: 24px; padding-left: 60px; color: #000; }
-.con1 p {font-size: 20px;  color: #666; }
-
-.st1 {width: 40%; height: 35%; display: flex; align-items: flex-end;
-background-image: url("img/601.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 0.7s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st1 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-.st2 {width: 40%; height: 35%; display: flex; align-items: flex-end;
-background-image: url("img/607.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 1s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st2 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-.st3 {width: 40%; height: 35%; display: flex; align-items: flex-end;
-background-image: url("img/611.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 1.3s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st3 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-.st4 {width: 40%; height: 35%; display: flex; align-items: flex-end;
-background-image: url("img/616.jpg"); background-position: center; background-size: cover;
-transform: translateY(0px); transition: all 1.5s; opacity: 0;
--webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5);}
-.st4 p {font-size: 24px; color: #f1f1f1; padding: 10px 10px 10px 10px;}
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 굿즈 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-#wrap {
-        width: 1200px;
-        height: 1800px;
-        border-bottom:  1px solid #999;
-        border-top:  1px solid #999;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        flex-flow: row wrap;
-    }
-
-    .div1 {
-        width: 1200px;
-        height: 94%;
- 
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .div2 {
-        width: 1200px;
-        height: 94%;
-
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .div3 {
-        width: 1200px;
-        height: 94%;
-  
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .div4 {
-        width: 1200px;
-        height: 94%;
-
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-content: space-around;
-    }
-
-    .textbox {
-        width: 30%;
-height: 30%;
-        margin: 30px auto;
- 
-        display: flex;
-        flex-direction: column;
-justify-content: space-evenly;
-align-items: center;
-       
-     
-    }
-
-    .textbox:hover {opacity: 0.7; }
-
-    .textbox a { margin: 0 auto; width: 95%; height: 70%;
-        text-decoration: none; text-align: center;
-    }
-
-    .textbox img { 
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-    }
-    .textbox img:hover {opacity: 0.7;}
-    .textbox  p {
-        font-size: 12px;
-    }
-
-    .b1, .b2, .b3, .b4 {
-        width: 100px;
-        height: 50px;
-        cursor: pointer;
-        border-bottom: 2px solid white;
-    }
-
-    #tt1, #tt2, #tt3, #tt4 {
-        font-size: 16px;
-      padding: 10px 0px;
-        cursor: pointer;
-        border-bottom: 2px solid white;
-    }
-
-  
-
-    .box {
-        width: 240px;
-        height: 395px;
-        border: 1px solid #eee;
-        padding: 10px;
-        margin: 10px;
-        display: inline-block;
-    }
-
-    .box img {
-        width: 100%;
-        height: 225px;
-    }
-
-    .box p {
-        border-bottom: 1px solid #eee;
-        font-size: 12px;
-        font-weight: bold;
-        height: 25px;
-    }
-
-    .box p a {
-        color: #000;
-    }
-
-    .c1 {
-        font-size: 12px;
-        color: #999;
-        display: block;
-    }
-
-    .c2 {
-        font-size: 14px;
-        color: #000;
-        display: block;
-        font-weight: bold;
-    }
-
-    .icon {
-        background-color: tomato;
-        font-size: 10px;
-        color: #fff;
-        padding: 2px;
-        border-radius: 2px;
-    }
-
-    .c3 {
-        font-size: 12px;
-        color: #666;
-    }
-
-    .btn1 {border-radius: 10px;
-        border: 1px solid red;
-        color:#000;
-        padding: 1px 5px 2px;
-        font-size: 10px;
-        display: block;
-        width: 150px;
-        height: 50px;
-        margin: 10px 0 0 0;
-    }
-
-    .btn1:hover {background-color: red; color: #f1f1f1;}
-
-    .bu {width: 1200px; height: 100px; margin: 0 auto; display: flex; 
-        flex-direction: row;
-justify-content: space-evenly;
-align-items: flex-end;
-}
-
-
-.div1 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div1 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div1 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 0.5s; opacity: 0;}
-.div1 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div1 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-
-
-.div2 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div2 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div2 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 2s; opacity: 0;}
-.div2 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-.div2 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 3s; opacity: 0;}
-.div2 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 3.5s; opacity: 0;}
-.div2 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 4s; opacity: 0;}
-.div2 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 4.5; opacity: 0;}
-.div2 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 5s; opacity: 0;}
-
-.div3 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div3 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 2s; opacity: 0;}
-.div3 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 3s; opacity: 0;}
-.div3 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 3.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 4s; opacity: 0;}
-.div3 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 4.5s; opacity: 0;}
-.div3 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 5s; opacity: 0;}
-
-.div4 > .textbox:nth-of-type(1) { transform: translateY(100px); transition: all 1s; opacity: 0;}
-.div4 > .textbox:nth-of-type(2) { transform: translateY(100px); transition: all 1.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(3) { transform: translateY(100px); transition: all 2s; opacity: 0;}
-.div4 > .textbox:nth-of-type(4) { transform: translateY(100px); transition: all 2.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(5) { transform: translateY(100px); transition: all 3s; opacity: 0;}
-.div4 > .textbox:nth-of-type(6) { transform: translateY(100px); transition: all 3.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(7) { transform: translateY(100px); transition: all 4s; opacity: 0;}
-.div4 > .textbox:nth-of-type(8) { transform: translateY(100px); transition: all 4.5s; opacity: 0;}
-.div4 > .textbox:nth-of-type(9) { transform: translateY(100px); transition: all 5s; opacity: 0;}
-
-
-#ne {width: 1200px; height: 350px; margin: 0 auto;}
-.we {width: 100%; height: 50px; margin: 0 auto; padding-top: 15px; }
-.we p {font-size: 30px; padding-left: 35px;}
-
-.s1 {width: 20%; height: 300px; display: flex; flex-direction: column;
-align-items: center;
-justify-content: center;}
-.s1 img {width: 70%; height: 60%;}
-.s1 p:nth-of-type(1) {color: #000; font-size: 16px;}
-.s1 p:nth-of-type(2) {color: #999; font-size: 14px;}
-.s1 a{color: #000; font-weight: bold; font-size: 12px;} 
-
-
-/* ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ푸터ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */
-
-
-   footer {width: 100%; height: 10%; margin: 0 auto; background-color: #000; color: #f1f1f1;}
-#footerbg {width: 80%; height: 100%; margin: 0 auto; }
-.foot {width: 50%; height: 100%; float: left; display: flex; justify-content: space-evenly;
-align-items: center;}
-.ter {width: 50%; height: 100%; float: right; display: flex; justify-content: space-evenly;
-align-items: center;}
-        }
-
-
-       
-    </style>
+    <link rel="stylesheet" href="css/sub.css">
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-
-    <script>
-
-        function openNav() {
-
-        
-// document.getElementById("myNav").style.width = "100%";
-document.getElementById("myNav").style.height = "50%";
+<script src="js/sub1.js"></script>
 
 
-
-}
-
-
-
-function closeNav() {
-
-    
-// document.getElementById("myNav").style.width = "0%";
-document.getElementById("myNav").style.height = "0%";
-
-}
-
-    </script>
-
-    
 
 
 </head>
 
 <body>
     <header>
-        
+
         <div class="small">
-            <div class="logo">LA CASA <b>DE</b> PAPEL</div>
+            <div class="logo"><a href="./index.html">LA CASA <b>DE</b> PAPEL</a> </div>
 
             <div id="a">
-                <a href="#">Team</a>
-                <a href="#">Work</a>
-                <a href="#">Price</a>
+                <a href="./index.html">HOME</a>
+                <a href="./index.html">PAGES</a>
+                <a href="./index.html">EVENT</a>
 
-                <a href="#"><button class="abt" style="color: #f1f1f1;">Contact</button></a>
+               <button class="abt" style="color: #f1f1f1;"> BUY TICKETS</button>
 
             </div>
 
 
 
-            <img src="img/i.png" id="b" onclick="openNav()">
+            <img src="img/i.png" id="b" alt="." onclick="openNav()">
 
         </div>
 
@@ -1254,658 +46,548 @@ document.getElementById("myNav").style.height = "0%";
 
             <div class="overlay-content">
 
-                <a href="#">HOME</a>
+                <a href="./index.html">HOME</a>
 
-                <a href="#">PAGES</a>
+                <a href="./index.html">PAGES</a>
 
-                <a href="#">SERVICES</a>
+                <a href="./index.html">SERVICES</a>
 
-                <a href="#">EVENT</a>
+                <a href="./index.html">EVENT</a>
 
-                <a href="#"><button class="lo">GALLERY</button></a>
+               <button class="lo"> BUY TICKETS</button>
 
             </div>
 
         </div>
 
     </header>
-    
 
-<div id="slider">
 
-    <div class="sl1">
-        <p>NETFLIX ORIGINAL</p>
-    </div>
+    <div id="slider" style=" background-image: url(img/s.jpg);
+    background-position: center;
+    background-size: cover;">
 
-    <div class="sl2">
-        <p>LA CASA</p>
-        <p>DE</p>
-        <p>PAPEL</p>
-    </div>
-
-    <div class="sl3">
-        <p>2022 . 06 . 24 OPEN</p>
-    </div>
-
-    <div class="er">
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>GOODS SHOP</p>
-    </div>
-
-
-</div>
-
-
-<script>
-
-
-
-    $(function () {
-
-
-        $(window).ready(function () {
-
-            var ws = $(this).scrollTop();
-        
-
-            if (ws > -10) {
-
-                $('.sl1 p').css("transform", "translateY(0px)").css("opacity", "1");
-                $('.sl2 p').css("transform", "translateY(0px)").css("opacity", "1");
-                $('.sl3 p').css("transform", "translateY(0px)").css("opacity", "1");
-                $('.er').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-            }
-
-
-        });
-
-    });
-
-
-
-
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-<div id="abo">
-
-    <div class="bo">
-
-        <p>ABOUT US</p>
-
-        <p><b>NETFLIX ORIGINAL LA CASA DE PAPEL</b><br>
-           : 2022 . 06 . 24 GOODS SHOP OPEN</p>
-        
-        <p>넷플릭스에서 방영된 스페인 드라마 종이의 집(La Casa de Papel)의 리메이크작이자 2022년에 공개한 넷플릭스 오리지널 한국 드라마.<br>
-            이 드라마의 시간적 배경은 2026년 9월 초,<br>
-            공간적 배경은 공동경제구역과 '한반도통일조폐국',<br>
-            한정판 굿즈 판매
-        </p>
-
-        <button class="bobtn">한정판 굿즈<br>
-            바로가기</button>
-
-        <hr>
-
-
-    </div>
-
-</div>
-
-
-<div id="const">
-
-    <div class="con1">
-        <p><b>CONSTANCY AND CHANGE IN</b> NETFLIX ORIGINAL LA CASA DE PAPEL 2022</p>
-    </div>
-
-    <div class="st1">
-        
-        <p>EXHIBITION</p>
-    </div>
-
-    <div class="st2">
-        
-        <p>PROGRAMME</p>
-    </div>
-
-    <div class="st3">
-       
-        <p>EVENT</p>
-    </div>
-
-    <div class="st4">
-        
-        <p>HIGHLIGHTS</p>
-    </div>
-
-</div>
-
-
-<div id="wrap">
-
-
-    <div class="bu">
-    <button class="b1"><p id="tt1">2022</p></button>
-    <button class="b2"><p id="tt2">2021</p></button>
-    <button class="b3"><p id="tt3">2020</p></button>
-    <button class="b4"><p id="tt4">2019</p></button>
-   </div>
-
-   <script>
-
-    const bu=document.getElementsByClassName('bu')[0];
-
-bu.onclick=function(e){
-    
-    if(e.target.id=="tt1"){tt1.style.borderColor="red";
-    
-    tt2.style.borderColor="white";
-    tt3.style.borderColor="white";
-    tt4.style.borderColor="white";}
-    
-    if(e.target.id=="tt2"){tt2.style.borderColor="red";
-    
-    tt1.style.borderColor="white";
-    tt3.style.borderColor="white";
-    tt4.style.borderColor="white";}
-
-    if(e.target.id=="tt3"){tt3.style.borderColor="red";
-    
-    tt1.style.borderColor="white";
-    tt2.style.borderColor="white";
-    tt4.style.borderColor="white";}
-
-    if(e.target.id=="tt4"){tt4.style.borderColor="red";
-    
-    tt1.style.borderColor="white";
-    tt2.style.borderColor="white";
-    tt3.style.borderColor="white";}
-    
-}
-
-
-
-    
-    </script>
-   <script>
-    $(function () {
-
-
-        $(window).ready(function () {
-
-            tt1.style.borderColor="red";
-
-
-        });
-
-    });
-</script>
-
-
-
-
-<script>
-
-$(function(){
-    onclick=function(e){
-
-    if(e.target.id=="tt2")   {
-$('.div2 > .textbox:nth-of-type(1)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div2 > .textbox:nth-of-type(2)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div2 > .textbox:nth-of-type(3)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div2 > .textbox:nth-of-type(4)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div2 > .textbox:nth-of-type(5)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div2 > .textbox:nth-of-type(6)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div2 > .textbox:nth-of-type(7)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div2 > .textbox:nth-of-type(8)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div2 > .textbox:nth-of-type(9)').css("transform", "translateY(0px)").css("opacity", "1");
-
-    } 
-
-    if(e.target.id=="tt3")   {
-$('.div3 > .textbox:nth-of-type(1)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div3 > .textbox:nth-of-type(2)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div3 > .textbox:nth-of-type(3)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div3 > .textbox:nth-of-type(4)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div3 > .textbox:nth-of-type(5)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div3 > .textbox:nth-of-type(6)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div3 > .textbox:nth-of-type(7)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div3 > .textbox:nth-of-type(8)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div3 > .textbox:nth-of-type(9)').css("transform", "translateY(0px)").css("opacity", "1");
-
-    } 
-
-    if(e.target.id=="tt4")   {
-$('.div4 > .textbox:nth-of-type(1)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div4 > .textbox:nth-of-type(2)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div4 > .textbox:nth-of-type(3)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div4 > .textbox:nth-of-type(4)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div4 > .textbox:nth-of-type(5)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div4 > .textbox:nth-of-type(6)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div4 > .textbox:nth-of-type(7)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div4 > .textbox:nth-of-type(8)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div4 > .textbox:nth-of-type(9)').css("transform", "translateY(0px)").css("opacity", "1");
-
-    } 
-
-
-
-    }
-});
-
-
-
-    
-    </script>
-
-
-
-
-    <div class="div1">
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/300.jpg" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 가면</span>
-            
-            <span class="c3">10,000원</span>
-
-            <button class="btn1">구매하기</button>
-            
+        <div class="sl1">
+            <p>NETFLIX ORIGINAL</p>
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/301.jpg" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">교수 안경</span>
-            
-            <span class="c3">12,900원</span>
-                   <button class="btn1">구매하기</button>
+        <div class="sl2">
+            <p>LA CASA</p>
+            <p>DE</p>
+            <p>PAPEL</p>
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/302.png" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 막걸리</span>
-            
-            <span class="c3">7,800원</span>
-                   <button class="btn1">구매하기</button>
+        <div class="sl3">
+            <p>2022 . 06 . 24 OPEN</p>
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/303.jpg" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 스티커</span>
-            
-            <span class="c3">2,800원</span>
-                   <button class="btn1">구매하기</button>
+        <div class="er">
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <p>GOODS SHOP</p>
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/318.jpg" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 키링</span>
-            
-            <span class="c3">12,700원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/395.jpg" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 포스터</span>
-            
-            <span class="c3">11,000원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
+    </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/396.jpg" alt=""></a>
-           
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 뱃지</span>
-            
-            <span class="c3">9,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
+<script src="js/sub2.js"></script>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/383.jpg" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 담요</span>
-            
-            <span class="c3">17,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/305.jpg" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 공구세트</span>
-            
-            <span class="c3">33,900원</span>
-                   <button class="btn1">구매하기</button>
+
+
+
+
+
+
+
+
+
+    <div id="abo">
+
+        <div class="bo">
+
+            <p>ABOUT US</p>
+
+            <p><b>NETFLIX ORIGINAL LA CASA DE PAPEL</b><br>
+                : 2022 . 06 . 24 GOODS SHOP OPEN</p>
+
+            <p>넷플릭스에서 방영된 스페인 드라마 종이의 집(La Casa de Papel)의 리메이크작이자 2022년에 공개한 넷플릭스 오리지널 한국 드라마.<br>
+                이 드라마의 시간적 배경은 2026년 9월 초,<br>
+                공간적 배경은 공동경제구역과 '한반도통일조폐국',<br>
+                한정판 굿즈 판매
+            </p>
+
+            <button class="bobtn">한정판 굿즈<br>
+                바로가기</button>
+
+            <hr>
+
+
         </div>
 
     </div>
 
 
+    <div id="const">
 
-    <div class="div2">
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/307.PNG" alt=""></a>
-
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 항공점퍼</span>
-            
-            <span class="c3">78,900원</span>
-                   <button class="btn1">구매하기</button>
-
-
+        <div class="con1">
+            <p><b>CONSTANCY AND CHANGE IN</b> NETFLIX ORIGINAL LA CASA DE PAPEL 2022</p>
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/313.PNG" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 티셔츠</span>
-            
-            <span class="c3">37,800원</span>
-                   <button class="btn1">구매하기</button>
+        <div class="st1" style=" background-image: url(img/601.jpg);
+        background-position: center;
+        background-size: cover;">
+
+            <p>EXHIBITION</p>
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/316.webp" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 트레이닝 바지</span>
-            
-            <span class="c3">57,800원</span>
-                   <button class="btn1">구매하기</button>
+        <div class="st2" style=" background-image: url(img/607.jpg);
+        background-position: center;
+        background-size: cover;">
+
+            <p>PROGRAMME</p>
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/310.webp" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 트레이닝 세트</span>
-            
-            <span class="c3">98,900원</span>
-                   <button class="btn1">구매하기</button>
+        <div class="st3" style=" background-image: url(img/611.jpg);
+        background-position: center;
+        background-size: cover;">
+
+            <p>EVENT</p>
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/311.jpg" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 모자 화이트</span>
-            
-            <span class="c3">37,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
+        <div class="st4" style="  background-image: url(img/616.jpg);
+        background-position: center;
+        background-size: cover;">
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/314.jpg" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 모자 옐로우</span>
-            
-            <span class="c3">37,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/315.jpg" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 모자 퍼플</span>
-            
-            <span class="c3">37,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/328.jpg" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 에코백</span>
-            
-            <span class="c3">15,700원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/330.jpg" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 카드지갑</span>
-            
-            <span class="c3">30,800원</span>
-                   <button class="btn1">구매하기</button>
+            <p>HIGHLIGHTS</p>
         </div>
 
     </div>
 
 
+    <div id="wrap">
 
 
-
-    <div class="div3">
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/341.PNG" alt=""></a>
-
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 아이패드 파우치</span>
-            
-            <span class="c3">17,800원</span>
-                   <button class="btn1">구매하기</button>
+        <div class="bu">
+            <button class="b1" id="tt1">
+                2022
+            </button>
+            <button class="b2"  id="tt2">
+              2021
+            </button>
+            <button class="b3"  id="tt3">
+           2020
+            </button>
+            <button class="b4"  id="tt4">
+           2019
+            </button>
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/342.PNG" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 사각 가방</span>
-            
-            <span class="c3">78,800원</span>
-                   <button class="btn1">구매하기</button>
+       <script src="js/sub3.js"></script>
+
+
+
+
+       <script src="js/sub4.js"></script>
+
+
+
+
+        <div class="div1">
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/300.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 가면</span>
+
+                <span class="c3">10,000원</span>
+
+                <button class="btn1">  구매하기</button>
+
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/301.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">교수 안경</span>
+
+                <span class="c3">12,900원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/302.png" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 막걸리</span>
+
+                <span class="c3">7,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/303.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 스티커</span>
+
+                <span class="c3">2,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/318.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 키링</span>
+
+                <span class="c3">12,700원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/395.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 포스터</span>
+
+                <span class="c3">11,000원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/396.jpg" alt=""></a>
+
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 뱃지</span>
+
+                <span class="c3">9,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/383.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 담요</span>
+
+                <span class="c3">17,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/305.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 공구세트</span>
+
+                <span class="c3">33,900원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/343.PNG" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 사각 가방</span>
-            
-            <span class="c3">78,800원</span>
-                   <button class="btn1">구매하기</button>
+
+
+        <div class="div2">
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/307.PNG" alt=""></a>
+
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 항공점퍼</span>
+
+                <span class="c3">78,900원</span>
+                <button class="btn1">구매하기</button>
+
+
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/313.PNG" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 티셔츠</span>
+
+                <span class="c3">37,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/316.webp" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 트레이닝 바지</span>
+
+                <span class="c3">57,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/310.webp" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 트레이닝 세트</span>
+
+                <span class="c3">98,900원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/311.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 모자 화이트</span>
+
+                <span class="c3">37,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/314.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 모자 옐로우</span>
+
+                <span class="c3">37,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/315.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 모자 퍼플</span>
+
+                <span class="c3">37,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/328.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 에코백</span>
+
+                <span class="c3">15,700원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/330.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 카드지갑</span>
+
+                <span class="c3">30,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/345.PNG" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-           <span class="c2">종이의 집 사각 가방</span>
-            
-           <span class="c3">78,800원</span>
-                  <button class="btn1">구매하기</button>
+
+
+
+
+        <div class="div3">
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/341.PNG" alt=""></a>
+
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 아이패드 파우치</span>
+
+                <span class="c3">17,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/342.PNG" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 사각 가방</span>
+
+                <span class="c3">78,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/343.PNG" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 사각 가방</span>
+
+                <span class="c3">78,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/345.PNG" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 사각 가방</span>
+
+                <span class="c3">78,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/353.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 사각 가방</span>
+
+                <span class="c3">78,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/350.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 가방</span>
+
+                <span class="c3">78,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/351.PNG" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 아이패드 파우치</span>
+
+                <span class="c3">17,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/360.PNG" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 모자</span>
+
+                <span class="c3">13,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/361.PNG" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 모자</span>
+
+                <span class="c3">13,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/353.jpg" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-           <span class="c2">종이의 집 사각 가방</span>
-            
-           <span class="c3">78,800원</span>
-                  <button class="btn1">구매하기</button>
+        <div class="div4">
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/369.webp" alt=""></a>
+
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 에어팟 케이스</span>
+
+                <span class="c3">12,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/370.webp" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 에어팟 케이스</span>
+
+                <span class="c3">12,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/371.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 에어팟 케이스</span>
+
+                <span class="c3">12,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/372.webp" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 에어팟 케이스</span>
+
+                <span class="c3">12,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/373.webp" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 에어팟 케이스</span>
+
+                <span class="c3">12,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/374.webp" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 에어팟 케이스</span>
+
+                <span class="c3">12,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/377.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 아이폰 케이스</span>
+
+                <span class="c3">15,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/378.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 아이폰 케이스</span>
+
+                <span class="c3">15,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+            <div class="textbox">
+                <a href="./index.html"><img src="img/379.jpg" alt=""></a>
+                <p><a href="./index.html"></a></p>
+
+                <span class="c2">종이의 집 아이폰 케이스</span>
+
+                <span class="c3">15,800원</span>
+                <button class="btn1">구매하기</button>
+            </div>
+
+
         </div>
 
-        <div class="textbox">
-            <a href="index.html"><img src="img/350.jpg" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 가방</span>
-            
-            <span class="c3">78,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
 
-        <div class="textbox">
-            <a href="#"><img src="img/351.PNG" alt=""></a>
-           <p><a href="#"></a></p>
-            
-            <span class="c2">종이의 집 아이패드 파우치</span>
-            
-            <span class="c3">17,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="#"><img src="img/360.PNG" alt=""></a>
-          <p><a href="#"></a></p>
-            
-            <span class="c2">종이의 집 모자</span>
-            
-            <span class="c3">13,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/361.PNG" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-           <span class="c2">종이의 집 모자</span>
-            
-           <span class="c3">13,800원</span>
-                  <button class="btn1">구매하기</button>
-        </div>
-
-    </div>
-
-    <div class="div4">
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/369.webp" alt=""></a>
-
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 에어팟 케이스</span>
-            
-            <span class="c3">12,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/370.webp" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-           <span class="c2">종이의 집 에어팟 케이스</span>
-            
-           <span class="c3">12,800원</span>
-                  <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/371.jpg" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-           <span class="c2">종이의 집 에어팟 케이스</span>
-            
-           <span class="c3">12,800원</span>
-                  <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/372.webp" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-           <span class="c2">종이의 집 에어팟 케이스</span>
-            
-           <span class="c3">12,800원</span>
-                  <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/373.webp" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-           <span class="c2">종이의 집 에어팟 케이스</span>
-            
-           <span class="c3">12,800원</span>
-                  <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/374.webp" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-           <span class="c2">종이의 집 에어팟 케이스</span>
-            
-           <span class="c3">12,800원</span>
-                  <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/377.jpg" alt=""></a>
-           <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 아이폰 케이스</span>
-            
-            <span class="c3">15,800원</span>
-                   <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/378.jpg" alt=""></a>
-          <p><a href="index.html"></a></p>
-            
-          <span class="c2">종이의 집 아이폰 케이스</span>
-            
-          <span class="c3">15,800원</span>
-                 <button class="btn1">구매하기</button>
-        </div>
-
-        <div class="textbox">
-            <a href="index.html"><img src="img/379.jpg" alt=""></a>
-            <p><a href="index.html"></a></p>
-            
-            <span class="c2">종이의 집 아이폰 케이스</span>
-            
-            <span class="c3">15,800원</span>
-            <button class="btn1">구매하기</button>
-        </div>
 
 
     </div>
@@ -1913,314 +595,66 @@ $('.div4 > .textbox:nth-of-type(9)').css("transform", "translateY(0px)").css("op
 
 
 
-</div>
+  <script src="js/sub5.js"></script>
+
+    <div id="ne">
 
 
-<script>
-    $(function () {
-
-$(window).ready(function(){
-    $('.div1').show();
-            $('.div2').hide();
-            $('.div3').hide();
-            $('.div4').hide();
-});
-});     
-       
-</script>
-
-<script>
-    $(function () {
-
-       
-       
-        $('button:nth-of-type(1)').click(function () {
-            $('.div1').show();
-            $('.div2').hide();
-            $('.div3').hide();
-            $('.div4').hide();
-        });
-
-        $('button:nth-of-type(2)').click(function () {
-            $('.div2').show();
-            $('.div1').hide();
-            $('.div3').hide();
-            $('.div4').hide();
-        });
-
-        $('button:nth-of-type(3)').click(function () {
-            $('.div3').show();
-            $('.div1').hide();
-            $('.div2').hide();
-            $('.div4').hide();
-        });
-
-        $('button:nth-of-type(4)').click(function () {
-            $('.div4').show();
-            $('.div1').hide();
-            $('.div2').hide();
-            $('.div3').hide();
-        });
-    });
-</script>
-
-
-<div id="ne">
-
-
-    <div class="we">
-        <p>EXHIBITION</p>
-    </div>
-
-    <div class="s1">
-        <img src="img/0.jpg" alt="">
-        <p>NEW PRODUCT LAUNCH</p>
-        <p>2022 - 08 - 19</p><br>
-        <p><a href="index.html">READ MORE +</a></p>
-    </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-<footer>
-    <div id="footerbg">
-        <div class="foot">
-            <p>mluemoonstudio@</p>
-            <p>+</p>
-            <p>Powered by Webflow</p>
+        <div class="we">
+            <p>EXHIBITION</p>
         </div>
-        <div class="ter">
-            <p>Password</p>
-            <p>+</p>
-            <p>404</p>
-            <p>+</p>
-            <p>Style</p>
-            <p>+</p>
-            <p>License</p>
-            <p>+</p>
-            <p>Changelog</p>
-            <p>+</p>
-            <p>Terms</p>
-            <p>+</p>
-            <p>Privacy</p>
+
+        <div class="s1">
+            <img src="img/0.jpg" alt="">
+            <p>NEW PRODUCT LAUNCH</p>
+            <p>2022 - 08 - 19</p><br>
+            <p><a href="./index.html">READ MORE +</a></p>
         </div>
+
     </div>
-</footer>
 
 
-<script>
-    $(function () {
-if (window.matchMedia("(max-width:599px) ").matches) { 
 
-   $(window).scroll(function(){
 
-   var ws = $(this).scrollTop();
 
 
 
-if (ws > 400) {
 
-$('.con1').css("transform", "translateY(0px)").css("opacity", "1");
 
 
-}
+    <footer>
+        <div id="footerbg">
+            <div class="foot">
+                <p>mluemoonstudio@</p>
+                <p>+</p>
+                <p>Powered by Webflow</p>
+            </div>
+            <div class="ter">
+                <p>Password</p>
+                <p>+</p>
+                <p>404</p>
+                <p>+</p>
+                <p>Style</p>
+                <p>+</p>
+                <p>License</p>
+                <p>+</p>
+                <p>Changelog</p>
+                <p>+</p>
+                <p>Terms</p>
+                <p>+</p>
+                <p>Privacy</p>
+            </div>
+        </div>
+    </footer>
 
-if (ws > 500) {
 
-$('.st1').css("transform", "translateY(0px)").css("opacity", "1");
-$('.st2').css("transform", "translateY(0px)").css("opacity", "1");
-$('.st3').css("transform", "translateY(0px)").css("opacity", "1");
-$('.st4').css("transform", "translateY(0px)").css("opacity", "1");
+ 
 
-}
 
-if (ws > 1000) {
 
-$('.div1 > .textbox:nth-of-type(1)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(2)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(3)').css("transform", "translateY(0px)").css("opacity", "1");
 
 
-}
-if (ws > 1100) {
-
-    $('.div1 > .textbox:nth-of-type(4)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(5)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(6)').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-
-if (ws > 1200) {
-
-$('.div1 > .textbox:nth-of-type(7)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(8)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(9)').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-
-
-    });
-
-} else { 
-
-/* 뷰포트 너비가 400 픽셀 미만 */
-
-}
-    });
-
-
-
-</script>
-
-<script>
-    $(function () {
-if (window.matchMedia("(min-width:600px) and (max-width:1199px) ").matches) { 
-
-   $(window).scroll(function(){
-
-   var ws = $(this).scrollTop();
-
-
-
-if (ws > 700) {
-
-$('.con1').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-
-if (ws > 700) {
-
-$('.st1').css("transform", "translateY(0px)").css("opacity", "1");
-$('.st2').css("transform", "translateY(0px)").css("opacity", "1");
-$('.st3').css("transform", "translateY(0px)").css("opacity", "1");
-$('.st4').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 1200) {
-
-$('.div1 > .textbox:nth-of-type(1)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(2)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(3)').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-if (ws > 2200) {
-
-    $('.div1 > .textbox:nth-of-type(4)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(5)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(6)').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-
-if (ws > 2700) {
-
-$('.div1 > .textbox:nth-of-type(7)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(8)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(9)').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-
-
-    });
-
-} else { 
-
-/* 뷰포트 너비가 400 픽셀 미만 */
-
-}
-    });
-
-
-
-</script>
-
-
-<script>
-    $(function () {
-if (window.matchMedia("(min-width: 1200px)").matches) { 
-
-   $(window).scroll(function(){
-
-   var ws = $(this).scrollTop();
-
-
-
-if (ws > 900) {
-
-$('.con1').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-
-if (ws > 1000) {
-
-$('.st1').css("transform", "translateY(0px)").css("opacity", "1");
-$('.st2').css("transform", "translateY(0px)").css("opacity", "1");
-$('.st3').css("transform", "translateY(0px)").css("opacity", "1");
-$('.st4').css("transform", "translateY(0px)").css("opacity", "1");
-
-}
-
-if (ws > 1600) {
-
-$('.div1 > .textbox:nth-of-type(1)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(2)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(3)').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-if (ws > 2200) {
-
-    $('.div1 > .textbox:nth-of-type(4)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(5)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(6)').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-
-if (ws > 2700) {
-
-$('.div1 > .textbox:nth-of-type(7)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(8)').css("transform", "translateY(0px)").css("opacity", "1");
-$('.div1 > .textbox:nth-of-type(9)').css("transform", "translateY(0px)").css("opacity", "1");
-
-
-}
-
-
-    });
-
-} else { 
-
-/* 뷰포트 너비가 400 픽셀 미만 */
-
-}
-    });
-
-
-
-</script>
-
-
-
-
-
-
-
+    <script type="text/javascript" src="js/sub.js"></script>
 
 
 </body>
